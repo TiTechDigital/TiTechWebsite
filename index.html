@@ -1,1293 +1,713 @@
 <!doctype html>
 <html lang="it">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TiTech Digital — Tecnologia e soluzioni digitali per le imprese</title>
-  <meta name="description" content="TiTech Digital è il partner tecnologico per imprese che vogliono progettare, sviluppare e far evolvere siti web, e-commerce, software su misura e automazioni.">
-  <meta name="theme-color" content="#101923">
-  <style>
-    :root {
-      --color-1: #101923;
-      --color-2: #f7f8f6;
-      --color-3: #315cdb;
-      --color-4: #e9edf0;
-      --color-5: #b7c0c9;
-      --color-6: #52606b;
-      --color-7: #25313c;
-      --font-1: "Gabarito", "Arial Black", Arial, sans-serif;
-      --font-2: "Onest", Arial, sans-serif;
-      --space-1: clamp(16px, 3.4vw, 48px);
-      --space-2: clamp(96px, 15vh, 200px);
-      --radius-1: 8px;
-      --radius-2: 999px;
-      --radius-3: 4px;
-      --shadow-1: 0 -18px 50px color-mix(in srgb, var(--color-1) 45%, transparent);
-      --shadow-2: 0 2px 0 var(--color-3);
-      --shadow-3: 0 0 0 2px var(--color-1);
-    }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      background: var(--color-2);
-      color: var(--color-1);
-      font-family: var(--font-2);
-      overflow-x: hidden;
-      line-height: 1.55;
-    }
-    img { display: block; max-width: 100%; }
-    a { color: inherit; text-decoration: none; }
-    ul, ol { list-style: none; padding: 0; margin: 0; }
-    h1, h2, h3, p, figure { margin: 0; }
-    button, input, textarea, select { font: inherit; }
-
-    .m-text { font-size: 17px; }
-    .m-text-2 {
-      font-family: var(--font-1);
-      font-size: min(40vw, calc((100vw - 2 * var(--space-1)) / (var(--len, 5) * 0.47)));
-      font-weight: 800;
-      line-height: 0.8;
-      letter-spacing: -0.065em;
-      text-transform: none;
-    }
-    .m-text-3 {
-      font-family: var(--font-1);
-      font-size: clamp(42px, 9.2vw, 150px);
-      font-weight: 800;
-      line-height: 0.88;
-      letter-spacing: -0.055em;
-    }
-    .m-text-4 {
-      font-family: var(--font-1);
-      font-size: clamp(28px, 3.9vw, 58px);
-      font-weight: 700;
-      line-height: 0.96;
-      letter-spacing: -0.04em;
-    }
-    .m-text-5 {
-      font-size: clamp(18px, 1.7vw, 25px);
-      font-weight: 500;
-      line-height: 1.28;
-      letter-spacing: -0.015em;
-    }
-    .m-text-6 {
-      font-size: 13px;
-      font-weight: 600;
-      line-height: 1.3;
-      letter-spacing: 0.01em;
-    }
-    .m-text-7 {
-      font-family: var(--font-1);
-      font-size: clamp(21px, 2.05vw, 30px);
-      font-weight: 700;
-      line-height: 1.08;
-      letter-spacing: -0.025em;
-    }
-    .m-dot {
-      display: inline-block;
-      width: 0.19em;
-      height: 0.19em;
-      margin-left: 0.035em;
-      border-radius: var(--radius-2);
-      background: var(--color-3);
-      vertical-align: baseline;
-    }
-    .m-badge {
-      display: inline-flex;
-      align-items: center;
-      min-height: 30px;
-      padding: 0 12px;
-      border: 1px solid color-mix(in srgb, currentColor 32%, transparent);
-      border-radius: var(--radius-3);
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-      text-transform: uppercase;
-    }
-    .m-btn, .m-btn-2 {
-      position: relative;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 48px;
-      padding: 0 22px 0 18px;
-      border: 0;
-      border-radius: 999px;
-      overflow: hidden;
-      cursor: pointer;
-      transition: transform .2s ease;
-    }
-    .m-btn {
-      background: var(--color-1);
-      color: var(--color-2);
-      box-shadow: var(--shadow-3);
-    }
-    .m-btn-2 {
-      background: var(--color-2);
-      color: var(--color-1);
-      border: 1px solid color-mix(in srgb, currentColor 15%, transparent);
-    }
-    .m-btn::before, .m-btn-2::before {
-      content: "";
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: currentColor;
-      margin-right: 10px;
-      flex: none;
-    }
-    .m-btn:hover, .m-btn-2:hover { transform: translateY(-1px); }
-    .m-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.45em;
-      font-weight: 600;
-      line-height: 1.2;
-    }
-    .m-link__label { position: relative; }
-    .m-link__label::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: -2px;
-      height: 2px;
-      border-radius: var(--radius-2);
-      background: currentColor;
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform .3s ease;
-    }
-    .m-link:hover .m-link__label::after { transform: scaleX(1); }
-    .m-link__arrow {
-      width: 0.8em;
-      height: 0.8em;
-      stroke: currentColor;
-      fill: none;
-      stroke-width: 1.8;
-    }
-    .m-link-2 {
-      position: relative;
-      display: inline-block;
-      font-size: 15px;
-      font-weight: 500;
-    }
-    .m-link-2::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: -2px;
-      height: 1.5px;
-      background: currentColor;
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform .3s ease;
-    }
-    .m-link-2:hover::after { transform: scaleX(1); }
-    .m-field {
-      display: block;
-      width: 100%;
-      min-height: 48px;
-      padding: 10px 0;
-      background: transparent;
-      border: 0;
-      border-bottom: 1.5px solid color-mix(in srgb, currentColor 40%, transparent);
-      border-radius: 0;
-      color: var(--color-1);
-    }
-    textarea.m-field { min-height: 112px; resize: vertical; }
-    .m-surface { border-radius: var(--radius-1); background: var(--color-4); color: var(--color-1); }
-
-    #navigation {
-      position: fixed;
-      inset: 0 0 auto 0;
-      z-index: 40;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 14px var(--space-1);
-      pointer-events: none;
-    }
-    #navigation > * { pointer-events: auto; }
-    .nav__brand {
-      display: inline-flex;
-      align-items: baseline;
-      min-height: 48px;
-      padding: 9px 18px 0;
-      border-radius: var(--radius-3);
-      background: var(--color-1);
-      color: var(--color-2);
-      font-family: var(--font-1);
-      font-weight: 800;
-      letter-spacing: -0.05em;
-      text-transform: none;
-    }
-    .nav__links {
-      margin-inline: auto;
-      padding: 0 8px;
-      border-radius: var(--radius-3);
-      background: var(--color-1);
-      color: var(--color-2);
-    }
-    .nav__links ul { display: flex; }
-    .nav__links a { display: block; margin: 0 14px; padding-block: 14px; }
-    .nav__cta { box-shadow: var(--shadow-3); }
-    .nav__menu { display: none; }
-    .menu {
-      position: fixed;
-      inset: 0;
-      z-index: 60;
-      display: grid;
-      grid-template-rows: auto 1fr auto;
-      padding: 14px var(--space-1) 32px;
-      background: var(--color-1);
-      color: var(--color-2);
-      transform: translateY(-8px);
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity .2s ease, visibility .2s ease, transform .2s ease;
-    }
-    .menu[hidden] { display: none; }
-    .menu.open {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-    }
-    .menu__top { display: flex; justify-content: flex-end; }
-    .menu__list { align-self: center; display: grid; gap: 6px; }
-    .menu__list a {
-      display: inline-block;
-      font-family: var(--font-1);
-      font-size: clamp(42px, 13vw, 72px);
-      font-weight: 800;
-      line-height: 1;
-      letter-spacing: -0.05em;
-      text-decoration: none;
-    }
-    .menu__foot { color: var(--color-5); }
-
-    main { overflow-x: clip; }
-    section {
-      position: relative;
-      scroll-margin-top: 80px;
-    }
-
-    #hero {
-      position: relative;
-      z-index: 3;
-      display: grid;
-      grid-template-rows: 1fr auto;
-      min-height: max(92svh, 560px);
-      padding: 0 var(--space-1);
-      background: var(--color-1);
-      color: var(--color-2);
-      overflow: hidden;
-    }
-    .hero__intro {
-      display: grid;
-      justify-items: start;
-      align-content: start;
-      gap: 18px;
-      max-width: 32rem;
-      padding-top: clamp(92px, 14svh, 150px);
-    }
-    .hero__lead { color: var(--color-2); }
-    .hero__title {
-      position: static;
-      align-self: end;
-      padding-bottom: clamp(18px, 5svh, 52px);
-      white-space: nowrap;
-      color: var(--color-2);
-    }
-    .hero__stage {
-      position: absolute;
-      left: calc(50% - var(--ap) / 2);
-      top: calc(57% - var(--ap) / 2);
-      width: var(--ap);
-      height: var(--ap);
-      font-size: 16px;
-      line-height: 0;
-    }
-    #hero { --ap: min(74vw, 44svh); }
-    .hero__aperture {
-      position: absolute;
-      inset: 0;
-      display: block;
-      overflow: hidden;
-      border-radius: var(--radius-2);
-      background: var(--color-3);
-    }
-    .hero__img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: saturate(.65) contrast(1.08);
-      animation: hero-turn 46s linear infinite;
-    }
-    .hero__orbit {
-      position: absolute;
-      inset: -9%;
-      display: block;
-      border-radius: var(--radius-2);
-      border: 1px solid color-mix(in srgb, var(--color-2) 16%, transparent);
-      animation: hero-orbit 13s linear infinite;
-    }
-    .hero__moon {
-      position: absolute;
-      left: 50%;
-      top: 0;
-      width: 9%;
-      height: 9%;
-      margin: -4.5% 0 0 -4.5%;
-      border-radius: var(--radius-2);
-      background: var(--color-3);
-    }
-    @keyframes hero-turn { to { transform: rotate(360deg); } }
-    @keyframes hero-orbit { to { transform: rotate(360deg); } }
-
-    #statement {
-      position: relative;
-      padding: var(--space-2) var(--space-1) calc(var(--space-2) * 0.9);
-      background: var(--color-2);
-    }
-    .statement__title { font-size: clamp(40px, 8.7vw, 140px); }
-    .statement__line { display: block; }
-    .statement__body {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr);
-      gap: 48px;
-      margin-top: clamp(56px, 11vh, 120px);
-    }
-    .statement__lead { max-width: 36rem; }
-    .statement__index ul { display: grid; gap: 12px; }
-
-    #work {
-      position: relative;
-      color: var(--color-2);
-      background: var(--color-1);
-    }
-    .work__plate { position: absolute; inset: 0 0 -2px; background: var(--color-1); }
-    .work__stage {
-      position: relative;
-      display: grid;
-      grid-template-columns: minmax(0, 1fr);
-      align-content: start;
-      gap: clamp(28px, 4vh, 48px);
-      padding: var(--space-2) var(--space-1);
-    }
-    .work__head {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: end;
-      justify-content: space-between;
-      gap: 16px 40px;
-    }
-    .work__lead { max-width: 25rem; color: var(--color-5); }
-    .work__track {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr);
-      gap: 20px;
-    }
-    .case {
-      position: relative;
-      display: block;
-      overflow: hidden;
-      border-radius: var(--radius-1);
-      background: var(--color-7);
-      aspect-ratio: 4 / 5;
-    }
-    .case__media { position: absolute; inset: 0; overflow: hidden; }
-    .case__img {
-      position: absolute;
-      top: 0;
-      left: -7%;
-      width: 114%;
-      height: 100%;
-      object-fit: cover;
-      filter: saturate(.62) contrast(1.08);
-    }
-    .case__media::after {
-      content: "";
-      position: absolute;
-      inset: 40% 0 0;
-      background: linear-gradient(to top, color-mix(in srgb, var(--color-1) 82%, transparent), transparent);
-    }
-    .case__tag {
-      position: absolute;
-      left: clamp(18px, 2vw, 28px);
-      top: clamp(18px, 2vw, 28px);
-      background: color-mix(in srgb, var(--color-1) 62%, transparent);
-    }
-    .case__text {
-      position: absolute;
-      left: clamp(18px, 2.4vw, 36px);
-      right: clamp(18px, 2.4vw, 36px);
-      bottom: clamp(18px, 2.4vw, 36px);
-      display: grid;
-      gap: 10px;
-    }
-    .case__line { max-width: 30rem; color: var(--color-2); }
-
-    #again {
-      position: relative;
-      background: var(--color-1);
-      color: var(--color-2);
-    }
-    .again__stage { position: relative; padding: calc(var(--space-2) * 0.7) var(--space-1) var(--space-2); }
-    .again__head {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: end;
-      justify-content: space-between;
-      gap: 16px 40px;
-    }
-    .again__lead { max-width: 27rem; color: var(--color-5); }
-    .again__wheel {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr);
-      gap: 16px;
-      margin-top: clamp(40px, 7vh, 72px);
-    }
-    .partner__card {
-      position: relative;
-      display: block;
-      overflow: hidden;
-      border-radius: var(--radius-1);
-      background: var(--color-7);
-      aspect-ratio: 4 / 5;
-    }
-    .partner__img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: saturate(.62) contrast(1.08);
-    }
-    .partner__card::after {
-      content: "";
-      position: absolute;
-      inset: 35% 0 0;
-      background: linear-gradient(to top, color-mix(in srgb, var(--color-1) 86%, transparent), transparent);
-    }
-    .partner__text {
-      position: absolute;
-      z-index: 1;
-      left: clamp(16px, 1.8vw, 26px);
-      right: clamp(16px, 1.8vw, 26px);
-      bottom: clamp(16px, 1.8vw, 26px);
-      display: grid;
-      justify-items: start;
-      gap: 10px;
-    }
-
-    #capabilities {
-      position: relative;
-      padding: calc(var(--space-2) * 0.6) var(--space-1) var(--space-2);
-      background: var(--color-1);
-      color: var(--color-2);
-    }
-    .capabilities__head {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: end;
-      justify-content: space-between;
-      gap: 20px 40px;
-      margin-bottom: clamp(40px, 7vh, 80px);
-    }
-    .capabilities__lead { max-width: 27rem; color: var(--color-5); }
-    .capabilities__deck { display: grid; gap: 20px; }
-    .service {
-      position: relative;
-      display: grid;
-      grid-template-columns: minmax(0, 1fr);
-      gap: 24px;
-      padding: clamp(18px, 2.4vw, 34px);
-      overflow: hidden;
-      box-shadow: var(--shadow-1);
-    }
-    .service__text { display: flex; flex-direction: column; gap: 16px; }
-    .service__line { max-width: 30rem; color: var(--color-6); }
-    .service__tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 8px; color: var(--color-6); }
-    .service__media { overflow: hidden; border-radius: var(--radius-3); aspect-ratio: 16 / 10; }
-    .service__media img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.62) contrast(1.08); }
-
-    #method {
-      position: relative;
-      padding: var(--space-2) var(--space-1);
-      background: var(--color-2);
-    }
-    .method__head {
-      display: grid;
-      gap: 24px;
-      max-width: 60rem;
-      margin-bottom: clamp(48px, 9vh, 110px);
-    }
-    .method__lead { max-width: 34rem; }
-    .method__body {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 92px;
-      gap: 20px;
-      align-items: start;
-    }
-    .method__ring {
-      position: relative;
-      grid-column: 2;
-      grid-row: 1;
-      width: 100%;
-      aspect-ratio: 1;
-    }
-    .method__svg {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      overflow: visible;
-      rotate: -90deg;
-    }
-    .method__track { fill: none; stroke: color-mix(in srgb, var(--color-1) 14%, transparent); stroke-width: 1.5; }
-    .method__arc { fill: none; stroke: var(--color-3); stroke-width: 5; stroke-linecap: round; }
-    .method__station {
-      position: absolute;
-      left: calc(50% + 42.5% * var(--x));
-      top: calc(50% + 42.5% * var(--y));
-      width: 9%;
-      height: 9%;
-      margin: -4.5% 0 0 -4.5%;
-      border-radius: var(--radius-2);
-      background: var(--color-3);
-    }
-    .method__arm { position: absolute; inset: 7.5%; }
-    .method__runner {
-      position: absolute;
-      left: 50%;
-      top: 0;
-      width: 15%;
-      height: 15%;
-      margin: -7.5% 0 0 -7.5%;
-      border: 3px solid var(--color-3);
-      border-radius: var(--radius-2);
-      background: var(--color-2);
-    }
-    .method__steps {
-      grid-column: 1;
-      grid-row: 1;
-      display: grid;
-      gap: clamp(56px, 18vh, 170px);
-    }
-    .step { display: grid; gap: 14px; max-width: 34rem; }
-    .step__text { color: var(--color-6); }
-
-    #studio {
-      position: relative;
-      padding: var(--space-2) var(--space-1);
-      background: var(--color-2);
-    }
-    .studio__head { display: grid; gap: 28px; margin-bottom: clamp(48px, 8vh, 96px); }
-    .studio__lead { max-width: 42rem; }
-    .studio__collage {
-      position: relative;
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-    }
-    .shot {
-      position: relative;
-      overflow: hidden;
-      border-radius: var(--radius-3);
-      background: var(--color-4);
-    }
-    .shot img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.62) contrast(1.08); }
-    .shot--wide { grid-column: span 2; aspect-ratio: 3 / 2; }
-    .shot--tall { aspect-ratio: 3 / 4; }
-    .studio__roles {
-      grid-column: span 2;
-      display: grid;
-      align-content: start;
-      gap: 18px;
-      padding-top: 24px;
-    }
-    .studio__roles ul { display: grid; }
-    .role {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 4px 16px;
-      padding: 14px 0;
-      border-top: 1px solid color-mix(in srgb, var(--color-1) 16%, transparent);
-    }
-    .role__place { color: var(--color-6); }
-
-    #journal {
-      position: relative;
-      padding: calc(var(--space-2) * 0.6) var(--space-1) var(--space-2);
-      background: var(--color-2);
-    }
-    .journal__head { margin-bottom: clamp(40px, 7vh, 88px); }
-    .journal__body {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr);
-      gap: 28px;
-      align-items: start;
-    }
-    .journal__frame {
-      position: relative;
-      overflow: hidden;
-      border-radius: var(--radius-1);
-      background: var(--color-4);
-      aspect-ratio: 16 / 10;
-    }
-    .journal__shot {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: saturate(.62) contrast(1.08);
-    }
-    .journal__list { display: grid; gap: clamp(36px, 8vh, 72px); }
-    .story {
-      display: grid;
-      gap: 12px;
-      max-width: 36rem;
-      padding-top: 20px;
-      border-top: 1px solid color-mix(in srgb, var(--color-1) 16%, transparent);
-    }
-    .story__meta { color: var(--color-6); }
-    .story__meta span { color: var(--color-3); }
-    .story__text { color: var(--color-6); }
-
-    #faq {
-      position: relative;
-      display: grid;
-      gap: 40px;
-      padding: var(--space-2) var(--space-1);
-      background: var(--color-2);
-      border-top: 1px solid color-mix(in srgb, var(--color-1) 12%, transparent);
-    }
-    .faq__title { font-size: clamp(48px, 7.2vw, 116px); }
-    .faq__item { border-bottom: 1px solid color-mix(in srgb, var(--color-1) 16%, transparent); }
-    .faq__item:first-child { border-top: 1px solid color-mix(in srgb, var(--color-1) 16%, transparent); }
-    summary {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      padding: 22px 0;
-      cursor: pointer;
-      list-style: none;
-    }
-    summary::-webkit-details-marker { display: none; }
-    .faq__mark {
-      position: relative;
-      flex: none;
-      width: 34px;
-      height: 34px;
-      border: 1.5px solid var(--color-1);
-      border-radius: var(--radius-2);
-    }
-    .faq__mark::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      margin: auto;
-      width: 10px;
-      height: 10px;
-      border-radius: var(--radius-2);
-      background: var(--color-3);
-      transition: transform .45s ease;
-    }
-    details[open] .faq__mark::after { transform: scale(3.1); }
-    .faq__answer { max-width: 40rem; padding: 0 0 26px; color: var(--color-6); }
-
-    #contact {
-      position: relative;
-      padding: var(--space-2) var(--space-1);
-      background: var(--color-3);
-      color: var(--color-2);
-    }
-    .contact__title {
-      font-size: min(19vw, calc((100vw - 2 * var(--space-1)) / (var(--len) * 0.5)));
-      line-height: 0.86;
-      white-space: nowrap;
-    }
-    .contact__title .m-dot { background: var(--color-2); }
-    .contact__grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr);
-      gap: 48px;
-      margin-top: clamp(40px, 8vh, 88px);
-    }
-    .contact__info { display: grid; align-content: start; gap: 32px; }
-    .contact__lead { max-width: 30rem; }
-    .contact__direct { display: grid; gap: 10px; justify-items: start; }
-    .contact__form { display: grid; gap: 18px; padding: clamp(22px, 3vw, 40px); }
-    .contact__form label { display: grid; gap: 2px; color: var(--color-6); }
-    .contact__pair { display: grid; gap: 18px; }
-    .contact__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; padding-top: 6px; }
-    .contact__status { color: var(--color-1); }
-
-    #footer {
-      --ap: min(22vw, 34svh);
-      position: relative;
-      padding: max(clamp(24px, 4vh, 56px), calc(var(--ap) * .34)) var(--space-1) 24px;
-      background: var(--color-1);
-      color: var(--color-2);
-    }
-    .footer__bye {
-      position: relative;
-      padding-top: 0;
-      white-space: nowrap;
-      font-size: min(30vw, 36svh);
-    }
-    .footer__period {
-      position: relative;
-      display: inline-block;
-      width: 0.19em;
-      height: 0.19em;
-      margin-left: 0.035em;
-      vertical-align: baseline;
-    }
-    .footer__aperture {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: var(--ap);
-      height: var(--ap);
-      overflow: hidden;
-      border-radius: var(--radius-2);
-      background: var(--color-3);
-      transform-origin: bottom left;
-    }
-    .footer__img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: saturate(.65) contrast(1.08);
-      animation: footer-turn 46s linear infinite;
-    }
-    @keyframes footer-turn { to { transform: rotate(360deg); } }
-    .footer__grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 40px 24px;
-      margin-top: clamp(36px, 6vh, 64px);
-      padding-top: 28px;
-      border-top: 1px solid color-mix(in srgb, var(--color-2) 12%, transparent);
-    }
-    .footer__col { display: grid; align-content: start; gap: 6px; }
-    .footer__label { margin-bottom: 8px; color: var(--color-5); }
-    .footer__news { grid-column: 1 / -1; display: grid; gap: 14px; }
-    .footer__note { color: var(--color-5); }
-    .footer__legal {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 8px 24px;
-      margin-top: 40px;
-      color: var(--color-5);
-    }
-
-    @media (min-width: 700px) {
-      .work__track { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .case { aspect-ratio: 16 / 11; }
-      .case:last-child:nth-child(odd) { grid-column: span 2; aspect-ratio: 16 / 6.5; }
-    }
-    @media (min-width: 640px) {
-      .again__wheel { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .contact__pair { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
-    @media (min-width: 900px) {
-      #hero { --ap: min(36vw, 60svh); }
-      .hero__intro { padding-top: max(0px, calc(87svh - var(--ap))); }
-      .hero__title { font-size: min(calc((100vw - 2 * var(--space-1) - var(--ap) * 1.16) / 2.603), 43svh); }
-      .hero__stage { left: 0; top: auto; bottom: 0; }
-      .statement__body { grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); align-items: start; }
-      .statement__lead { font-size: clamp(24px, 2.35vw, 34px); line-height: 1.16; letter-spacing: -0.025em; }
-      .service { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(24px, 3vw, 48px); height: min(62svh, 560px); min-height: 400px; }
-      .service__media { aspect-ratio: auto; height: 100%; }
-      .method__body { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 7vw; }
-      .method__ring { grid-column: 1; width: min(100%, 50svh); justify-self: center; }
-      .method__steps { grid-column: 2; padding-block: 8svh 14svh; }
-      .studio__head { grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); align-items: end; column-gap: 6vw; }
-      .studio__collage { display: block; aspect-ratio: 1.85; }
-      .shot { position: absolute; }
-      .shot:nth-child(1) { left: 0; top: 0; width: 34%; }
-      .shot:nth-child(2) { left: 37%; top: 5.5%; width: 19%; }
-      .shot:nth-child(3) { left: 8%; top: 47%; width: 20%; }
-      .shot:nth-child(4) { left: 59%; top: 0; width: 41%; }
-      .shot:nth-child(5) { left: 31%; top: 53.3%; width: 36%; }
-      .studio__roles { position: absolute; left: 71%; top: 55%; width: 29%; padding-top: 0; }
-      .journal__body { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 7vw; }
-      .journal__frame { aspect-ratio: 4 / 5; }
-      .journal__list { gap: clamp(64px, 18vh, 170px); padding-block: 6svh 10svh; }
-      #faq { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 6vw; }
-      #contact .contact__grid { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 6vw; }
-      #footer { --ap: min(24vw, 34svh); }
-      .footer__bye { font-size: min(22vw, 34svh); }
-      .footer__grid { grid-template-columns: repeat(3, minmax(0, 1fr)) minmax(0, 2fr); }
-      .footer__news { grid-column: auto; }
-    }
-
-    @media (max-width: 899px) {
-      html { scroll-behavior: auto; }
-      body, main { overflow-x: hidden; }
-      #navigation { padding-top: 10px; }
-      .nav__links, .nav__cta { display: none; }
-      .nav__menu { display: inline-flex; }
-      #hero {
-        min-height: auto;
-        display: grid;
-        gap: 26px;
-        padding-top: 84px;
-        padding-bottom: 36px;
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TiTech Digital — Tecnologia e soluzioni digitali per le imprese</title>
+    <meta name="description" content="TiTech Digital è il partner tecnologico per imprese che vogliono progettare, sviluppare e far evolvere siti web, e-commerce, software su misura e automazioni.">
+    <meta name="theme-color" content="#101923">
+    <style>
+      :root {
+        --bg: #f7f8f6;
+        --bg-soft: #e9edf0;
+        --ink: #101923;
+        --ink-soft: #52606b;
+        --muted: #b7c0c9;
+        --primary: #315cdb;
+        --card: #25313c;
+        --white: #ffffff;
+        --shadow: rgba(16,25,35,0.18);
+        --radius: 18px;
+        --header-h: 82px;
+        --container: min(1180px, calc(100vw - 32px));
       }
-      .hero__intro {
-        padding-top: 0;
-        max-width: none;
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: var(--bg);
+        color: var(--ink);
+        line-height: 1.55;
+        overflow-x: hidden;
       }
-      .hero__title,
-      .contact__title,
-      .footer__bye {
-        white-space: normal;
-        line-height: 0.9;
+      body.is-loading { overflow: hidden; }
+
+      a { color: inherit; text-decoration: none; }
+      img { display: block; width: 100%; max-width: 100%; }
+      ul { list-style: none; padding: 0; margin: 0; }
+      h1, h2, h3, p { margin: 0; }
+
+      .shell {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity .5s ease, transform .5s ease;
       }
-      .hero__stage {
-        position: relative;
-        left: auto;
-        top: auto;
-        width: min(72vw, 320px);
-        height: min(72vw, 320px);
+      body.is-ready .shell {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .container {
+        width: var(--container);
         margin: 0 auto;
       }
-      .statement__title,
-      .work__head h2,
-      .again__head h2,
-      .capabilities__head h2,
-      .method__head h2,
-      .studio__head h2,
-      .journal__head h2,
-      .faq__title,
-      .contact__title {
-        font-size: clamp(38px, 15vw, 84px);
-      }
-      .statement__title { line-height: 0.9; }
-      .work__track,
-      .again__wheel,
-      .capabilities__deck,
-      .method__body,
-      .journal__body,
-      .contact__grid,
-      .footer__grid,
-      #faq {
-        grid-template-columns: 1fr;
+
+      .site-loader {
+        position: fixed;
+        inset: 0;
+        z-index: 2000;
         display: grid;
+        place-items: center;
+        background: radial-gradient(circle at top, rgba(49,92,219,.25), rgba(16,25,35,1) 42%);
+        transition: opacity .45s ease, visibility .45s ease;
       }
-      .case,
-      .partner__card,
-      .service,
-      .journal__frame,
-      .contact__form {
-        min-height: auto;
+      body.is-ready .site-loader {
+        opacity: 0;
+        visibility: hidden;
       }
-      .service { grid-template-columns: 1fr; height: auto; }
-      .method__ring { width: min(70vw, 260px); margin: 0 auto 24px; }
-      .method__body { display: grid; grid-template-columns: 1fr; }
-      .method__steps { grid-column: 1; }
-      .studio__collage { display: grid; grid-template-columns: 1fr; }
-      .shot,
-      .shot--wide,
-      .shot--tall,
-      .studio__roles { position: relative; width: 100%; left: auto; right: auto; top: auto; grid-column: auto; }
-      .faq__item summary { font-size: clamp(22px, 5vw, 30px); }
-      .contact__title { white-space: normal; }
-      .footer__grid { gap: 28px; }
-      .footer__news { grid-column: 1; }
-    }
+      .site-loader__ring {
+        position: relative;
+        width: 92px;
+        height: 92px;
+        border-radius: 50%;
+        border: 2px solid rgba(255,255,255,0.18);
+        border-top-color: var(--white);
+        border-right-color: var(--primary);
+        box-shadow: 0 0 30px rgba(49,92,219,0.45);
+        animation: spin 1.05s linear infinite;
+      }
+      .site-loader__ring::before,
+      .site-loader__ring::after {
+        content: "";
+        position: absolute;
+        inset: 14px;
+        border-radius: 50%;
+        border: 2px solid rgba(255,255,255,0.16);
+      }
+      .site-loader__ring::after {
+        inset: auto;
+        right: -6px;
+        top: 50%;
+        width: 12px;
+        height: 12px;
+        margin-top: -6px;
+        background: var(--primary);
+        border: 0;
+        box-shadow: 0 0 16px rgba(49,92,219,0.9);
+      }
+      @keyframes spin { to { transform: rotate(360deg); } }
 
-    @media (max-width: 640px) {
-      #navigation { gap: 8px; }
-      .nav__brand { padding-inline: 12px; }
-      .menu__list a { font-size: clamp(32px, 11vw, 56px); }
-      .m-btn, .m-btn-2 { width: 100%; justify-content: center; }
-      .contact__actions { display: grid; width: 100%; }
-      .footer__legal { display: grid; gap: 10px; }
-    }
-  </style>
-</head>
-<body class="m-text">
-  <a class="skip" href="#main" style="position:fixed;left:var(--space-1);top:12px;z-index:100;padding:10px 16px;border-radius:var(--radius-2);background:var(--color-2);color:var(--color-1);font-weight:700;display:inline-block;">Vai al contenuto</a>
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        backdrop-filter: blur(12px);
+        background: rgba(16,25,35,0.7);
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+      }
+      .topbar__inner {
+        width: var(--container);
+        margin: 0 auto;
+        min-height: var(--header-h);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 16px;
+        border-radius: 999px;
+        background: var(--ink);
+        color: var(--white);
+        font-weight: 800;
+        letter-spacing: -0.06em;
+      }
+      .brand__dot {
+        display: inline-block;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: var(--primary);
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        color: rgba(255,255,255,0.85);
+      }
+      .nav a {
+        font-size: 0.96rem;
+        opacity: .85;
+      }
+      .nav a:hover { opacity: 1; }
+      .nav__cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 46px;
+        padding: 0 18px;
+        border-radius: 999px;
+        background: var(--white);
+        color: var(--ink);
+        font-weight: 700;
+      }
 
-  <header id="navigation" class="nav">
-    <a class="nav__brand" href="#hero" aria-label="TiTech Digital, torna all'inizio">TiTech<span class="m-dot" aria-hidden="true"></span></a>
-    <nav class="nav__links" aria-label="Navigazione principale">
-      <ul>
-        <li><a class="m-link-2" href="#work">Soluzioni</a></li>
-        <li><a class="m-link-2" href="#capabilities">Competenze</a></li>
-        <li><a class="m-link-2" href="#method">Metodo</a></li>
-        <li><a class="m-link-2" href="#studio">TiTech</a></li>
-        <li><a class="m-link-2" href="#journal">Approccio</a></li>
-      </ul>
-    </nav>
-    <a class="m-btn nav__cta" href="#contact"><span class="m-btn__label">Parliamo del progetto</span></a>
-    <button class="m-btn-2 nav__menu" type="button" aria-expanded="false" aria-controls="menu"><span class="m-btn__label">Menu</span></button>
+      #hero {
+        background: linear-gradient(180deg, #101923 0%, #101923 62%, #f7f8f6 62%, #f7f8f6 100%);
+        color: var(--white);
+      }
+      .hero {
+        width: var(--container);
+        margin: 0 auto;
+        padding: 78px 0 110px;
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        align-items: center;
+        gap: 26px;
+      }
+      .hero__eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 14px;
+        border: 1px solid rgba(255,255,255,0.14);
+        border-radius: 999px;
+        color: rgba(255,255,255,0.8);
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: .12em;
+      }
+      .hero__eyebrow::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--primary);
+      }
+      .hero__title {
+        font-size: clamp(3.8rem, 9vw, 8rem);
+        letter-spacing: -.08em;
+        line-height: .86;
+        margin-top: 18px;
+      }
+      .hero__title span { display: block; }
+      .hero__copy {
+        font-size: clamp(1.08rem, 2vw, 1.35rem);
+        color: rgba(255,255,255,0.84);
+        max-width: 36rem;
+        margin-top: 24px;
+      }
+      .hero__actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 30px;
+      }
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 50px;
+        border-radius: 999px;
+        font-weight: 700;
+        padding: 0 20px;
+        border: 1px solid transparent;
+      }
+      .button--primary {
+        background: var(--white);
+        color: var(--ink);
+      }
+      .button--secondary {
+        background: transparent;
+        border-color: rgba(255,255,255,0.18);
+        color: var(--white);
+      }
+      .hero__visual {
+        position: relative;
+        display: grid;
+        place-items: center;
+      }
+      .hero__frame {
+        position: relative;
+        width: min(90vw, 500px);
+        aspect-ratio: 1;
+        border-radius: 28px;
+        overflow: hidden;
+        background: linear-gradient(135deg, rgba(49,92,219,0.45), rgba(16,25,35,0.9));
+        box-shadow: 0 35px 80px rgba(16,25,35,0.42);
+      }
+      .hero__frame::before,
+      .hero__frame::after {
+        content: "";
+        position: absolute;
+        inset: 9%;
+        border-radius: 50%;
+        border: 1px solid rgba(255,255,255,0.18);
+        animation: orbit 14s linear infinite;
+      }
+      .hero__frame::after {
+        inset: -8%;
+        animation-duration: 20s;
+      }
+      .hero__frame img {
+        width: 100%; height: 100%; object-fit: cover; filter: saturate(.7) contrast(1.08);
+        animation: drift 42s linear infinite;
+      }
+      @keyframes orbit { to { transform: rotate(360deg); } }
+      @keyframes drift { to { transform: rotate(360deg) scale(1.08); } }
 
-    <div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu" hidden>
-      <div class="menu__top">
-        <button class="m-btn-2 menu__close" type="button" aria-label="Chiudi il menu">Chiudi</button>
-      </div>
-      <ul class="menu__list">
-        <li><a href="#work">Soluzioni<span class="m-dot" aria-hidden="true"></span></a></li>
-        <li><a href="#capabilities">Competenze<span class="m-dot" aria-hidden="true"></span></a></li>
-        <li><a href="#method">Metodo<span class="m-dot" aria-hidden="true"></span></a></li>
-        <li><a href="#studio">TiTech<span class="m-dot" aria-hidden="true"></span></a></li>
-        <li><a href="#journal">Approccio<span class="m-dot" aria-hidden="true"></span></a></li>
-        <li><a href="#contact">Contatti<span class="m-dot" aria-hidden="true"></span></a></li>
-      </ul>
-      <p class="m-text menu__foot">Tecnologia e soluzioni digitali · Italia e mercati internazionali</p>
+      .section {
+        padding: 90px 0;
+      }
+      .section--light { background: var(--bg); }
+      .headline {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 18px 36px;
+        margin-bottom: 34px;
+      }
+      .headline__title {
+        font-size: clamp(2.3rem, 6vw, 5rem);
+        letter-spacing: -.06em;
+        line-height: .9;
+      }
+      .headline__lead {
+        max-width: 30rem;
+        color: var(--ink-soft);
+        font-size: 1.08rem;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px;
+      }
+      .card {
+        position: relative;
+        overflow: hidden;
+        border-radius: var(--radius);
+        background: var(--card);
+        color: var(--white);
+        min-height: 420px;
+        box-shadow: 0 18px 32px var(--shadow);
+        content-visibility: auto;
+        contain-intrinsic-size: 360px 440px;
+      }
+      .card__img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: saturate(.7) contrast(1.08);
+      }
+      .card__img-wrap::after {
+        content: "";
+        position: absolute;
+        inset: 40% 0 0;
+        background: linear-gradient(to top, rgba(16,25,35,0.82), transparent 62%);
+      }
+      .card__body {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        height: 100%;
+        padding: 20px 20px 22px;
+      }
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        justify-self: start;
+        min-height: 28px;
+        padding: 0 10px;
+        border-radius: 999px;
+        background: rgba(16,25,35,0.48);
+        border: 1px solid rgba(255,255,255,0.12);
+        font-size: 0.7rem;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+      }
+      .card__text {
+        align-self: end;
+        display: grid;
+        gap: 8px;
+      }
+      .card__name { font-size: clamp(1.9rem, 4vw, 2.7rem); letter-spacing: -.05em; }
+      .card__copy { color: rgba(255,255,255,0.8); }
+
+      .services {
+        display: grid;
+        gap: 18px;
+      }
+      .service {
+        display: grid;
+        grid-template-columns: 1.1fr 1.3fr;
+        gap: 30px;
+        align-items: center;
+        padding: 22px;
+        background: rgba(255,255,255,0.52);
+        border: 1px solid rgba(16,25,35,0.08);
+        border-radius: var(--radius);
+        box-shadow: 0 12px 28px rgba(16,25,35,0.04);
+      }
+      .service__media img {
+        height: 260px;
+        object-fit: cover;
+        border-radius: 14px;
+      }
+      .service__eyebrow {
+        font-size: .72rem;
+        letter-spacing: .12em;
+        text-transform: uppercase;
+        color: var(--primary);
+        font-weight: 700;
+      }
+      .service__title {
+        font-size: clamp(1.7rem, 3vw, 2.5rem);
+        letter-spacing: -.04em;
+        margin-top: 12px;
+      }
+      .service__copy {
+        color: var(--ink-soft);
+        margin-top: 16px;
+      }
+      .service__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 18px;
+      }
+      .service__tags span {
+        display: inline-flex;
+        align-items: center;
+        min-height: 32px;
+        padding: 0 10px;
+        border-radius: 999px;
+        background: rgba(49,92,219,0.08);
+        color: var(--ink);
+        font-size: 0.76rem;
+        font-weight: 600;
+      }
+
+      .cta {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 36px;
+        align-items: center;
+        padding: 32px;
+        border-radius: 28px;
+        background: linear-gradient(135deg, var(--ink) 0%, var(--primary) 110%);
+        color: var(--white);
+      }
+      .cta__title {
+        font-size: clamp(2.2rem, 6vw, 4.5rem);
+        letter-spacing: -.06em;
+        line-height: .9;
+      }
+      .cta__copy {
+        margin-top: 18px;
+        color: rgba(255,255,255,0.84);
+      }
+      .cta__actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 12px;
+      }
+      .button--light {
+        background: var(--white);
+        color: var(--ink);
+      }
+      .button--dark {
+        background: rgba(255,255,255,0.06);
+        color: var(--white);
+        border-color: rgba(255,255,255,0.18);
+      }
+
+      footer {
+        background: #101923;
+        color: rgba(255,255,255,0.8);
+        padding: 28px 0 44px;
+      }
+      .footer__inner {
+        width: var(--container);
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+
+      @media (max-width: 920px) {
+        .hero {
+          grid-template-columns: 1fr;
+          padding-top: 54px;
+        }
+        .grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .cta {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 680px) {
+        .nav {
+          display: none;
+        }
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        .service {
+          grid-template-columns: 1fr;
+        }
+        .headline {
+          display: grid;
+        }
+        .cta__actions {
+          justify-content: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="site-loader" aria-live="polite" aria-label="Caricamento pagina">
+      <div class="site-loader__ring" aria-hidden="true"></div>
     </div>
-  </header>
 
-  <main id="main">
-    <section id="hero" aria-labelledby="hero-title">
-      <div class="hero__intro">
-        <p class="m-text-5 hero__lead">TiTech Digital progetta e sviluppa soluzioni digitali affidabili: dalla presenza online ai software che rendono più efficaci i processi aziendali.</p>
-        <a class="m-link hero__link" href="#capabilities"><span class="m-link__label">Scopri le competenze</span><svg class="m-link__arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
-      </div>
-      <h1 class="m-text-2 hero__title" id="hero-title" style="--len:6"><span>TiTech</span><span class="m-dot" aria-hidden="true"></span></h1>
-      <div class="hero__stage" aria-hidden="true">
-        <span class="hero__aperture"><img class="hero__img" src="https://images.pexels.com/photos/28428587/pexels-photo-28428587.jpeg?auto=compress&cs=tinysrgb&w=1200&h=1000&fit=crop" alt=""></span>
-        <span class="hero__orbit"></span>
-        <span class="hero__moon"></span>
-      </div>
-    </section>
+    <div class="shell">
+      <header class="topbar">
+        <div class="topbar__inner">
+          <a href="#hero" class="brand" aria-label="TiTech Digital home">
+            <span>TiTech</span>
+            <span class="brand__dot" aria-hidden="true"></span>
+          </a>
 
-    <section id="statement" aria-labelledby="statement-title">
-      <h2 class="m-text-3 statement__title" id="statement-title"><span class="statement__line">Tecnologia</span><span class="statement__line">che muove il business<span class="m-dot" aria-hidden="true"></span></span></h2>
-      <div class="statement__body">
-        <p class="m-text-5 statement__lead">Un prodotto digitale efficace nasce da obiettivi chiari, scelte tecniche solide e attenzione alle persone che lo useranno. Affianchiamo aziende e imprese con soluzioni pensate per crescere nel tempo.</p>
-        <nav class="statement__index" aria-label="In questa pagina">
-          <ul>
-            <li><a class="m-link" href="#work"><span class="m-link__label">Soluzioni</span><svg class="m-link__arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></li>
-            <li><a class="m-link" href="#capabilities"><span class="m-link__label">Competenze</span><svg class="m-link__arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></li>
-            <li><a class="m-link" href="#method"><span class="m-link__label">Metodo</span><svg class="m-link__arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></li>
-            <li><a class="m-link" href="#studio"><span class="m-link__label">TiTech Digital</span><svg class="m-link__arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></li>
-            <li><a class="m-link" href="#journal"><span class="m-link__label">Approccio</span><svg class="m-link__arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></li>
-            <li><a class="m-link" href="#contact"><span class="m-link__label">Contattaci</span><svg class="m-link__arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></li>
-          </ul>
-        </nav>
-      </div>
-    </section>
-
-    <section id="work" aria-labelledby="work-title">
-      <div class="work__plate" aria-hidden="true"></div>
-      <div class="work__stage">
-        <div class="work__head">
-          <h2 class="m-text-3" id="work-title">Cosa costruiamo<span class="m-dot" aria-hidden="true"></span></h2>
-          <p class="m-text-5 work__lead">Prodotti digitali pensati per risolvere esigenze concrete, integrarsi nei processi e restare pronti a evolvere.</p>
+          <nav class="nav" aria-label="Navigazione principale">
+            <a href="#work">Soluzioni</a>
+            <a href="#services">Servizi</a>
+            <a href="#method">Metodo</a>
+            <a href="#contact">Contatti</a>
+            <a href="#contact" class="nav__cta">Parliamo del progetto</a>
+          </nav>
         </div>
-        <div class="work__window">
-          <ul class="work__track">
-            <li class="case">
-              <div class="case__media"><img class="case__img" src="https://images.pexels.com/photos/37880101/pexels-photo-37880101.jpeg?auto=compress&cs=tinysrgb&w=1200&h=1000&fit=crop" alt=""></div>
-              <span class="m-badge case__tag">Presenza digitale</span>
-              <div class="case__text"><h3 class="m-text-4 case__name">Siti web</h3><p class="m-text-5 case__line">Esperienze web su misura, veloci e accessibili, costruite intorno agli obiettivi dell’impresa.</p></div>
-            </li>
-            <li class="case">
-              <div class="case__media"><img class="case__img" src="https://images.pexels.com/photos/6207736/pexels-photo-6207736.jpeg?auto=compress&cs=tinysrgb&w=1200&h=1000&fit=crop" alt=""></div>
-              <span class="m-badge case__tag">Vendita online</span>
-              <div class="case__text"><h3 class="m-text-4 case__name">E-commerce</h3><p class="m-text-5 case__line">Negozi digitali che semplificano catalogo, acquisto e gestione degli ordini.</p></div>
-            </li>
-            <li class="case">
-              <div class="case__media"><img class="case__img" src="https://images.pexels.com/photos/36496927/pexels-photo-36496927.jpeg?auto=compress&cs=tinysrgb&w=1200&h=1000&fit=crop" alt=""></div>
-              <span class="m-badge case__tag">Strumenti per il business</span>
-              <div class="case__text"><h3 class="m-text-4 case__name">Applicazioni web</h3><p class="m-text-5 case__line">Piattaforme, dashboard e strumenti digitali modellati sui flussi di lavoro reali.</p></div>
-            </li>
-            <li class="case">
-              <div class="case__media"><img class="case__img" src="https://images.pexels.com/photos/8386437/pexels-photo-8386437.jpeg?auto=compress&cs=tinysrgb&w=1200&h=1000&fit=crop" alt=""></div>
-              <span class="m-badge case__tag">Processi intelligenti</span>
-              <div class="case__text"><h3 class="m-text-4 case__name">AI e automazione</h3><p class="m-text-5 case__line">Automazioni e strumenti intelligenti che riducono le attività ripetitive e migliorano i processi.</p></div>
-            </li>
-            <li class="case">
-              <div class="case__media"><img class="case__img" src="https://images.pexels.com/photos/17489153/pexels-photo-17489153.jpeg?auto=compress&cs=tinysrgb&w=1200&h=1000&fit=crop" alt=""></div>
-              <span class="m-badge case__tag">Evoluzione continua</span>
-              <div class="case__text"><h3 class="m-text-4 case__name">Supporto continuo</h3><p class="m-text-5 case__line">Manutenzione, ottimizzazione e assistenza tecnica per far crescere il prodotto nel tempo.</p></div>
-            </li>
-          </ul>
+      </header>
+
+      <main>
+        <section id="hero">
+          <div class="hero">
+            <div>
+              <span class="hero__eyebrow">Technology for business</span>
+              <h1 class="hero__title">
+                <span>TiTech</span>
+                <span>Digital</span>
+              </h1>
+              <p class="hero__copy">Progettiamo siti web, sistemi e automazioni che aiutano le aziende a vendere di più, lavorare meglio e crescere senza frizioni.</p>
+              <div class="hero__actions">
+                <a href="#services" class="button button--primary">Scopri i servizi</a>
+                <a href="#contact" class="button button--secondary">Chiedi un preventivo</a>
+              </div>
+            </div>
+
+            <div class="hero__visual" aria-hidden="true">
+              <div class="hero__frame">
+                <img class="preload-image" src="https://images.pexels.com/photos/28428587/pexels-photo-28428587.jpeg?auto=compress&cs=tinysrgb&w=1200&h=1200&fit=crop" alt="">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="work" class="section section--light">
+          <div class="container">
+            <div class="headline">
+              <h2 class="headline__title">Cosa costruiamo</h2>
+              <p class="headline__lead">Esperienze digitali progettate per essere veloci, efficaci e facili da usare sia su desktop sia su mobile.</p>
+            </div>
+
+            <div class="grid">
+              <article class="card">
+                <div class="card__img-wrap">
+                  <img class="card__img preload-image" loading="lazy" decoding="async" src="https://images.pexels.com/photos/37880101/pexels-photo-37880101.jpeg?auto=compress&cs=tinysrgb&w=1200&h=1000&fit=crop" alt="Siti web premium">
+                </div>
+                <div class="card__body">
+                  <span class="tag">Presenza digitale</span>
+                  <div class="card__text">
+                    <h3 class="card__name">Siti web</h3>
+                    <p class="card__copy">Pagine veloci, moderne e ottimizzate per convertire visitatori in clienti.</p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="card">
+                <div class="card__img-wrap">
+                  <img class="card__img preload-image" loading="lazy" decoding="async" src="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1200&h=1000&fit=crop" alt="E-commerce e business">
+                </div>
+                <div class="card__body">
+                  <span class="tag">E-commerce</span>
+                  <div class="card__text">
+                    <h3 class="card__name">Store</h3>
+                    <p class="card__copy">Cataloghi facili da navigare, checkout semplici e flussi pensati per vendere meglio.</p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="card">
+                <div class="card__img-wrap">
+                  <img class="card__img preload-image" loading="lazy" decoding="async" src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1200&h=1000&fit=crop" alt="Software customizzato">
+                </div>
+                <div class="card__body">
+                  <span class="tag">Software</span>
+                  <div class="card__text">
+                    <h3 class="card__name">Automazioni</h3>
+                    <p class="card__copy">Processi semplificati e strumenti interni per ridurre tempi, errori e sprechi.</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="services" class="section">
+          <div class="container">
+            <div class="headline">
+              <h2 class="headline__title">Competenze</h2>
+              <p class="headline__lead">Un approccio pratico: chiaro, misurabile e costruito intorno ai risultati di business.</p>
+            </div>
+
+            <div class="services">
+              <article class="service">
+                <div class="service__media">
+                  <img class="preload-image" loading="lazy" decoding="async" src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop" alt="Strategia digitale">
+                </div>
+                <div class="service__content">
+                  <div class="service__eyebrow">Strategy</div>
+                  <h3 class="service__title">Identità digitale e posizionamento</h3>
+                  <p class="service__copy">Definiamo la proposta, la struttura del messaggio e i contenuti giusti per rendere il brand chiaro, credibile e coerente su tutti i touchpoint.</p>
+                  <div class="service__tags">
+                    <span>Brand</span>
+                    <span>UX strategy</span>
+                    <span>Copywriting</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="service">
+                <div class="service__media">
+                  <img class="preload-image" loading="lazy" decoding="async" src="https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop" alt="Sviluppo web">
+                </div>
+                <div class="service__content">
+                  <div class="service__eyebrow">Build</div>
+                  <h3 class="service__title">Sviluppo front-end e performance</h3>
+                  <p class="service__copy">Costruiamo esperienze leggere, accessibili e veloci: ottimizzate per mobile, SEO e ogni dispositivo reale che i clienti usano tutti i giorni.</p>
+                  <div class="service__tags">
+                    <span>Performance</span>
+                    <span>Responsive</span>
+                    <span>Accessibility</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="service">
+                <div class="service__media">
+                  <img class="preload-image" loading="lazy" decoding="async" src="https://images.pexels.com/photos/5911717/pexels-photo-5911717.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop" alt="Automazioni e sistemi">
+                </div>
+                <div class="service__content">
+                  <div class="service__eyebrow">Automation</div>
+                  <h3 class="service__title">Automazione e sistemi integrati</h3>
+                  <p class="service__copy">Connettiamo i tool che usi già per eliminare passaggi manuali, semplificare il lavoro del team e rendere i processi più affidabili.</p>
+                  <div class="service__tags">
+                    <span>CRM</span>
+                    <span>Integrations</span>
+                    <span>Workflows</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="method" class="section section--light">
+          <div class="container">
+            <div class="headline">
+              <h2 class="headline__title">Metodo</h2>
+              <p class="headline__lead">Lavoriamo a piccoli passi chiari: comprensione, prototipazione, sviluppo e ottimizzazione continua.</p>
+            </div>
+
+            <div class="cta">
+              <div>
+                <h3 class="cta__title">Prepariamo il progetto per avere velocità reale fin da subito.</h3>
+                <p class="cta__copy">Dal briefing alla pubblicazione, valiamo ogni scelta in funzione del risultato finale: più velocità, più trasparenza e meno attrito.</p>
+              </div>
+              <div class="cta__actions">
+                <a href="#contact" class="button button--light">Parliamo del tuo caso</a>
+                <a href="#work" class="button button--dark">Vedi i risultati</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer id="contact">
+        <div class="footer__inner">
+          <div>
+            <strong>TiTech Digital</strong>
+          </div>
+          <div>Progetti digitali per aziende in crescita</div>
+          <a href="mailto:hello@titechdigital.it">hello@titechdigital.it</a>
         </div>
-      </div>
-    </section>
-
-    <section id="again" aria-labelledby="again-title">
-      <div class="again__stage">
-        <div class="again__head">
-          <h2 class="m-text-3" id="again-title">Progettato per evolvere<span class="m-dot" aria-hidden="true"></span></h2>
-          <p class="m-text-5 again__lead">Una soluzione digitale deve funzionare nel presente e poter cambiare con l’impresa. Per questo progettiamo pensando anche a ciò che verrà.</p>
-        </div>
-        <ul class="again__wheel">
-          <li class="partner">
-            <div class="partner__card"><img class="partner__img" src="https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=900&h=1125&fit=crop" alt=""><div class="partner__text"><span class="m-badge partner__year">01 · Qualità</span><h3 class="m-text-4 partner__name">Affidabilità</h3><p class="m-text partner__line">Codice curato, test e strutture progettate per durare.</p></div></div>
-          </li>
-          <li class="partner">
-            <div class="partner__card"><img class="partner__img" src="https://images.pexels.com/photos/4508751/pexels-photo-4508751.jpeg?auto=compress&cs=tinysrgb&w=900&h=1125&fit=crop" alt=""><div class="partner__text"><span class="m-badge partner__year">02 · Struttura</span><h3 class="m-text-4 partner__name">Scalabilità</h3><p class="m-text partner__line">Architetture ordinate e pronte a crescere con i dati e gli utenti.</p></div></div>
-          </li>
-          <li class="partner">
-            <div class="partner__card"><img class="partner__img" src="https://images.pexels.com/photos/4973899/pexels-photo-4973899.jpeg?auto=compress&cs=tinysrgb&w=900&h=1125&fit=crop" alt=""><div class="partner__text"><span class="m-badge partner__year">03 · Protezione</span><h3 class="m-text-4 partner__name">Sicurezza</h3><p class="m-text partner__line">Pratiche tecniche e processi pensati per usare dati e sistemi in modo responsabile.</p></div></div>
-          </li>
-          <li class="partner">
-            <div class="partner__card"><img class="partner__img" src="https://images.pexels.com/photos/6424583/pexels-photo-6424583.jpeg?auto=compress&cs=tinysrgb&w=900&h=1125&fit=crop" alt=""><div class="partner__text"><span class="m-badge partner__year">04 · Continuità</span><h3 class="m-text-4 partner__name">Manutenibilità</h3><p class="m-text partner__line">Soluzioni chiare da aggiornare, far evolvere e mantenere nel tempo.</p></div></div>
-          </li>
-          <li class="partner">
-            <div class="partner__card"><img class="partner__img" src="https://images.pexels.com/photos/4682187/pexels-photo-4682187.jpeg?auto=compress&cs=tinysrgb&w=900&h=1125&fit=crop" alt=""><div class="partner__text"><span class="m-badge partner__year">05 · Connessione</span><h3 class="m-text-4 partner__name">Integrazione</h3><p class="m-text partner__line">Dati e strumenti che lavorano insieme con processi e persone.</p></div></div>
-          </li>
-          <li class="partner">
-            <div class="partner__card"><img class="partner__img" src="https://images.pexels.com/photos/106344/pexels-photo-106344.jpeg?auto=compress&cs=tinysrgb&w=900&h=1125&fit=crop" alt=""><div class="partner__text"><span class="m-badge partner__year">06 · Evoluzione</span><h3 class="m-text-4 partner__name">Miglioramento</h3><p class="m-text partner__line">Misuriamo l’uso, raccogliamo feedback e miglioriamo il prodotto.</p></div></div>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="capabilities" aria-labelledby="capabilities-title">
-      <div class="capabilities__head">
-        <h2 class="m-text-3" id="capabilities-title">Competenze digitali<span class="m-dot" aria-hidden="true"></span></h2>
-        <p class="m-text-5 capabilities__lead">Design e tecnologia lavorano insieme per trasformare esigenze operative in strumenti digitali solidi.</p>
-      </div>
-      <ol class="capabilities__deck">
-        <li class="service m-surface">
-          <div class="service__text">
-            <h3 class="m-text-4">Siti web ed e-commerce</h3>
-            <p class="m-text-5 service__line">Siti professionali e negozi online sviluppati su misura, con attenzione a prestazioni, accessibilità e gestione.</p>
-            <ul class="service__tags"><li class="m-badge">Sviluppo web</li><li class="m-badge">E-commerce</li><li class="m-badge">Landing page</li><li class="m-badge">Redesign</li></ul>
-          </div>
-          <div class="service__media"><img src="https://images.pexels.com/photos/12899156/pexels-photo-12899156.jpeg?auto=compress&cs=tinysrgb&w=1200&h=900&fit=crop" alt=""></div>
-        </li>
-        <li class="service m-surface">
-          <div class="service__text">
-            <h3 class="m-text-4">Design e identità digitale</h3>
-            <p class="m-text-5 service__line">Identità visive, interfacce e prodotti digitali progettati per essere chiari, coerenti e riconoscibili.</p>
-            <ul class="service__tags"><li class="m-badge">Brand identity</li><li class="m-badge">UI/UX</li><li class="m-badge">Design di prodotto</li><li class="m-badge">Direzione creativa</li></ul>
-          </div>
-          <div class="service__media"><img src="https://images.pexels.com/photos/3471423/pexels-photo-3471423.jpeg?auto=compress&cs=tinysrgb&w=1200&h=900&fit=crop" alt=""></div>
-        </li>
-        <li class="service m-surface">
-          <div class="service__text">
-            <h3 class="m-text-4">Software e automazione</h3>
-            <p class="m-text-5 service__line">Piattaforme web, dashboard, API e automazioni per semplificare attività e processi aziendali.</p>
-            <ul class="service__tags"><li class="m-badge">Web app</li><li class="m-badge">Dashboard</li><li class="m-badge">API e integrazioni</li><li class="m-badge">AI e automazione</li></ul>
-          </div>
-          <div class="service__media"><img src="https://images.pexels.com/photos/12899191/pexels-photo-12899191.jpeg?auto=compress&cs=tinysrgb&w=1200&h=900&fit=crop" alt=""></div>
-        </li>
-        <li class="service m-surface">
-          <div class="service__text">
-            <h3 class="m-text-4">SEO e crescita digitale</h3>
-            <p class="m-text-5 service__line">Basi tecniche e interventi SEO per migliorare indicizzazione, reperibilità e qualità dell’esperienza.</p>
-            <ul class="service__tags"><li class="m-badge">SEO tecnica</li><li class="m-badge">Performance</li><li class="m-badge">Contenuti</li><li class="m-badge">CRO</li></ul>
-          </div>
-          <div class="service__media"><img src="https://images.pexels.com/photos/20206391/pexels-photo-20206391.jpeg?auto=compress&cs=tinysrgb&w=1200&h=900&fit=crop" alt=""></div>
-        </li>
-        <li class="service m-surface">
-          <div class="service__text">
-            <h3 class="m-text-4">Supporto continuo</h3>
-            <p class="m-text-5 service__line">Manutenzione, hosting e ottimizzazione per accompagnare il prodotto durante tutto il suo ciclo di vita.</p>
-            <ul class="service__tags"><li class="m-badge">Manutenzione</li><li class="m-badge">Hosting</li><li class="m-badge">Assistenza</li><li class="m-badge">Partnership</li></ul>
-          </div>
-          <div class="service__media"><img src="https://images.pexels.com/photos/7988081/pexels-photo-7988081.jpeg?auto=compress&cs=tinysrgb&w=1200&h=900&fit=crop" alt=""></div>
-        </li>
-      </ol>
-    </section>
-
-    <section id="method" aria-labelledby="method-title">
-      <div class="method__head">
-        <h2 class="m-text-3" id="method-title">Dal problema al prodotto<span class="m-dot" aria-hidden="true"></span></h2>
-        <p class="m-text-5 method__lead">Un processo trasparente mantiene allineati obiettivi, decisioni tecniche e risultati. Ogni fase ha uno scopo chiaro e prepara la successiva evoluzione del prodotto.</p>
-      </div>
-      <div class="method__body">
-        <div class="method__ring" aria-hidden="true">
-          <svg class="method__svg" viewBox="0 0 400 400">
-            <circle class="method__track" cx="200" cy="200" r="170"></circle>
-            <circle class="method__arc" cx="200" cy="200" r="170" pathLength="1" stroke-dasharray="0.08 1" stroke-dashoffset="0.12"></circle>
-          </svg>
-          <span class="method__station" style="--x:0;--y:-1"></span>
-          <span class="method__station" style="--x:1;--y:0"></span>
-          <span class="method__station" style="--x:0;--y:1"></span>
-          <span class="method__station" style="--x:-1;--y:0"></span>
-          <span class="method__arm"><span class="method__runner"></span></span>
-        </div>
-        <ol class="method__steps">
-          <li class="step"><h3 class="m-text-4">Analisi</h3><p class="m-text-5 step__text">Definiamo obiettivi, utenti, vincoli e sistemi esistenti prima di scegliere la direzione tecnica.</p></li>
-          <li class="step"><h3 class="m-text-4">Progettazione</h3><p class="m-text-5 step__text">Diamo forma all’esperienza e all’architettura, condividendo priorità e scelte con il cliente.</p></li>
-          <li class="step"><h3 class="m-text-4">Sviluppo</h3><p class="m-text-5 step__text">Realizziamo la soluzione, verifichiamo le funzionalità e prepariamo un rilascio affidabile.</p></li>
-          <li class="step"><h3 class="m-text-4">Evoluzione</h3><p class="m-text-5 step__text">Osserviamo l’utilizzo, raccogliamo nuove esigenze e pianifichiamo i miglioramenti successivi.</p></li>
-        </ol>
-      </div>
-    </section>
-
-    <section id="studio" aria-labelledby="studio-title">
-      <div class="studio__head">
-        <h2 class="m-text-3" id="studio-title">Tecnologia, metodo, responsabilità<span class="m-dot" aria-hidden="true"></span></h2>
-        <p class="m-text-5 studio__lead">TiTech Digital è un partner tecnologico con base in Italia e un orizzonte internazionale. Affianchiamo le imprese con un approccio diretto, preciso e sempre orientato a risultati misurabili.</p>
-      </div>
-      <div class="studio__collage">
-        <figure class="shot shot--wide"><img src="https://images.pexels.com/photos/6804068/pexels-photo-6804068.jpeg?auto=compress&cs=tinysrgb&w=1200&h=933&fit=crop" alt=""></figure>
-        <figure class="shot shot--tall"><img src="https://images.pexels.com/photos/3861959/pexels-photo-3861959.jpeg?auto=compress&cs=tinysrgb&w=900&h=1200&fit=crop" alt=""></figure>
-        <figure class="shot shot--tall"><img src="https://images.pexels.com/photos/7988089/pexels-photo-7988089.jpeg?auto=compress&cs=tinysrgb&w=900&h=1200&fit=crop" alt=""></figure>
-        <figure class="shot shot--wide"><img src="https://images.pexels.com/photos/7988114/pexels-photo-7988114.jpeg?auto=compress&cs=tinysrgb&w=1200&h=933&fit=crop" alt=""></figure>
-        <figure class="shot shot--wide"><img src="https://images.unsplash.com/photo-1623652653308-d49d335c92eb?auto=format&fit=crop&w=1200&q=80" alt=""></figure>
-        <div class="studio__roles">
-          <h3 class="m-text-7">Competenze integrate<span class="m-dot" aria-hidden="true"></span></h3>
-          <ul>
-            <li class="role"><span class="m-text-7">Progettazione</span><span class="m-text-6 role__place">UI/UX · prodotto</span></li>
-            <li class="role"><span class="m-text-7">Ingegneria</span><span class="m-text-6 role__place">Web · software</span></li>
-            <li class="role"><span class="m-text-7">Strategia digitale</span><span class="m-text-6 role__place">Analisi · evoluzione</span></li>
-          </ul>
-          <a class="m-link" href="#contact"><span class="m-link__label">Parliamo del tuo progetto</span><svg class="m-link__arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
-        </div>
-      </div>
-    </section>
-
-    <section id="journal" aria-labelledby="journal-title">
-      <div class="journal__head">
-        <h2 class="m-text-3" id="journal-title">Il nostro approccio<span class="m-dot" aria-hidden="true"></span></h2>
-      </div>
-      <div class="journal__body">
-        <div class="journal__frame">
-          <img class="journal__shot" src="https://images.pexels.com/photos/256502/pexels-photo-256502.jpeg?auto=compress&cs=tinysrgb&w=1000&h=1250&fit=crop" alt="">
-          <img class="journal__shot" src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1000&h=1250&fit=crop" alt="">
-          <img class="journal__shot" src="https://images.pexels.com/photos/4497197/pexels-photo-4497197.jpeg?auto=compress&cs=tinysrgb&w=1000&h=1250&fit=crop" alt="">
-        </div>
-        <ol class="journal__list">
-          <li class="story"><p class="m-text-6 story__meta"><span>01 · Fondamenta</span></p><h3 class="m-text-7">La qualità inizia dall’architettura</h3><p class="m-text story__text">Struttura, performance e scalabilità non sono dettagli secondari: sono il punto di partenza di ogni soluzione efficace.</p></li>
-          <li class="story"><p class="m-text-6 story__meta"><span>02 · Esperienza</span></p><h3 class="m-text-7">Un’interfaccia deve essere utile prima che bella</h3><p class="m-text story__text">Costruiamo esperienze chiare, accessibili e coerenti con i bisogni reali delle persone che le usano ogni giorno.</p></li>
-          <li class="story"><p class="m-text-6 story__meta"><span>03 · Integrazione</span></p><h3 class="m-text-7">Il software ha valore quando si inserisce nel lavoro</h3><p class="m-text story__text">Le soluzioni funzionano davvero quando si integrano con i dati, i processi e gli strumenti già in uso nell’azienda.</p></li>
-          <li class="story"><p class="m-text-6 story__meta"><span>04 · Continuità</span></p><h3 class="m-text-7">Un rilascio è l’inizio della manutenzione</h3><p class="m-text story__text">Documentazione, monitoraggio e aggiornamenti costanti sono la base per far crescere il prodotto nel tempo.</p></li>
-        </ol>
-      </div>
-    </section>
-
-    <section id="faq" aria-labelledby="faq-title">
-      <h2 class="m-text-3 faq__title" id="faq-title">Domande frequenti<span class="m-dot" aria-hidden="true"></span></h2>
-      <div class="faq__list">
-        <details class="faq__item" open>
-          <summary class="m-text-7">Che tipo di soluzioni realizzate?<span class="faq__mark" aria-hidden="true"></span></summary>
-          <p class="m-text faq__answer">Siti web, e-commerce, applicazioni web, automazioni, integrazioni e soluzioni digitali per migliorare processi e vendite.</p>
-        </details>
-        <details class="faq__item">
-          <summary class="m-text-7">Con quali imprese lavorate?<span class="faq__mark" aria-hidden="true"></span></summary>
-          <p class="m-text faq__answer">Lavoriamo con PMI, aziende in crescita e realtà che hanno bisogno di trasformare il digitale in un vantaggio concreto.</p>
-        </details>
-        <details class="faq__item">
-          <summary class="m-text-7">Come inizia una collaborazione?<span class="faq__mark" aria-hidden="true"></span></summary>
-          <p class="m-text faq__answer">Partiamo da un confronto sul problema, sulle esigenze e sull’obiettivo da raggiungere, poi definiamo la direzione più adatta.</p>
-        </details>
-        <details class="faq__item">
-          <summary class="m-text-7">Potete integrarvi con i sistemi già usati?<span class="faq__mark" aria-hidden="true"></span></summary>
-          <p class="m-text faq__answer">Sì. Valutiamo le tecnologie già presenti e riusciamo a costruire integrazioni che riducano frizione e aumentino efficienza.</p>
-        </details>
-        <details class="faq__item">
-          <summary class="m-text-7">Come definite tempi e costi?<span class="faq__mark" aria-hidden="true"></span></summary>
-          <p class="m-text faq__answer">Dopo aver chiarito obiettivi, contesto e priorità, definiamo un piano realistico con tempi, fasi e investimento.</p>
-        </details>
-        <details class="faq__item">
-          <summary class="m-text-7">Cosa succede dopo il lancio?<span class="faq__mark" aria-hidden="true"></span></summary>
-          <p class="m-text faq__answer">Il lancio non è la fine: è il punto di partenza per osservare, migliorare, assistere e far crescere la soluzione nel tempo.</p>
-        </details>
-      </div>
-    </section>
-
-    <section id="contact" aria-labelledby="contact-title">
-      <h2 class="m-text-3 contact__title" id="contact-title">Parliamone<span class="m-dot" aria-hidden="true"></span></h2>
-      <div class="contact__grid">
-        <div class="contact__info">
-          <p class="m-text-5 contact__lead">Descrivi l’esigenza e il contesto della tua impresa. TiTech Digital progetta soluzioni digitali in linea con gli obiettivi e i processi aziendali.</p>
-          <div class="contact__direct">
-            <p class="m-text-6">Preferisci scriverci direttamente?</p>
-            <a class="m-link-2" href="mailto:info@titechdigital.it">info@titechdigital.it</a>
-            <p class="m-text-6">Rispondiamo con una prima valutazione del progetto.</p>
-          </div>
-        </div>
-        <form class="contact__form m-surface" novalidate>
-          <div class="contact__pair">
-            <label class="m-text-6">Nome<input class="m-field" name="name" type="text" autocomplete="name" required></label>
-            <label class="m-text-6">Email<input class="m-field" name="email" type="email" autocomplete="email" required></label>
-          </div>
-          <div class="contact__pair">
-            <label class="m-text-6">Azienda<input class="m-field" name="company" type="text" autocomplete="organization"></label>
-            <label class="m-text-6">Di cosa hai bisogno?<select class="m-field" name="topic"><option value="">Seleziona un’area</option><option>Sito web</option><option>E-commerce</option><option>App web</option><option>AI e automazione</option><option>SEO</option></select></label>
-          </div>
-          <label class="m-text-6">Parlaci del progetto<textarea class="m-field" name="message" rows="3" required></textarea></label>
-          <div class="contact__actions">
-            <button class="m-btn" type="submit"><span class="m-btn__label">Invia richiesta</span></button>
-            <p class="m-text contact__status" role="status" aria-live="polite">Apro il tuo programma di posta con la richiesta già compilata.</p>
-          </div>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer id="footer">
-    <p class="m-text-2 footer__bye"><span>Ciao</span><span class="footer__period" aria-hidden="true"><span class="footer__aperture"><img class="footer__img" src="https://images.pexels.com/photos/17489150/pexels-photo-17489150.jpeg?auto=compress&cs=tinysrgb&w=1000&h=1250&fit=crop" alt=""></span></span></p>
-    <div class="footer__grid">
-      <nav class="footer__col" aria-label="Footer">
-        <p class="m-text-6 footer__label">Esplora</p>
-        <a class="m-link-2" href="#work">Soluzioni</a>
-        <a class="m-link-2" href="#capabilities">Competenze</a>
-        <a class="m-link-2" href="#method">Metodo</a>
-        <a class="m-link-2" href="#studio">TiTech Digital</a>
-        <a class="m-link-2" href="#journal">Approccio</a>
-      </nav>
-      <div class="footer__col">
-        <p class="m-text-6 footer__label">Servizi</p>
-        <a class="m-link-2" href="#capabilities">Siti web ed e-commerce</a>
-        <a class="m-link-2" href="#capabilities">Design e identità digitale</a>
-        <a class="m-link-2" href="#capabilities">Software, AI e automazione</a>
-        <a class="m-link-2" href="#capabilities">SEO e supporto continuo</a>
-        <a class="m-link-2" href="#contact">Parliamo di un progetto</a>
-      </div>
-      <div class="footer__col">
-        <p class="m-text-6 footer__label">TiTech Digital</p>
-        <p class="m-text">Partner tecnologico per imprese, dall’Italia ai mercati internazionali.</p>
-        <p class="m-text">Strategia, design e sviluppo con attenzione alla continuità.</p>
-        <a class="m-link-2" href="mailto:info@titechdigital.it">info@titechdigital.it</a>
-      </div>
-      <div class="footer__news">
-        <p class="m-text-7">Hai un progetto digitale da sviluppare?<span class="m-dot" aria-hidden="true"></span></p>
-        <a class="m-link-2" href="#contact">Descrivici la tua esigenza</a>
-        <p class="m-text-6 footer__note">Contatta TiTech Digital per valutare la soluzione più adatta.</p>
-      </div>
+      </footer>
     </div>
-    <div class="footer__legal m-text-6">
-      <p>© 2026 TiTech Digital</p>
-      <p>Soluzioni digitali · Italia e mercati internazionali</p>
-    </div>
-  </footer>
 
-  <script>
-    const menu = document.getElementById('menu');
-    const toggle = document.querySelector('.nav__menu');
-    const closeBtn = document.querySelector('.menu__close');
-    const links = menu.querySelectorAll('a');
+    <script>
+      (function () {
+        const body = document.body;
+        body.classList.add('is-loading');
 
-    const setMenu = (open) => {
-      menu.hidden = !open;
-      menu.classList.toggle('open', open);
-      toggle.setAttribute('aria-expanded', String(open));
-    };
+        const images = Array.from(document.querySelectorAll('.preload-image'));
+        const total = images.length || 1;
+        let loaded = 0;
 
-    toggle.addEventListener('click', () => setMenu(true));
-    closeBtn.addEventListener('click', () => setMenu(false));
-    links.forEach(link => link.addEventListener('click', () => setMenu(false)));
+        const reveal = () => {
+          loaded += 1;
+          if (loaded >= total) {
+            requestAnimationFrame(() => {
+              body.classList.add('is-ready');
+              body.classList.remove('is-loading');
+            });
+          }
+        };
 
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape' && !menu.hidden) setMenu(false);
-    });
+        if (!images.length) {
+          reveal();
+          return;
+        }
 
-    if (window.matchMedia('(max-width: 899px)').matches) {
-      document.documentElement.classList.add('is-mobile');
-    }
-  </script>
-</body>
+        images.forEach((img) => {
+          const src = img.getAttribute('src');
+          if (!src) {
+            reveal();
+            return;
+          }
+
+          const preload = new Image();
+          preload.decoding = 'async';
+          preload.onload = reveal;
+          preload.onerror = reveal;
+          preload.src = src;
+        });
+
+        setTimeout(() => {
+          if (!body.classList.contains('is-ready')) {
+            body.classList.add('is-ready');
+            body.classList.remove('is-loading');
+          }
+        }, 2600);
+      })();
+    </script>
+  </body>
 </html>
