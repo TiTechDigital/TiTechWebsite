@@ -458,7 +458,10 @@ textarea.m-field { min-height: 112px; resize: vertical; }
 #journal .story__img { display: block; width: 100%; height: 100%; object-fit: cover; }
 @media (max-width: 899px) {
   #journal .journal__frame { display: none; }
-  #journal .story__media { display: block; margin: 0 0 2px; aspect-ratio: 3 / 2; overflow: hidden; border-radius: var(--radius-1); background: var(--color-4); }
+  #journal .story { gap: 10px; max-width: none; }
+  #journal .story__media { display: block; margin: 0 0 8px; aspect-ratio: 4 / 3; overflow: hidden; border-radius: var(--radius-1); background: var(--color-4); }
+  #journal .story h3 { font-size: clamp(24px, 6.6vw, 32px); line-height: 1.1; letter-spacing: -0.025em; text-wrap: balance; }
+  #journal .story__text { max-width: 34rem; }
 }
 @media (min-width: 900px) {
   #journal .journal__body { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 7vw; }
@@ -791,7 +794,7 @@ textarea.m-field { min-height: 112px; resize: vertical; }
   </div>
 </section>
 
-<!-- journal: four technical principles beside a sticky photo frame (animation: scene:journal) -->
+<!-- journal: four technical principles; desktop sticky photo frame, mobile one photo per principle (animation: scene:journal) -->
 <section id="journal" data-8b-section="journal" aria-labelledby="journal-title">
   <div class="journal__head">
     <h2 class="m-text-3" id="journal-title" data-8b-motion="rise">Il nostro approccio<span class="m-dot" aria-hidden="true"></span></h2>
@@ -804,10 +807,10 @@ textarea.m-field { min-height: 112px; resize: vertical; }
       <img class="journal__shot" src="assets/img/journal-04-600.webp" srcset="assets/img/journal-04-600.webp 600w, assets/img/journal-04-900.webp 900w, assets/img/journal-04-1100.webp 1100w" sizes="(min-width: 900px) 46vw, 92vw" width="600" height="750" alt="" loading="lazy" decoding="async">
     </div>
     <ol class="journal__list">
-      <li class="story"><figure class="story__media" data-8b-motion="iris"><img class="story__img" src="assets/img/journal-01-600.webp" srcset="assets/img/journal-01-600.webp 600w, assets/img/journal-01-900.webp 900w, assets/img/journal-01-1100.webp 1100w" sizes="92vw" width="600" height="750" alt="" loading="lazy" decoding="async"></figure><p class="m-text-6 story__meta"><span>01 · Fondamenta</span></p><h3 class="m-text-7">La qualità inizia dall'architettura</h3><p class="m-text story__text">Struttura, performance e sicurezza vengono considerate fin dalle prime decisioni, non aggiunte alla fine.</p></li>
-      <li class="story"><figure class="story__media" data-8b-motion="iris"><img class="story__img" src="assets/img/journal-02-600.webp" srcset="assets/img/journal-02-600.webp 600w, assets/img/journal-02-900.webp 900w, assets/img/journal-02-1100.webp 1100w" sizes="92vw" width="600" height="750" alt="" loading="lazy" decoding="async"></figure><p class="m-text-6 story__meta"><span>02 · Esperienza</span></p><h3 class="m-text-7">Un'interfaccia deve essere utile prima che bella</h3><p class="m-text story__text">Contenuti, flussi e interazioni sono progettati per rendere ogni attività comprensibile e accessibile.</p></li>
-      <li class="story"><figure class="story__media" data-8b-motion="iris"><img class="story__img" src="assets/img/journal-03-600.webp" srcset="assets/img/journal-03-600.webp 600w, assets/img/journal-03-900.webp 900w, assets/img/journal-03-1100.webp 1100w" sizes="92vw" width="600" height="750" alt="" loading="lazy" decoding="async"></figure><p class="m-text-6 story__meta"><span>03 · Integrazione</span></p><h3 class="m-text-7">Il software ha valore quando si inserisce nel lavoro</h3><p class="m-text story__text">Partiamo dai processi e dai sistemi esistenti per creare strumenti coerenti con il modo in cui l'impresa opera.</p></li>
-      <li class="story"><figure class="story__media" data-8b-motion="iris"><img class="story__img" src="assets/img/journal-04-600.webp" srcset="assets/img/journal-04-600.webp 600w, assets/img/journal-04-900.webp 900w, assets/img/journal-04-1100.webp 1100w" sizes="92vw" width="600" height="750" alt="" loading="lazy" decoding="async"></figure><p class="m-text-6 story__meta"><span>04 · Continuità</span></p><h3 class="m-text-7">Un rilascio è l'inizio della manutenzione</h3><p class="m-text story__text">Documentazione e scelte sostenibili rendono più semplice correggere, aggiornare e ampliare un prodotto.</p></li>
+      <li class="story"><figure class="story__media"><img class="story__img" src="assets/img/journal-01-600.webp" srcset="assets/img/journal-01-600.webp 600w, assets/img/journal-01-900.webp 900w, assets/img/journal-01-1100.webp 1100w" sizes="92vw" width="600" height="750" alt="" loading="lazy" decoding="async"></figure><p class="m-text-6 story__meta"><span>01 · Fondamenta</span></p><h3 class="m-text-7">La qualità inizia dall'architettura</h3><p class="m-text story__text">Struttura, performance e sicurezza vengono considerate fin dalle prime decisioni, non aggiunte alla fine.</p></li>
+      <li class="story"><figure class="story__media"><img class="story__img" src="assets/img/journal-02-600.webp" srcset="assets/img/journal-02-600.webp 600w, assets/img/journal-02-900.webp 900w, assets/img/journal-02-1100.webp 1100w" sizes="92vw" width="600" height="750" alt="" loading="lazy" decoding="async"></figure><p class="m-text-6 story__meta"><span>02 · Esperienza</span></p><h3 class="m-text-7">Un'interfaccia deve essere utile prima che bella</h3><p class="m-text story__text">Contenuti, flussi e interazioni sono progettati per rendere ogni attività comprensibile e accessibile.</p></li>
+      <li class="story"><figure class="story__media"><img class="story__img" src="assets/img/journal-03-600.webp" srcset="assets/img/journal-03-600.webp 600w, assets/img/journal-03-900.webp 900w, assets/img/journal-03-1100.webp 1100w" sizes="92vw" width="600" height="750" alt="" loading="lazy" decoding="async"></figure><p class="m-text-6 story__meta"><span>03 · Integrazione</span></p><h3 class="m-text-7">Il software ha valore quando si inserisce nel lavoro</h3><p class="m-text story__text">Partiamo dai processi e dai sistemi esistenti per creare strumenti coerenti con il modo in cui l'impresa opera.</p></li>
+      <li class="story"><figure class="story__media"><img class="story__img" src="assets/img/journal-04-600.webp" srcset="assets/img/journal-04-600.webp 600w, assets/img/journal-04-900.webp 900w, assets/img/journal-04-1100.webp 1100w" sizes="92vw" width="600" height="750" alt="" loading="lazy" decoding="async"></figure><p class="m-text-6 story__meta"><span>04 · Continuità</span></p><h3 class="m-text-7">Un rilascio è l'inizio della manutenzione</h3><p class="m-text story__text">Documentazione e scelte sostenibili rendono più semplice correggere, aggiornare e ampliare un prodotto.</p></li>
     </ol>
   </div>
 </section>
@@ -1299,14 +1302,31 @@ queueMotion(() => {
     const journal = document.getElementById('journal');
     const shots = [...journal.querySelectorAll('.journal__shot')];
     const stories = [...journal.querySelectorAll('.story')];
-    const wide = matchMedia('(min-width: 900px)');
-    journal.classList.add('is-swap');
-    stories.forEach((story, index) => {
-      const timeline = gsap.timeline({ defaults: { ease: 'none' }, scrollTrigger: { id: `journal:${index}`, trigger: story, start: 'top 84%', end: 'top 50%', scrub: true } });
-      timeline.fromTo(story, { opacity: 0.25 }, { opacity: 1, duration: 0.8 }, 0);
-      if (index && shots[index] && wide.matches) timeline.fromTo(shots[index], { clipPath: 'circle(0% at 50% 50%)' }, { clipPath: 'circle(75% at 50% 50%)', ease: 'power1.inOut', duration: 1 }, 0);
+    const mm = gsap.matchMedia();
+
+    mm.add('(min-width: 900px)', () => {
+      journal.classList.add('is-swap');
+      stories.forEach((story, index) => {
+        const timeline = gsap.timeline({ defaults: { ease: 'none' }, scrollTrigger: { id: `journal:${index}`, trigger: story, start: 'top 84%', end: 'top 50%', scrub: true } });
+        timeline.fromTo(story, { opacity: 0.25 }, { opacity: 1, duration: 0.8 }, 0);
+        if (index && shots[index]) timeline.fromTo(shots[index], { clipPath: 'circle(0% at 50% 50%)' }, { clipPath: 'circle(75% at 50% 50%)', ease: 'power1.inOut', duration: 1 }, 0);
+      });
+      return () => journal.classList.remove('is-swap');
     });
-    return () => journal.classList.remove('is-swap');
+
+    mm.add('(max-width: 899px)', () => {
+      stories.forEach((story, index) => {
+        const media = story.querySelector('.story__media');
+        const image = story.querySelector('.story__img');
+        const copy = [story.querySelector('.story__meta'), story.querySelector('h3'), story.querySelector('.story__text')].filter(Boolean);
+        if (!media) return;
+        const reveal = gsap.timeline({ defaults: { ease: 'none' }, scrollTrigger: { id: `journal:media:${index}`, trigger: media, start: 'top 92%', end: 'top 45%', scrub: true } });
+        if (image) reveal.fromTo(image, { scale: 1.12 }, { scale: 1 }, 0);
+        gsap.fromTo(copy, { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, stagger: 0.08, ease: 'power2.out', scrollTrigger: { trigger: story, start: 'top 78%', once: true } });
+      });
+    });
+
+    return () => mm.revert();
   });
 }, { id: 'scene:journal' });
 </script>
