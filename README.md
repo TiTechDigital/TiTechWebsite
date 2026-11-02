@@ -18,15 +18,13 @@ Il posizionamento è quello di un partner serio e concreto: competenza tecnica, 
 
 1. Hero con immagine rotonda e parola di apertura.
 2. Statement in due righe.
-3. Cinque card di lavoro su binario orizzontale.
+3. Cinque card di servizio su binario orizzontale (siti ed e-commerce, design, software, SEO, supporto).
 4. Sei card della ruota dei principi.
-5. Cinque card dei servizi che si impilano.
-6. Metodo in quattro fasi con anello animato.
-7. Collage dello studio con competenze integrate.
-8. Quattro principi dell'approccio accanto a una foto fissa.
-9. Sei domande frequenti in `<details>`.
-10. Contatti con modulo.
-11. Footer con saluto, link, email e credito Design: 8B.
+5. Metodo in quattro fasi con anello animato.
+6. Collage dello studio con competenze integrate.
+7. Sei domande frequenti in `<details>`.
+8. Contatti con modulo.
+9. Footer con saluto, link, email e credito Design: 8B.
 
 Le animazioni GSAP/ScrollTrigger e lo smooth scrolling Lenis sono quelli originali del template. Con `prefers-reduced-motion` attivo la pagina resta completa e statica.
 
@@ -56,7 +54,7 @@ L'indirizzo `info@titechdigital.it` è un **segnaposto**: va sostituito con l'in
 
 - **Testi** — dentro `index.html`.
 - **Email** — cercare `info@titechdigital.it` e sostituirla in contatti, footer e script.
-- **Immagini** — gli URL sono in `index.html`; le attribuzioni sono in [CREDITS.md](CREDITS.md). Le foto sono illustrative e non rappresentano clienti o progetti reali.
+- **Immagini** — i WebP ottimizzati sono in `assets/img` e referenziati da `index.html`; le attribuzioni sono in [CREDITS.md](CREDITS.md). Le foto sono illustrative e non rappresentano clienti o progetti reali.
 - **Meta e anteprima social** — aggiornare `description`, `og:title`, `og:description` e `og:image` quando saranno disponibili contenuti definitivi.
 - **Dati strutturati** — il blocco JSON-LD `Organization` è presente nell'head; aggiungere solo dati verificati (indirizzo, telefono, profili social).
 

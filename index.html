@@ -299,6 +299,9 @@ textarea.m-field { min-height: 112px; resize: vertical; }
 #work .case__tag { position: absolute; left: clamp(18px, 2vw, 28px); top: clamp(18px, 2vw, 28px); background: color-mix(in srgb, var(--color-1) 62%, transparent); }
 #work .case__text { position: absolute; left: clamp(18px, 2.4vw, 36px); right: clamp(18px, 2.4vw, 36px); bottom: clamp(18px, 2.4vw, 36px); display: grid; gap: 10px; }
 #work .case__line { max-width: 30rem; color: var(--color-2); }
+#work .case__tags { display: flex; flex-wrap: wrap; align-items: center; font-size: clamp(11.5px, 1vw, 13px); line-height: 1.45; color: color-mix(in srgb, var(--color-2) 64%, transparent); }
+#work .case__tags li { display: inline-flex; align-items: center; }
+#work .case__tags li + li::before { content: "\00b7"; margin: 0 8px; opacity: .5; }
 @media (min-width: 700px) {
   #work .work__track { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   #work .case { aspect-ratio: 16 / 11; }
@@ -348,32 +351,6 @@ textarea.m-field { min-height: 112px; resize: vertical; }
   #again.is-wheel .again__wheel { position: absolute; left: 0; top: 0; display: block; width: 0; height: 0; }
   #again.is-wheel .partner { position: absolute; left: 0; top: 0; width: 0; height: 0; rotate: calc(var(--i) * var(--step)); }
   #again.is-wheel .partner__card { position: absolute; left: calc(var(--card) / -2); top: calc(var(--radius) * -1); width: var(--card); }
-}
-}
-</style>
-<style data-8b-part="section:capabilities">
-@layer sections {
-#capabilities { position: relative; padding: calc(var(--space-2) * 0.6) var(--space-1) var(--space-2); background: var(--color-1); color: var(--color-2); }
-#capabilities .capabilities__head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 20px 40px; margin-bottom: clamp(40px, 7vh, 80px); }
-#capabilities .capabilities__lead { max-width: 27rem; color: var(--color-5); }
-#capabilities .capabilities__deck { display: grid; gap: 20px; }
-#capabilities .service { position: relative; display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; padding: clamp(18px, 2.4vw, 34px); overflow: hidden; box-shadow: var(--shadow-1); }
-#capabilities .service__text { display: flex; flex-direction: column; gap: 16px; }
-#capabilities .service__line { max-width: 30rem; color: var(--color-6); }
-#capabilities .service__tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 8px; color: var(--color-6); }
-#capabilities .service__media { overflow: hidden; border-radius: var(--radius-3); aspect-ratio: 16 / 10; }
-#capabilities .service__media img { width: 100%; height: 100%; object-fit: cover; }
-#capabilities .service__shade { position: absolute; inset: 0; background: var(--color-1); opacity: 0; pointer-events: none; }
-@media (min-width: 900px) {
-  #capabilities .service { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(24px, 3vw, 48px); height: min(62svh, 560px); min-height: 400px; }
-  #capabilities .service__media { aspect-ratio: auto; height: 100%; }
-}
-}
-</style>
-<style data-8b-part="scene-style:capabilities">
-@layer scenes {
-@media (prefers-reduced-motion: no-preference) {
-  #capabilities.is-deck .service { position: sticky; top: calc(clamp(80px, 12svh, 108px) + var(--i) * 14px); transform-origin: 50% 0; }
 }
 }
 </style>
@@ -438,45 +415,6 @@ textarea.m-field { min-height: 112px; resize: vertical; }
   #studio .shot:nth-child(4) { left: 59%; top: 0; width: 41%; }
   #studio .shot:nth-child(5) { left: 31%; top: 53.3%; width: 36%; }
   #studio .studio__roles { position: absolute; left: 71%; top: 55%; width: 29%; padding-top: 0; }
-}
-}
-</style>
-<style data-8b-part="section:journal">
-@layer sections {
-#journal { position: relative; padding: calc(var(--space-2) * 0.6) var(--space-1) var(--space-2); background: var(--color-2); }
-#journal .journal__head { margin-bottom: clamp(40px, 7vh, 88px); }
-#journal .journal__body { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; align-items: start; }
-#journal .journal__frame { position: relative; overflow: hidden; border-radius: var(--radius-1); background: var(--color-4); aspect-ratio: 16 / 10; }
-#journal .journal__shot { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-#journal .journal__shot:first-child { z-index: 1; }
-#journal .journal__list { display: grid; gap: clamp(36px, 8vh, 72px); }
-#journal .story { display: grid; gap: 12px; max-width: 36rem; padding-top: 20px; border-top: 1px solid color-mix(in srgb, var(--color-1) 16%, transparent); }
-#journal .story__meta { color: var(--color-6); }
-#journal .story__meta span { color: var(--color-3); }
-#journal .story__text { color: var(--color-6); }
-#journal .story__media { display: none; }
-#journal .story__img { display: block; width: 100%; height: 100%; object-fit: cover; }
-@media (max-width: 899px) {
-  #journal .journal__frame { display: none; }
-  #journal .story { gap: 10px; max-width: none; }
-  #journal .story__media { display: block; margin: 0 0 8px; aspect-ratio: 4 / 3; overflow: hidden; border-radius: var(--radius-1); background: var(--color-4); }
-  #journal .story h3 { font-size: clamp(24px, 6.6vw, 32px); line-height: 1.1; letter-spacing: -0.025em; text-wrap: balance; }
-  #journal .story__text { max-width: 34rem; }
-}
-@media (min-width: 900px) {
-  #journal .journal__body { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 7vw; }
-  #journal .journal__frame { aspect-ratio: 4 / 5; }
-  #journal .journal__list { gap: clamp(64px, 18vh, 170px); padding-block: 6svh 10svh; }
-}
-}
-</style>
-<style data-8b-part="scene-style:journal">
-@layer scenes {
-@media (prefers-reduced-motion: no-preference) {
-  #journal.is-swap .journal__frame { position: sticky; z-index: 1; top: 80px; }
-  #journal.is-swap .journal__shot:first-child { z-index: auto; }
-  @media (max-width: 899px) { #journal.is-swap .journal__frame { top: 92px; max-height: 46svh; } }
-  @media (min-width: 900px) { #journal.is-swap .journal__frame { top: calc(50svh - min(30svh, 22vw)); max-height: 60svh; } }
 }
 }
 </style>
@@ -564,10 +502,8 @@ textarea.m-field { min-height: 112px; resize: vertical; }
   <nav class="nav__links" aria-label="Navigazione principale">
     <ul>
       <li><a class="m-link-2" href="#work">Soluzioni</a></li>
-      <li><a class="m-link-2" href="#capabilities">Competenze</a></li>
       <li><a class="m-link-2" href="#method">Metodo</a></li>
       <li><a class="m-link-2" href="#studio">TiTech</a></li>
-      <li><a class="m-link-2" href="#journal">Approccio</a></li>
     </ul>
   </nav>
   <a class="m-btn nav__cta" href="#contact"><span class="m-btn__label">Parliamo del progetto</span></a>
@@ -576,10 +512,8 @@ textarea.m-field { min-height: 112px; resize: vertical; }
     <div class="menu__top"><button class="m-icon menu__close" type="button" aria-label="Chiudi il menu"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3 3 13"/></svg></button></div>
     <ul class="menu__list">
       <li><a href="#work">Soluzioni<span class="m-dot" aria-hidden="true"></span></a></li>
-      <li><a href="#capabilities">Competenze<span class="m-dot" aria-hidden="true"></span></a></li>
       <li><a href="#method">Metodo<span class="m-dot" aria-hidden="true"></span></a></li>
       <li><a href="#studio">TiTech<span class="m-dot" aria-hidden="true"></span></a></li>
-      <li><a href="#journal">Approccio<span class="m-dot" aria-hidden="true"></span></a></li>
       <li><a href="#contact">Contatti<span class="m-dot" aria-hidden="true"></span></a></li>
     </ul>
     <p class="m-text menu__foot">Tecnologia e soluzioni digitali · Italia e mercati internazionali</p>
@@ -590,7 +524,7 @@ textarea.m-field { min-height: 112px; resize: vertical; }
 <section id="hero" data-8b-section="hero" aria-labelledby="hero-title">
   <div class="hero__intro">
     <p class="m-text-5 hero__lead">TiTech Digital progetta e sviluppa soluzioni digitali affidabili: dalla presenza online ai software che rendono più efficaci i processi aziendali.</p>
-      <a class="m-link hero__link" href="#capabilities"><span class="m-link__label">Scopri le competenze</span><svg class="m-link__arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5"/></svg></a>
+      <a class="m-link hero__link" href="#work"><span class="m-link__label">Scopri le soluzioni</span><svg class="m-link__arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5"/></svg></a>
   </div>
   <h1 class="m-text-2 hero__title" id="hero-title" style="--len:6"><span class="hero__word"><span class="hero__mask"><span class="hero__glyphs">TiTech</span></span></span><span class="hero__period" aria-hidden="true"><span class="hero__stage"><span class="hero__orbit"><span class="hero__moon"></span></span><span class="hero__aperture"><img class="hero__img" src="assets/img/hero-700.webp" srcset="assets/img/hero-700.webp 700w, assets/img/hero-1400.webp 1400w" sizes="(min-width: 900px) 40vw, 74vw" width="700" height="700" alt="" loading="eager" fetchpriority="high" decoding="async"><span class="hero__tint"></span></span></span></span></h1>
 </section>
@@ -603,50 +537,48 @@ textarea.m-field { min-height: 112px; resize: vertical; }
     <nav class="statement__index" aria-label="In questa pagina">
       <ul>
         <li><a class="m-link" href="#work"><span class="m-link__label">Soluzioni</span><svg class="m-link__arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5"/></svg></a></li>
-        <li><a class="m-link" href="#capabilities"><span class="m-link__label">Competenze</span><svg class="m-link__arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5"/></svg></a></li>
         <li><a class="m-link" href="#method"><span class="m-link__label">Metodo</span><svg class="m-link__arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5"/></svg></a></li>
         <li><a class="m-link" href="#studio"><span class="m-link__label">TiTech Digital</span><svg class="m-link__arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5"/></svg></a></li>
-        <li><a class="m-link" href="#journal"><span class="m-link__label">Approccio</span><svg class="m-link__arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5"/></svg></a></li>
         <li><a class="m-link" href="#contact"><span class="m-link__label">Contattaci</span><svg class="m-link__arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5"/></svg></a></li>
       </ul>
     </nav>
   </div>
 </section>
 
-<!-- work: five solution areas on a horizontal track (animation: scene:work) -->
+<!-- work: five service areas, merging the former Competenze section, on a horizontal track (animation: scene:work) -->
 <section id="work" data-8b-section="work" aria-labelledby="work-title">
   <div class="work__plate" aria-hidden="true"></div>
   <div class="work__stage">
     <div class="work__head">
       <h2 class="m-text-3" id="work-title">Cosa costruiamo<span class="m-dot" aria-hidden="true"></span></h2>
-      <p class="m-text-5 work__lead">Prodotti digitali pensati per risolvere esigenze concrete, integrarsi nei processi e restare pronti a evolvere.</p>
+      <p class="m-text-5 work__lead">Un unico partner per siti, piattaforme e strumenti digitali pensati per esigenze concrete.</p>
     </div>
     <div class="work__window">
       <ul class="work__track">
         <li class="case">
-          <div class="case__media"><img class="case__img" src="assets/img/work-01-480.webp" srcset="assets/img/work-01-480.webp 480w, assets/img/work-01-720.webp 720w, assets/img/work-01-960.webp 960w" sizes="(min-width: 700px) 34vw, 92vw" width="480" height="400" alt="" loading="lazy" decoding="async"></div>
-          <span class="m-badge case__tag">Presenza digitale</span>
-          <div class="case__text"><h3 class="m-text-4 case__name">Siti web</h3><p class="m-text-5 case__line">Esperienze web su misura, veloci e accessibili, costruite intorno agli obiettivi dell'impresa.</p></div>
-        </li>
-        <li class="case">
           <div class="case__media"><img class="case__img" src="assets/img/work-02-480.webp" srcset="assets/img/work-02-480.webp 480w, assets/img/work-02-720.webp 720w, assets/img/work-02-960.webp 960w" sizes="(min-width: 700px) 34vw, 92vw" width="480" height="400" alt="" loading="lazy" decoding="async"></div>
-          <span class="m-badge case__tag">Vendita online</span>
-          <div class="case__text"><h3 class="m-text-4 case__name">E-commerce</h3><p class="m-text-5 case__line">Negozi digitali che semplificano catalogo, acquisto e gestione degli ordini.</p></div>
+          <span class="m-badge case__tag">Presenza digitale</span>
+          <div class="case__text"><h3 class="m-text-4 case__name">Siti web ed e-commerce</h3><p class="m-text-5 case__line">Esperienze web e negozi online su misura, veloci e accessibili, pensati per obiettivi concreti.</p><ul class="m-text-6 case__tags"><li>Sviluppo web</li><li>E-commerce</li><li>UI/UX</li></ul></div>
         </li>
         <li class="case">
-          <div class="case__media"><img class="case__img" src="assets/img/work-03-480.webp" srcset="assets/img/work-03-480.webp 480w, assets/img/work-03-720.webp 720w, assets/img/work-03-960.webp 960w" sizes="(min-width: 700px) 34vw, 92vw" width="480" height="400" alt="" loading="lazy" decoding="async"></div>
-          <span class="m-badge case__tag">Strumenti per il business</span>
-          <div class="case__text"><h3 class="m-text-4 case__name">Applicazioni web</h3><p class="m-text-5 case__line">Piattaforme, dashboard e strumenti digitali modellati sui flussi di lavoro reali.</p></div>
+          <div class="case__media"><img class="case__img" src="assets/img/service-02-600.webp" srcset="assets/img/service-02-600.webp 600w, assets/img/service-02-900.webp 900w, assets/img/service-02-1200.webp 1200w" sizes="(min-width: 700px) 34vw, 92vw" width="600" height="450" alt="" loading="lazy" decoding="async"></div>
+          <span class="m-badge case__tag">Identità</span>
+          <div class="case__text"><h3 class="m-text-4 case__name">Design e identità digitale</h3><p class="m-text-5 case__line">Identità visive e interfacce chiare, coerenti e riconoscibili.</p><ul class="m-text-6 case__tags"><li>Brand identity</li><li>UI/UX</li><li>Design di prodotto</li></ul></div>
         </li>
         <li class="case">
           <div class="case__media"><img class="case__img" src="assets/img/work-04-480.webp" srcset="assets/img/work-04-480.webp 480w, assets/img/work-04-720.webp 720w, assets/img/work-04-960.webp 960w" sizes="(min-width: 700px) 34vw, 92vw" width="480" height="400" alt="" loading="lazy" decoding="async"></div>
-          <span class="m-badge case__tag">Processi intelligenti</span>
-          <div class="case__text"><h3 class="m-text-4 case__name">AI e automazione</h3><p class="m-text-5 case__line">Automazioni e strumenti intelligenti che riducono le attività ripetitive e migliorano i flussi di lavoro.</p></div>
+          <span class="m-badge case__tag">Strumenti per il business</span>
+          <div class="case__text"><h3 class="m-text-4 case__name">Software e automazione</h3><p class="m-text-5 case__line">Piattaforme, dashboard e automazioni modellate sui flussi di lavoro reali.</p><ul class="m-text-6 case__tags"><li>Web app</li><li>API</li><li>AI e automazione</li></ul></div>
+        </li>
+        <li class="case">
+          <div class="case__media"><img class="case__img" src="assets/img/service-04-600.webp" srcset="assets/img/service-04-600.webp 600w, assets/img/service-04-900.webp 900w, assets/img/service-04-1200.webp 1200w" sizes="(min-width: 700px) 34vw, 92vw" width="600" height="450" alt="" loading="lazy" decoding="async"></div>
+          <span class="m-badge case__tag">Crescita</span>
+          <div class="case__text"><h3 class="m-text-4 case__name">SEO e crescita digitale</h3><p class="m-text-5 case__line">Basi tecniche e interventi mirati per indicizzazione, performance e conversione.</p><ul class="m-text-6 case__tags"><li>SEO tecnica</li><li>Performance</li><li>CRO</li></ul></div>
         </li>
         <li class="case">
           <div class="case__media"><img class="case__img" src="assets/img/work-05-480.webp" srcset="assets/img/work-05-480.webp 480w, assets/img/work-05-720.webp 720w, assets/img/work-05-960.webp 960w" sizes="(min-width: 700px) 34vw, 92vw" width="480" height="400" alt="" loading="lazy" decoding="async"></div>
           <span class="m-badge case__tag">Evoluzione continua</span>
-          <div class="case__text"><h3 class="m-text-4 case__name">Supporto continuo</h3><p class="m-text-5 case__line">Manutenzione, ottimizzazione e assistenza tecnica per far crescere il prodotto nel tempo.</p></div>
+          <div class="case__text"><h3 class="m-text-4 case__name">Supporto continuo</h3><p class="m-text-5 case__line">Manutenzione, hosting e ottimizzazione lungo tutto il ciclo di vita del prodotto.</p><ul class="m-text-6 case__tags"><li>Manutenzione</li><li>Hosting</li><li>Assistenza</li></ul></div>
         </li>
       </ul>
     </div>
@@ -691,60 +623,7 @@ textarea.m-field { min-height: 112px; resize: vertical; }
   </div>
 </section>
 
-<!-- capabilities: five cards that stack as you scroll, each with deliverable badges and a photo (animation: scene:capabilities) -->
-<section id="capabilities" data-8b-section="capabilities" aria-labelledby="capabilities-title">
-  <div class="capabilities__head">
-    <h2 class="m-text-3" id="capabilities-title" data-8b-motion="rise">Competenze digitali<span class="m-dot" aria-hidden="true"></span></h2>
-    <p class="m-text-5 capabilities__lead">Design e tecnologia lavorano insieme per trasformare esigenze operative in strumenti digitali solidi.</p>
-  </div>
-  <ol class="capabilities__deck">
-    <li class="service m-surface">
-      <div class="service__text">
-        <h3 class="m-text-4">Siti web ed e-commerce</h3>
-        <p class="m-text-5 service__line">Siti professionali e negozi online sviluppati su misura, con attenzione a prestazioni, accessibilità e gestione.</p>
-        <ul class="service__tags"><li class="m-badge">Sviluppo web</li><li class="m-badge">E-commerce</li><li class="m-badge">Landing page</li><li class="m-badge">Redesign</li></ul>
-      </div>
-      <div class="service__media" data-8b-motion="iris"><img src="assets/img/service-01-600.webp" srcset="assets/img/service-01-600.webp 600w, assets/img/service-01-900.webp 900w, assets/img/service-01-1200.webp 1200w" sizes="(min-width: 900px) 47vw, 92vw" width="600" height="450" alt="" loading="lazy" decoding="async"></div>
-      <span class="service__shade" aria-hidden="true"></span>
-    </li>
-    <li class="service m-surface">
-      <div class="service__text">
-        <h3 class="m-text-4">Design e identità digitale</h3>
-        <p class="m-text-5 service__line">Identità visive, interfacce e prodotti digitali progettati per essere chiari, coerenti e riconoscibili.</p>
-        <ul class="service__tags"><li class="m-badge">Brand identity</li><li class="m-badge">UI/UX</li><li class="m-badge">Design di prodotto</li><li class="m-badge">Direzione creativa</li></ul>
-      </div>
-      <div class="service__media" data-8b-motion="iris"><img src="assets/img/service-02-600.webp" srcset="assets/img/service-02-600.webp 600w, assets/img/service-02-900.webp 900w, assets/img/service-02-1200.webp 1200w" sizes="(min-width: 900px) 47vw, 92vw" width="600" height="450" alt="" loading="lazy" decoding="async"></div>
-      <span class="service__shade" aria-hidden="true"></span>
-    </li>
-    <li class="service m-surface">
-      <div class="service__text">
-        <h3 class="m-text-4">Software e automazione</h3>
-        <p class="m-text-5 service__line">Piattaforme web, dashboard, API e automazioni per semplificare attività e processi aziendali.</p>
-        <ul class="service__tags"><li class="m-badge">Web app</li><li class="m-badge">Dashboard</li><li class="m-badge">API e integrazioni</li><li class="m-badge">AI e automazione</li></ul>
-      </div>
-      <div class="service__media" data-8b-motion="iris"><img src="assets/img/service-03-600.webp" srcset="assets/img/service-03-600.webp 600w, assets/img/service-03-900.webp 900w, assets/img/service-03-1200.webp 1200w" sizes="(min-width: 900px) 47vw, 92vw" width="600" height="450" alt="" loading="lazy" decoding="async"></div>
-      <span class="service__shade" aria-hidden="true"></span>
-    </li>
-    <li class="service m-surface">
-      <div class="service__text">
-        <h3 class="m-text-4">SEO e crescita digitale</h3>
-        <p class="m-text-5 service__line">Basi tecniche e interventi SEO per migliorare indicizzazione, reperibilità e qualità dell'esperienza.</p>
-        <ul class="service__tags"><li class="m-badge">SEO tecnica</li><li class="m-badge">Performance</li><li class="m-badge">Contenuti</li><li class="m-badge">CRO</li></ul>
-      </div>
-      <div class="service__media" data-8b-motion="iris"><img src="assets/img/service-04-600.webp" srcset="assets/img/service-04-600.webp 600w, assets/img/service-04-900.webp 900w, assets/img/service-04-1200.webp 1200w" sizes="(min-width: 900px) 47vw, 92vw" width="600" height="450" alt="" loading="lazy" decoding="async"></div>
-      <span class="service__shade" aria-hidden="true"></span>
-    </li>
-    <li class="service m-surface">
-      <div class="service__text">
-        <h3 class="m-text-4">Supporto continuo</h3>
-        <p class="m-text-5 service__line">Manutenzione, hosting e ottimizzazione per accompagnare il prodotto durante tutto il suo ciclo di vita.</p>
-        <ul class="service__tags"><li class="m-badge">Manutenzione</li><li class="m-badge">Hosting</li><li class="m-badge">Assistenza</li><li class="m-badge">Partnership</li></ul>
-      </div>
-      <div class="service__media" data-8b-motion="iris"><img src="assets/img/service-05-600.webp" srcset="assets/img/service-05-600.webp 600w, assets/img/service-05-900.webp 900w, assets/img/service-05-1200.webp 1200w" sizes="(min-width: 900px) 47vw, 92vw" width="600" height="450" alt="" loading="lazy" decoding="async"></div>
-      <span class="service__shade" aria-hidden="true"></span>
-    </li>
-  </ol>
-</section>
+
 
 <!-- method: process: four steps beside a ring the scroll draws round (animation: scene:method) -->
 <section id="method" data-8b-section="method" aria-labelledby="method-title">
@@ -794,26 +673,7 @@ textarea.m-field { min-height: 112px; resize: vertical; }
   </div>
 </section>
 
-<!-- journal: four technical principles; desktop sticky photo frame, mobile one photo per principle (animation: scene:journal) -->
-<section id="journal" data-8b-section="journal" aria-labelledby="journal-title">
-  <div class="journal__head">
-    <h2 class="m-text-3" id="journal-title" data-8b-motion="rise">Il nostro approccio<span class="m-dot" aria-hidden="true"></span></h2>
-  </div>
-  <div class="journal__body">
-    <div class="journal__frame">
-      <img class="journal__shot" src="assets/img/journal-01-600.webp" srcset="assets/img/journal-01-600.webp 600w, assets/img/journal-01-900.webp 900w, assets/img/journal-01-1100.webp 1100w" sizes="(min-width: 900px) 46vw, 92vw" width="600" height="750" alt="" loading="lazy" decoding="async">
-      <img class="journal__shot" src="assets/img/journal-02-600.webp" srcset="assets/img/journal-02-600.webp 600w, assets/img/journal-02-900.webp 900w, assets/img/journal-02-1100.webp 1100w" sizes="(min-width: 900px) 46vw, 92vw" width="600" height="750" alt="" loading="lazy" decoding="async">
-      <img class="journal__shot" src="assets/img/journal-03-600.webp" srcset="assets/img/journal-03-600.webp 600w, assets/img/journal-03-900.webp 900w, assets/img/journal-03-1100.webp 1100w" sizes="(min-width: 900px) 46vw, 92vw" width="600" height="750" alt="" loading="lazy" decoding="async">
-      <img class="journal__shot" src="assets/img/journal-04-600.webp" srcset="assets/img/journal-04-600.webp 600w, assets/img/journal-04-900.webp 900w, assets/img/journal-04-1100.webp 1100w" sizes="(min-width: 900px) 46vw, 92vw" width="600" height="750" alt="" loading="lazy" decoding="async">
-    </div>
-    <ol class="journal__list">
-      <li class="story"><figure class="story__media"><img class="story__img" src="assets/img/journal-01-600.webp" srcset="assets/img/journal-01-600.webp 600w, assets/img/journal-01-900.webp 900w, assets/img/journal-01-1100.webp 1100w" sizes="92vw" width="600" height="750" alt="" loading="lazy" decoding="async"></figure><p class="m-text-6 story__meta"><span>01 · Fondamenta</span></p><h3 class="m-text-7">La qualità inizia dall'architettura</h3><p class="m-text story__text">Struttura, performance e sicurezza vengono considerate fin dalle prime decisioni, non aggiunte alla fine.</p></li>
-      <li class="story"><figure class="story__media"><img class="story__img" src="assets/img/journal-02-600.webp" srcset="assets/img/journal-02-600.webp 600w, assets/img/journal-02-900.webp 900w, assets/img/journal-02-1100.webp 1100w" sizes="92vw" width="600" height="750" alt="" loading="lazy" decoding="async"></figure><p class="m-text-6 story__meta"><span>02 · Esperienza</span></p><h3 class="m-text-7">Un'interfaccia deve essere utile prima che bella</h3><p class="m-text story__text">Contenuti, flussi e interazioni sono progettati per rendere ogni attività comprensibile e accessibile.</p></li>
-      <li class="story"><figure class="story__media"><img class="story__img" src="assets/img/journal-03-600.webp" srcset="assets/img/journal-03-600.webp 600w, assets/img/journal-03-900.webp 900w, assets/img/journal-03-1100.webp 1100w" sizes="92vw" width="600" height="750" alt="" loading="lazy" decoding="async"></figure><p class="m-text-6 story__meta"><span>03 · Integrazione</span></p><h3 class="m-text-7">Il software ha valore quando si inserisce nel lavoro</h3><p class="m-text story__text">Partiamo dai processi e dai sistemi esistenti per creare strumenti coerenti con il modo in cui l'impresa opera.</p></li>
-      <li class="story"><figure class="story__media"><img class="story__img" src="assets/img/journal-04-600.webp" srcset="assets/img/journal-04-600.webp 600w, assets/img/journal-04-900.webp 900w, assets/img/journal-04-1100.webp 1100w" sizes="92vw" width="600" height="750" alt="" loading="lazy" decoding="async"></figure><p class="m-text-6 story__meta"><span>04 · Continuità</span></p><h3 class="m-text-7">Un rilascio è l'inizio della manutenzione</h3><p class="m-text story__text">Documentazione e scelte sostenibili rendono più semplice correggere, aggiornare e ampliare un prodotto.</p></li>
-    </ol>
-  </div>
-</section>
+
 
 <!-- faq: questions and answers (native <details>) -->
 <section id="faq" data-8b-section="faq" aria-labelledby="faq-title">
@@ -866,17 +726,16 @@ textarea.m-field { min-height: 112px; resize: vertical; }
     <nav class="footer__col" aria-label="Footer">
       <p class="m-text-6 footer__label">Esplora</p>
       <a class="m-link-2" href="#work">Soluzioni</a>
-      <a class="m-link-2" href="#capabilities">Competenze</a>
       <a class="m-link-2" href="#method">Metodo</a>
       <a class="m-link-2" href="#studio">TiTech Digital</a>
-      <a class="m-link-2" href="#journal">Approccio</a>
     </nav>
     <div class="footer__col">
       <p class="m-text-6 footer__label">Servizi</p>
-      <a class="m-link-2" href="#capabilities">Siti web ed e-commerce</a>
-      <a class="m-link-2" href="#capabilities">Design e identità digitale</a>
-      <a class="m-link-2" href="#capabilities">Software, AI e automazione</a>
-      <a class="m-link-2" href="#capabilities">SEO e supporto continuo</a>
+      <a class="m-link-2" href="#work">Siti web ed e-commerce</a>
+      <a class="m-link-2" href="#work">Design e identità digitale</a>
+      <a class="m-link-2" href="#work">Software e automazione</a>
+      <a class="m-link-2" href="#work">SEO e crescita digitale</a>
+      <a class="m-link-2" href="#work">Supporto continuo</a>
       <a class="m-link-2" href="#contact">Parliamo di un progetto</a>
     </div>
     <div class="footer__col">
@@ -926,27 +785,6 @@ textarea.m-field { min-height: 112px; resize: vertical; }
   const hero = document.getElementById('hero');
   if (!('IntersectionObserver' in window)) return;
   new IntersectionObserver(([entry]) => hero.classList.toggle('is-offscreen', !entry.isIntersecting)).observe(hero);
-})();
-</script>
-<script data-8b-part="image-warmup">
-(() => {
-  const journal = document.getElementById('journal');
-  if (!journal) return;
-  const warm = () => journal.querySelectorAll(innerWidth < 900 ? '.story__img' : '.journal__shot').forEach(image => {
-    if (image.dataset.warm) return;
-    image.dataset.warm = '1';
-    const preload = new Image();
-    preload.srcset = image.srcset;
-    preload.sizes = image.sizes;
-    preload.src = image.src;
-  });
-  if (!('IntersectionObserver' in window)) { window.addEventListener('load', warm, { once: true }); return; }
-  const watch = new IntersectionObserver(entries => {
-    if (!entries.some(entry => entry.isIntersecting)) return;
-    watch.disconnect();
-    warm();
-  }, { rootMargin: '150% 0px' });
-  watch.observe(journal);
 })();
 </script>
 <script data-8b-part="motion-queue">
@@ -1201,24 +1039,6 @@ queueMotion(() => {
   });
 }, { id: 'scene:again' });
 </script>
-<script data-8b-part="scene:capabilities">
-queueMotion(() => {
-  gsap.matchMedia().add('(prefers-reduced-motion: no-preference)', () => {
-    const section = document.getElementById('capabilities');
-    const cards = [...section.querySelectorAll('.service')];
-    section.classList.add('is-deck');
-    cards.forEach((card, index) => card.style.setProperty('--i', index));
-    cards.forEach((card, index) => {
-      const next = cards[index + 1];
-      if (!next) return;
-      gsap.timeline({ defaults: { ease: 'none' }, scrollTrigger: { id: `capabilities:${index}`, trigger: next, start: 'top bottom', end: () => `top ${parseFloat(getComputedStyle(next).top) || 0}px`, scrub: true, invalidateOnRefresh: true } })
-        .to(card, { scale: 0.9 }, 0)
-        .to(card.querySelector('.service__shade'), { opacity: 0.55 }, 0);
-    });
-    return () => { section.classList.remove('is-deck'); cards.forEach(card => card.style.removeProperty('--i')); };
-  });
-}, { id: 'scene:capabilities' });
-</script>
 <script data-8b-part="scene:method">
 queueMotion(() => {
   gsap.matchMedia().add('(prefers-reduced-motion: no-preference)', () => {
@@ -1295,40 +1115,6 @@ queueMotion(() => {
     shots.forEach((shot, index) => timeline.fromTo(shot, { x: () => offset(shot, 'x'), y: () => offset(shot, 'y'), rotation: tilt[index % tilt.length], scale: 0.66 }, { x: 0, y: 0, rotation: 0, scale: 1, duration: 1 }, (shots.length - 1 - index) * 0.08));
   });
 }, { id: 'scene:studio' });
-</script>
-<script data-8b-part="scene:journal">
-queueMotion(() => {
-  gsap.matchMedia().add('(prefers-reduced-motion: no-preference)', () => {
-    const journal = document.getElementById('journal');
-    const shots = [...journal.querySelectorAll('.journal__shot')];
-    const stories = [...journal.querySelectorAll('.story')];
-    const mm = gsap.matchMedia();
-
-    mm.add('(min-width: 900px)', () => {
-      journal.classList.add('is-swap');
-      stories.forEach((story, index) => {
-        const timeline = gsap.timeline({ defaults: { ease: 'none' }, scrollTrigger: { id: `journal:${index}`, trigger: story, start: 'top 84%', end: 'top 50%', scrub: true } });
-        timeline.fromTo(story, { opacity: 0.25 }, { opacity: 1, duration: 0.8 }, 0);
-        if (index && shots[index]) timeline.fromTo(shots[index], { clipPath: 'circle(0% at 50% 50%)' }, { clipPath: 'circle(75% at 50% 50%)', ease: 'power1.inOut', duration: 1 }, 0);
-      });
-      return () => journal.classList.remove('is-swap');
-    });
-
-    mm.add('(max-width: 899px)', () => {
-      stories.forEach((story, index) => {
-        const media = story.querySelector('.story__media');
-        const image = story.querySelector('.story__img');
-        const copy = [story.querySelector('.story__meta'), story.querySelector('h3'), story.querySelector('.story__text')].filter(Boolean);
-        if (!media) return;
-        const reveal = gsap.timeline({ defaults: { ease: 'none' }, scrollTrigger: { id: `journal:media:${index}`, trigger: media, start: 'top 92%', end: 'top 45%', scrub: true } });
-        if (image) reveal.fromTo(image, { scale: 1.12 }, { scale: 1 }, 0);
-        gsap.fromTo(copy, { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, stagger: 0.08, ease: 'power2.out', scrollTrigger: { trigger: story, start: 'top 78%', once: true } });
-      });
-    });
-
-    return () => mm.revert();
-  });
-}, { id: 'scene:journal' });
 </script>
 <script data-8b-part="scene:contact">
 queueMotion(() => {
