@@ -24,6 +24,7 @@
 <meta property="og:image:alt" content="Forme astratte blu che rappresentano tecnologia e movimento">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2064%2064'%3E%3Crect%20width%3D'64'%20height%3D'64'%20rx%3D'10'%20fill%3D'%23315cdb'%2F%3E%3Ctext%20x%3D'32'%20y%3D'45'%20font-family%3D'Arial%2CHelvetica%2Csans-serif'%20font-size%3D'38'%20font-weight%3D'700'%20text-anchor%3D'middle'%20fill%3D'%23ffffff'%3ET%3C%2Ftext%3E%3C%2Fsvg%3E">
+<link rel="preload" as="image" href="assets/img/hero-700.webp" imagesrcset="assets/img/hero-700.webp 700w, assets/img/hero-1400.webp 1400w" imagesizes="(min-width: 900px) 40vw, 74vw" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" href="https://fonts.gstatic.com/s/gabarito/v9/QGYtz_0dZAGKJJ4t3HtoW4U.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="https://fonts.gstatic.com/s/onest/v11/gNMKW3F-SZuj7xmf-HY.woff2" as="font" type="font/woff2" crossorigin>
@@ -234,7 +235,7 @@ textarea.m-field { min-height: 112px; resize: vertical; }
 #hero .hero__period { position: static; display: inline-block; width: 0.19em; height: 0.19em; margin-left: 0.035em; border-radius: var(--radius-2); background: var(--color-3); vertical-align: baseline; }
 #hero .hero__stage { position: absolute; left: calc(50% - var(--ap) / 2); top: calc(57% - var(--ap) / 2); width: var(--ap); height: var(--ap); font-size: 16px; line-height: 0; }
 #hero .hero__aperture { position: absolute; inset: 0; display: block; overflow: hidden; border-radius: var(--radius-2); background: var(--color-3); }
-#hero .hero__img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.65) contrast(1.08); }
+#hero .hero__img { width: 100%; height: 100%; object-fit: cover; }
 #hero .hero__tint { position: absolute; inset: 0; background: var(--color-3); opacity: 0; }
 #hero .hero__orbit { position: absolute; inset: -9%; display: block; border-radius: var(--radius-2); border: 1px solid color-mix(in srgb, var(--color-2) 16%, transparent); }
 #hero .hero__moon { position: absolute; left: 50%; top: 0; width: 9%; height: 9%; margin: -4.5% 0 0 -4.5%; border-radius: var(--radius-2); background: var(--color-3); }
@@ -246,8 +247,8 @@ textarea.m-field { min-height: 112px; resize: vertical; }
   #hero .hero__stage { left: 0; top: auto; bottom: 0; }
 }
 @media (orientation: portrait) and (max-height: 760px) {
-  #hero { --ap: min(66vw, 37svh); min-height: 100svh; }
-  #hero .hero__stage { top: calc(60% - var(--ap) / 2); }
+  #hero { --ap: min(58vw, 32svh); min-height: 100svh; }
+  #hero .hero__stage { top: calc(62% - var(--ap) / 2); }
 }
 @media (prefers-reduced-motion: no-preference) {
   #hero .hero__mask { animation: hero-mask .95s linear backwards; }
@@ -276,6 +277,7 @@ textarea.m-field { min-height: 112px; resize: vertical; }
 #statement .statement__body { display: grid; grid-template-columns: minmax(0, 1fr); gap: 48px; margin-top: clamp(56px, 11vh, 120px); }
 #statement .statement__lead { max-width: 36rem; }
 #statement .statement__index ul { display: grid; gap: 12px; }
+@media (max-width: 899px) { #statement .statement__title { font-size: clamp(32px, 10vw, 76px); } }
 @media (min-width: 900px) {
   #statement .statement__body { grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); align-items: start; }
   #statement .statement__lead { font-size: clamp(24px, 2.35vw, 34px); line-height: 1.16; letter-spacing: -0.025em; }
@@ -292,7 +294,7 @@ textarea.m-field { min-height: 112px; resize: vertical; }
 #work .work__track { display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; }
 #work .case { position: relative; display: block; overflow: hidden; border-radius: var(--radius-1); background: var(--color-7); aspect-ratio: 4 / 5; }
 #work .case__media { position: absolute; inset: 0; overflow: hidden; }
-#work .case__img { position: absolute; top: 0; left: -7%; width: 114%; max-width: none; height: 100%; object-fit: cover; filter: saturate(.62) contrast(1.08); }
+#work .case__img { position: absolute; top: 0; left: -7%; width: 114%; max-width: none; height: 100%; object-fit: cover; }
 #work .case__media::after { content: ""; position: absolute; inset: 40% 0 0; background: linear-gradient(to top, color-mix(in srgb, var(--color-1) 82%, transparent), transparent); }
 #work .case__tag { position: absolute; left: clamp(18px, 2vw, 28px); top: clamp(18px, 2vw, 28px); background: color-mix(in srgb, var(--color-1) 62%, transparent); }
 #work .case__text { position: absolute; left: clamp(18px, 2.4vw, 36px); right: clamp(18px, 2.4vw, 36px); bottom: clamp(18px, 2.4vw, 36px); display: grid; gap: 10px; }
@@ -312,6 +314,7 @@ textarea.m-field { min-height: 112px; resize: vertical; }
   #work.is-track .work__window { display: flex; align-items: center; min-height: 0; transform-origin: 0 50%; }
   #work.is-track .work__track { display: flex; gap: clamp(14px, 1.6vw, 24px); width: max-content; height: min(100%, 64svh); }
   #work.is-track .case { width: auto; height: 100%; aspect-ratio: 4 / 5; flex: none; }
+  @media (max-width: 899px) { #work.is-track .work__track { height: min(100%, 115vw); } }
   @media (min-width: 700px) { #work.is-track .case { aspect-ratio: 16 / 10.5; } }
 }
 }
@@ -325,12 +328,13 @@ textarea.m-field { min-height: 112px; resize: vertical; }
 #again .again__swing { margin-top: clamp(40px, 7vh, 72px); }
 #again .again__wheel { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
 #again .partner__card { position: relative; display: block; overflow: hidden; border-radius: var(--radius-1); background: var(--color-7); aspect-ratio: 4 / 5; }
-#again .partner__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(.62) contrast(1.08); }
+#again .partner__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 #again .partner__card::after { content: ""; position: absolute; inset: 35% 0 0; background: linear-gradient(to top, color-mix(in srgb, var(--color-1) 86%, transparent), transparent); }
 #again .partner__text { position: absolute; z-index: 1; left: clamp(16px, 1.8vw, 26px); right: clamp(16px, 1.8vw, 26px); bottom: clamp(16px, 1.8vw, 26px); display: grid; justify-items: start; gap: 10px; }
 #again .partner__year { background: color-mix(in srgb, var(--color-1) 62%, transparent); }
 #again .partner__name { font-size: clamp(28px, 2.6vw, 40px); }
 #again .partner__line { color: var(--color-2); }
+@media (max-width: 699px) { #again .partner__text { right: 42px; } }
 @media (min-width: 640px) { #again .again__wheel { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (min-width: 1000px) { #again .again__wheel { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 }
@@ -358,7 +362,7 @@ textarea.m-field { min-height: 112px; resize: vertical; }
 #capabilities .service__line { max-width: 30rem; color: var(--color-6); }
 #capabilities .service__tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 8px; color: var(--color-6); }
 #capabilities .service__media { overflow: hidden; border-radius: var(--radius-3); aspect-ratio: 16 / 10; }
-#capabilities .service__media img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.62) contrast(1.08); }
+#capabilities .service__media img { width: 100%; height: 100%; object-fit: cover; }
 #capabilities .service__shade { position: absolute; inset: 0; background: var(--color-1); opacity: 0; pointer-events: none; }
 @media (min-width: 900px) {
   #capabilities .service { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(24px, 3vw, 48px); height: min(62svh, 560px); min-height: 400px; }
@@ -389,6 +393,11 @@ textarea.m-field { min-height: 112px; resize: vertical; }
 #method .method__steps { grid-column: 1; grid-row: 1; display: grid; gap: clamp(56px, 18vh, 170px); }
 #method .step { display: grid; gap: 14px; max-width: 34rem; }
 #method .step__text { color: var(--color-6); }
+@media (max-width: 899px) {
+  #method .method__body { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  #method .method__ring { grid-column: 1; grid-row: 1; width: 144px; margin: 0 auto clamp(36px, 7vh, 56px); }
+  #method .method__steps { grid-column: 1; grid-row: 2; gap: clamp(48px, 9vh, 80px); }
+}
 @media (min-width: 900px) {
   #method .method__body { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 7vw; }
   #method .method__ring { grid-column: 1; width: min(100%, 50svh); justify-self: center; }
@@ -400,6 +409,7 @@ textarea.m-field { min-height: 112px; resize: vertical; }
 @layer scenes {
 @media (prefers-reduced-motion: no-preference) {
   #method.is-cycle .method__ring { position: sticky; top: 104px; }
+  @media (max-width: 899px) { #method.is-cycle .method__ring { position: relative; top: auto; } }
   @media (min-width: 900px) { #method.is-cycle .method__ring { top: calc(50svh - min(25svh, 21vw)); } }
 }
 }
@@ -411,7 +421,7 @@ textarea.m-field { min-height: 112px; resize: vertical; }
 #studio .studio__lead { max-width: 42rem; }
 #studio .studio__collage { position: relative; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 #studio .shot { position: relative; overflow: hidden; border-radius: var(--radius-3); background: var(--color-4); }
-#studio .shot img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.62) contrast(1.08); }
+#studio .shot img { width: 100%; height: 100%; object-fit: cover; }
 #studio .shot--wide { grid-column: span 2; aspect-ratio: 3 / 2; }
 #studio .shot--tall { aspect-ratio: 3 / 4; }
 #studio .studio__roles { grid-column: span 2; display: grid; align-content: start; gap: 18px; padding-top: 24px; }
@@ -437,13 +447,19 @@ textarea.m-field { min-height: 112px; resize: vertical; }
 #journal .journal__head { margin-bottom: clamp(40px, 7vh, 88px); }
 #journal .journal__body { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; align-items: start; }
 #journal .journal__frame { position: relative; overflow: hidden; border-radius: var(--radius-1); background: var(--color-4); aspect-ratio: 16 / 10; }
-#journal .journal__shot { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(.62) contrast(1.08); }
+#journal .journal__shot { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 #journal .journal__shot:first-child { z-index: 1; }
 #journal .journal__list { display: grid; gap: clamp(36px, 8vh, 72px); }
 #journal .story { display: grid; gap: 12px; max-width: 36rem; padding-top: 20px; border-top: 1px solid color-mix(in srgb, var(--color-1) 16%, transparent); }
 #journal .story__meta { color: var(--color-6); }
 #journal .story__meta span { color: var(--color-3); }
 #journal .story__text { color: var(--color-6); }
+#journal .story__media { display: none; }
+#journal .story__img { display: block; width: 100%; height: 100%; object-fit: cover; }
+@media (max-width: 899px) {
+  #journal .journal__frame { display: none; }
+  #journal .story__media { display: block; margin: 0 0 2px; aspect-ratio: 3 / 2; overflow: hidden; border-radius: var(--radius-1); background: var(--color-4); }
+}
 @media (min-width: 900px) {
   #journal .journal__body { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 7vw; }
   #journal .journal__frame { aspect-ratio: 4 / 5; }
@@ -456,6 +472,7 @@ textarea.m-field { min-height: 112px; resize: vertical; }
 @media (prefers-reduced-motion: no-preference) {
   #journal.is-swap .journal__frame { position: sticky; z-index: 1; top: 80px; }
   #journal.is-swap .journal__shot:first-child { z-index: auto; }
+  @media (max-width: 899px) { #journal.is-swap .journal__frame { top: 92px; max-height: 46svh; } }
   @media (min-width: 900px) { #journal.is-swap .journal__frame { top: calc(50svh - min(30svh, 22vw)); max-height: 60svh; } }
 }
 }
@@ -504,7 +521,7 @@ textarea.m-field { min-height: 112px; resize: vertical; }
 #footer .footer__word { display: inline-block; }
 #footer .footer__period { position: relative; display: inline-block; width: 0.19em; height: 0.19em; margin-left: 0.035em; vertical-align: baseline; }
 #footer .footer__aperture { position: absolute; left: 0; bottom: 0; width: var(--ap); height: var(--ap); overflow: hidden; border-radius: var(--radius-2); background: var(--color-3); transform-origin: 0 100%; }
-#footer .footer__img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.65) contrast(1.08); }
+#footer .footer__img { width: 100%; height: 100%; object-fit: cover; }
 #footer .footer__tint { position: absolute; inset: 0; background: var(--color-3); opacity: 0; }
 #footer .footer__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px 24px; margin-top: clamp(36px, 6vh, 64px); padding-top: 28px; border-top: 1px solid color-mix(in srgb, var(--color-2) 16%, transparent); }
 #footer .footer__col { display: grid; align-content: start; gap: 6px; }
@@ -572,7 +589,7 @@ textarea.m-field { min-height: 112px; resize: vertical; }
     <p class="m-text-5 hero__lead">TiTech Digital progetta e sviluppa soluzioni digitali affidabili: dalla presenza online ai software che rendono più efficaci i processi aziendali.</p>
       <a class="m-link hero__link" href="#capabilities"><span class="m-link__label">Scopri le competenze</span><svg class="m-link__arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5"/></svg></a>
   </div>
-  <h1 class="m-text-2 hero__title" id="hero-title" style="--len:6"><span class="hero__word"><span class="hero__mask"><span class="hero__glyphs">TiTech</span></span></span><span class="hero__period" aria-hidden="true"><span class="hero__stage"><span class="hero__orbit"><span class="hero__moon"></span></span><span class="hero__aperture"><img class="hero__img" src="https://images.pexels.com/photos/28428587/pexels-photo-28428587.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200&amp;h=1200&amp;fit=crop" width="1200" height="1200" alt="" fetchpriority="high"><span class="hero__tint"></span></span></span></span></h1>
+  <h1 class="m-text-2 hero__title" id="hero-title" style="--len:6"><span class="hero__word"><span class="hero__mask"><span class="hero__glyphs">TiTech</span></span></span><span class="hero__period" aria-hidden="true"><span class="hero__stage"><span class="hero__orbit"><span class="hero__moon"></span></span><span class="hero__aperture"><img class="hero__img" src="assets/img/hero-700.webp" srcset="assets/img/hero-700.webp 700w, assets/img/hero-1400.webp 1400w" sizes="(min-width: 900px) 40vw, 74vw" width="700" height="700" alt="" loading="eager" fetchpriority="high" decoding="async"><span class="hero__tint"></span></span></span></span></h1>
 </section>
 
 <!-- statement: two-line statement of what the studio does, a lead paragraph and an index of links into the page (animation: scene:statement) -->
@@ -604,27 +621,27 @@ textarea.m-field { min-height: 112px; resize: vertical; }
     <div class="work__window">
       <ul class="work__track">
         <li class="case">
-          <div class="case__media"><img class="case__img" src="https://images.pexels.com/photos/37880101/pexels-photo-37880101.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200&amp;h=1000&amp;fit=crop" width="1200" height="1000" alt="" loading="lazy"></div>
+          <div class="case__media"><img class="case__img" src="assets/img/work-01-480.webp" srcset="assets/img/work-01-480.webp 480w, assets/img/work-01-720.webp 720w, assets/img/work-01-960.webp 960w" sizes="(min-width: 700px) 34vw, 92vw" width="480" height="400" alt="" loading="lazy" decoding="async"></div>
           <span class="m-badge case__tag">Presenza digitale</span>
           <div class="case__text"><h3 class="m-text-4 case__name">Siti web</h3><p class="m-text-5 case__line">Esperienze web su misura, veloci e accessibili, costruite intorno agli obiettivi dell'impresa.</p></div>
         </li>
         <li class="case">
-          <div class="case__media"><img class="case__img" src="https://images.pexels.com/photos/6207736/pexels-photo-6207736.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200&amp;h=1000&amp;fit=crop" width="1200" height="1000" alt="" loading="lazy"></div>
+          <div class="case__media"><img class="case__img" src="assets/img/work-02-480.webp" srcset="assets/img/work-02-480.webp 480w, assets/img/work-02-720.webp 720w, assets/img/work-02-960.webp 960w" sizes="(min-width: 700px) 34vw, 92vw" width="480" height="400" alt="" loading="lazy" decoding="async"></div>
           <span class="m-badge case__tag">Vendita online</span>
           <div class="case__text"><h3 class="m-text-4 case__name">E-commerce</h3><p class="m-text-5 case__line">Negozi digitali che semplificano catalogo, acquisto e gestione degli ordini.</p></div>
         </li>
         <li class="case">
-          <div class="case__media"><img class="case__img" src="https://images.pexels.com/photos/36496927/pexels-photo-36496927.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200&amp;h=1000&amp;fit=crop" width="1200" height="1000" alt="" loading="lazy"></div>
+          <div class="case__media"><img class="case__img" src="assets/img/work-03-480.webp" srcset="assets/img/work-03-480.webp 480w, assets/img/work-03-720.webp 720w, assets/img/work-03-960.webp 960w" sizes="(min-width: 700px) 34vw, 92vw" width="480" height="400" alt="" loading="lazy" decoding="async"></div>
           <span class="m-badge case__tag">Strumenti per il business</span>
           <div class="case__text"><h3 class="m-text-4 case__name">Applicazioni web</h3><p class="m-text-5 case__line">Piattaforme, dashboard e strumenti digitali modellati sui flussi di lavoro reali.</p></div>
         </li>
         <li class="case">
-          <div class="case__media"><img class="case__img" src="https://images.pexels.com/photos/8386437/pexels-photo-8386437.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200&amp;h=1000&amp;fit=crop" width="1200" height="1000" alt="" loading="lazy"></div>
+          <div class="case__media"><img class="case__img" src="assets/img/work-04-480.webp" srcset="assets/img/work-04-480.webp 480w, assets/img/work-04-720.webp 720w, assets/img/work-04-960.webp 960w" sizes="(min-width: 700px) 34vw, 92vw" width="480" height="400" alt="" loading="lazy" decoding="async"></div>
           <span class="m-badge case__tag">Processi intelligenti</span>
           <div class="case__text"><h3 class="m-text-4 case__name">AI e automazione</h3><p class="m-text-5 case__line">Automazioni e strumenti intelligenti che riducono le attività ripetitive e migliorano i flussi di lavoro.</p></div>
         </li>
         <li class="case">
-          <div class="case__media"><img class="case__img" src="https://images.pexels.com/photos/17489153/pexels-photo-17489153.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200&amp;h=1000&amp;fit=crop" width="1200" height="1000" alt="" loading="lazy"></div>
+          <div class="case__media"><img class="case__img" src="assets/img/work-05-480.webp" srcset="assets/img/work-05-480.webp 480w, assets/img/work-05-720.webp 720w, assets/img/work-05-960.webp 960w" sizes="(min-width: 700px) 34vw, 92vw" width="480" height="400" alt="" loading="lazy" decoding="async"></div>
           <span class="m-badge case__tag">Evoluzione continua</span>
           <div class="case__text"><h3 class="m-text-4 case__name">Supporto continuo</h3><p class="m-text-5 case__line">Manutenzione, ottimizzazione e assistenza tecnica per far crescere il prodotto nel tempo.</p></div>
         </li>
@@ -643,27 +660,27 @@ textarea.m-field { min-height: 112px; resize: vertical; }
     <div class="again__swing">
       <ul class="again__wheel">
         <li class="partner">
-          <div class="partner__card"><img class="partner__img" src="https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900&amp;h=1125&amp;fit=crop" width="900" height="1125" alt="" loading="lazy">
+          <div class="partner__card"><img class="partner__img" src="assets/img/partner-01-480.webp" srcset="assets/img/partner-01-480.webp 480w, assets/img/partner-01-720.webp 720w, assets/img/partner-01-900.webp 900w" sizes="(min-width: 1000px) 28vw, (min-width: 640px) 46vw, 70vw" width="480" height="600" alt="" loading="lazy" decoding="async">
           <div class="partner__text"><span class="m-badge partner__year">01 · Qualità</span><h3 class="m-text-4 partner__name">Affidabilità</h3><p class="m-text partner__line">Codice curato, test e attenzione ai dettagli prima di ogni rilascio.</p></div></div>
         </li>
         <li class="partner">
-          <div class="partner__card"><img class="partner__img" src="https://images.pexels.com/photos/4508751/pexels-photo-4508751.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900&amp;h=1125&amp;fit=crop" width="900" height="1125" alt="" loading="lazy">
+          <div class="partner__card"><img class="partner__img" src="assets/img/partner-02-480.webp" srcset="assets/img/partner-02-480.webp 480w, assets/img/partner-02-720.webp 720w, assets/img/partner-02-900.webp 900w" sizes="(min-width: 1000px) 28vw, (min-width: 640px) 46vw, 70vw" width="480" height="600" alt="" loading="lazy" decoding="async">
           <div class="partner__text"><span class="m-badge partner__year">02 · Struttura</span><h3 class="m-text-4 partner__name">Scalabilità</h3><p class="m-text partner__line">Architetture organizzate per sostenere nuove funzionalità e volumi.</p></div></div>
         </li>
         <li class="partner">
-          <div class="partner__card"><img class="partner__img" src="https://images.pexels.com/photos/4973899/pexels-photo-4973899.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900&amp;h=1125&amp;fit=crop" width="900" height="1125" alt="" loading="lazy">
+          <div class="partner__card"><img class="partner__img" src="assets/img/partner-03-480.webp" srcset="assets/img/partner-03-480.webp 480w, assets/img/partner-03-720.webp 720w, assets/img/partner-03-900.webp 900w" sizes="(min-width: 1000px) 28vw, (min-width: 640px) 46vw, 70vw" width="480" height="600" alt="" loading="lazy" decoding="async">
           <div class="partner__text"><span class="m-badge partner__year">03 · Protezione</span><h3 class="m-text-4 partner__name">Sicurezza</h3><p class="m-text partner__line">Pratiche tecniche e aggiornamenti considerati fin dalla progettazione.</p></div></div>
         </li>
         <li class="partner">
-          <div class="partner__card"><img class="partner__img" src="https://images.pexels.com/photos/6424583/pexels-photo-6424583.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900&amp;h=1125&amp;fit=crop" width="900" height="1125" alt="" loading="lazy">
+          <div class="partner__card"><img class="partner__img" src="assets/img/partner-04-480.webp" srcset="assets/img/partner-04-480.webp 480w, assets/img/partner-04-720.webp 720w, assets/img/partner-04-900.webp 900w" sizes="(min-width: 1000px) 28vw, (min-width: 640px) 46vw, 70vw" width="480" height="600" alt="" loading="lazy" decoding="async">
           <div class="partner__text"><span class="m-badge partner__year">04 · Continuità</span><h3 class="m-text-4 partner__name">Manutenibilità</h3><p class="m-text partner__line">Soluzioni comprensibili e documentate, più semplici da mantenere.</p></div></div>
         </li>
         <li class="partner">
-          <div class="partner__card"><img class="partner__img" src="https://images.pexels.com/photos/4682187/pexels-photo-4682187.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900&amp;h=1125&amp;fit=crop" width="900" height="1125" alt="" loading="lazy">
+          <div class="partner__card"><img class="partner__img" src="assets/img/partner-05-480.webp" srcset="assets/img/partner-05-480.webp 480w, assets/img/partner-05-720.webp 720w, assets/img/partner-05-900.webp 900w" sizes="(min-width: 1000px) 28vw, (min-width: 640px) 46vw, 70vw" width="480" height="600" alt="" loading="lazy" decoding="async">
           <div class="partner__text"><span class="m-badge partner__year">05 · Connessione</span><h3 class="m-text-4 partner__name">Integrazione</h3><p class="m-text partner__line">Dati e strumenti dialogano con i sistemi già presenti in azienda.</p></div></div>
         </li>
         <li class="partner">
-          <div class="partner__card"><img class="partner__img" src="https://images.pexels.com/photos/106344/pexels-photo-106344.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900&amp;h=1125&amp;fit=crop" width="900" height="1125" alt="" loading="lazy">
+          <div class="partner__card"><img class="partner__img" src="assets/img/partner-06-480.webp" srcset="assets/img/partner-06-480.webp 480w, assets/img/partner-06-720.webp 720w, assets/img/partner-06-900.webp 900w" sizes="(min-width: 1000px) 28vw, (min-width: 640px) 46vw, 70vw" width="480" height="600" alt="" loading="lazy" decoding="async">
           <div class="partner__text"><span class="m-badge partner__year">06 · Evoluzione</span><h3 class="m-text-4 partner__name">Miglioramento</h3><p class="m-text partner__line">Misuriamo l'esperienza e interveniamo dove il prodotto può fare meglio.</p></div></div>
         </li>
       </ul>
@@ -684,7 +701,7 @@ textarea.m-field { min-height: 112px; resize: vertical; }
         <p class="m-text-5 service__line">Siti professionali e negozi online sviluppati su misura, con attenzione a prestazioni, accessibilità e gestione.</p>
         <ul class="service__tags"><li class="m-badge">Sviluppo web</li><li class="m-badge">E-commerce</li><li class="m-badge">Landing page</li><li class="m-badge">Redesign</li></ul>
       </div>
-      <div class="service__media" data-8b-motion="iris"><img src="https://images.pexels.com/photos/12899156/pexels-photo-12899156.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200&amp;h=900&amp;fit=crop" width="1200" height="900" alt="" loading="lazy"></div>
+      <div class="service__media" data-8b-motion="iris"><img src="assets/img/service-01-600.webp" srcset="assets/img/service-01-600.webp 600w, assets/img/service-01-900.webp 900w, assets/img/service-01-1200.webp 1200w" sizes="(min-width: 900px) 47vw, 92vw" width="600" height="450" alt="" loading="lazy" decoding="async"></div>
       <span class="service__shade" aria-hidden="true"></span>
     </li>
     <li class="service m-surface">
@@ -693,7 +710,7 @@ textarea.m-field { min-height: 112px; resize: vertical; }
         <p class="m-text-5 service__line">Identità visive, interfacce e prodotti digitali progettati per essere chiari, coerenti e riconoscibili.</p>
         <ul class="service__tags"><li class="m-badge">Brand identity</li><li class="m-badge">UI/UX</li><li class="m-badge">Design di prodotto</li><li class="m-badge">Direzione creativa</li></ul>
       </div>
-      <div class="service__media" data-8b-motion="iris"><img src="https://images.pexels.com/photos/3471423/pexels-photo-3471423.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200&amp;h=900&amp;fit=crop" width="1200" height="900" alt="" loading="lazy"></div>
+      <div class="service__media" data-8b-motion="iris"><img src="assets/img/service-02-600.webp" srcset="assets/img/service-02-600.webp 600w, assets/img/service-02-900.webp 900w, assets/img/service-02-1200.webp 1200w" sizes="(min-width: 900px) 47vw, 92vw" width="600" height="450" alt="" loading="lazy" decoding="async"></div>
       <span class="service__shade" aria-hidden="true"></span>
     </li>
     <li class="service m-surface">
@@ -702,7 +719,7 @@ textarea.m-field { min-height: 112px; resize: vertical; }
         <p class="m-text-5 service__line">Piattaforme web, dashboard, API e automazioni per semplificare attività e processi aziendali.</p>
         <ul class="service__tags"><li class="m-badge">Web app</li><li class="m-badge">Dashboard</li><li class="m-badge">API e integrazioni</li><li class="m-badge">AI e automazione</li></ul>
       </div>
-      <div class="service__media" data-8b-motion="iris"><img src="https://images.pexels.com/photos/12899191/pexels-photo-12899191.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200&amp;h=900&amp;fit=crop" width="1200" height="900" alt="" loading="lazy"></div>
+      <div class="service__media" data-8b-motion="iris"><img src="assets/img/service-03-600.webp" srcset="assets/img/service-03-600.webp 600w, assets/img/service-03-900.webp 900w, assets/img/service-03-1200.webp 1200w" sizes="(min-width: 900px) 47vw, 92vw" width="600" height="450" alt="" loading="lazy" decoding="async"></div>
       <span class="service__shade" aria-hidden="true"></span>
     </li>
     <li class="service m-surface">
@@ -711,7 +728,7 @@ textarea.m-field { min-height: 112px; resize: vertical; }
         <p class="m-text-5 service__line">Basi tecniche e interventi SEO per migliorare indicizzazione, reperibilità e qualità dell'esperienza.</p>
         <ul class="service__tags"><li class="m-badge">SEO tecnica</li><li class="m-badge">Performance</li><li class="m-badge">Contenuti</li><li class="m-badge">CRO</li></ul>
       </div>
-      <div class="service__media" data-8b-motion="iris"><img src="https://images.pexels.com/photos/20206391/pexels-photo-20206391.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200&amp;h=900&amp;fit=crop" width="1200" height="900" alt="" loading="lazy"></div>
+      <div class="service__media" data-8b-motion="iris"><img src="assets/img/service-04-600.webp" srcset="assets/img/service-04-600.webp 600w, assets/img/service-04-900.webp 900w, assets/img/service-04-1200.webp 1200w" sizes="(min-width: 900px) 47vw, 92vw" width="600" height="450" alt="" loading="lazy" decoding="async"></div>
       <span class="service__shade" aria-hidden="true"></span>
     </li>
     <li class="service m-surface">
@@ -720,7 +737,7 @@ textarea.m-field { min-height: 112px; resize: vertical; }
         <p class="m-text-5 service__line">Manutenzione, hosting e ottimizzazione per accompagnare il prodotto durante tutto il suo ciclo di vita.</p>
         <ul class="service__tags"><li class="m-badge">Manutenzione</li><li class="m-badge">Hosting</li><li class="m-badge">Assistenza</li><li class="m-badge">Partnership</li></ul>
       </div>
-      <div class="service__media" data-8b-motion="iris"><img src="https://images.pexels.com/photos/7988081/pexels-photo-7988081.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200&amp;h=900&amp;fit=crop" width="1200" height="900" alt="" loading="lazy"></div>
+      <div class="service__media" data-8b-motion="iris"><img src="assets/img/service-05-600.webp" srcset="assets/img/service-05-600.webp 600w, assets/img/service-05-900.webp 900w, assets/img/service-05-1200.webp 1200w" sizes="(min-width: 900px) 47vw, 92vw" width="600" height="450" alt="" loading="lazy" decoding="async"></div>
       <span class="service__shade" aria-hidden="true"></span>
     </li>
   </ol>
@@ -757,11 +774,11 @@ textarea.m-field { min-height: 112px; resize: vertical; }
     <p class="m-text-5 studio__lead" data-8b-motion="ink">TiTech Digital è un partner tecnologico con base in Italia e un orizzonte internazionale. Affianchiamo le imprese con un approccio diretto: comprendiamo il contesto, motiviamo le scelte e realizziamo soluzioni pensate per essere mantenute ed evolvere.</p>
   </div>
   <div class="studio__collage">
-    <figure class="shot shot--wide"><img src="https://images.pexels.com/photos/6804068/pexels-photo-6804068.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200&amp;h=933&amp;fit=crop" width="1200" height="933" alt="" loading="lazy"></figure>
-    <figure class="shot shot--tall"><img src="https://images.pexels.com/photos/3861959/pexels-photo-3861959.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900&amp;h=1200&amp;fit=crop" width="900" height="1200" alt="" loading="lazy"></figure>
-    <figure class="shot shot--tall"><img src="https://images.pexels.com/photos/7988089/pexels-photo-7988089.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900&amp;h=1200&amp;fit=crop" width="900" height="1200" alt="" loading="lazy"></figure>
-    <figure class="shot shot--wide"><img src="https://images.pexels.com/photos/7988114/pexels-photo-7988114.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200&amp;h=933&amp;fit=crop" width="1200" height="933" alt="" loading="lazy"></figure>
-    <figure class="shot shot--wide"><img src="https://images.unsplash.com/photo-1623652653308-d49d335c92eb?ixid=M3w0Mzc5fDB8MXxzZWFyY2h8Nnx8d29ya3Nob3AlMjBzdGlja3klMjBub3RlcyUyMHdhbGx8ZW58MXwwfHx8MTc5MTIwOTc1MHww&amp;ixlib=rb-4.1.0&amp;auto=format&amp;fit=crop&amp;w=1200&amp;h=933&amp;q=72" width="1200" height="933" alt="" loading="lazy"></figure>
+    <figure class="shot shot--wide"><img src="assets/img/studio-01-wide-600.webp" srcset="assets/img/studio-01-wide-600.webp 600w, assets/img/studio-01-wide-900.webp 900w, assets/img/studio-01-wide-1100.webp 1100w" sizes="(min-width: 900px) 42vw, 92vw" width="600" height="466" alt="" loading="lazy" decoding="async"></figure>
+    <figure class="shot shot--tall"><img src="assets/img/studio-02-tall-400.webp" srcset="assets/img/studio-02-tall-400.webp 400w, assets/img/studio-02-tall-600.webp 600w" sizes="(min-width: 900px) 22vw, 46vw" width="400" height="533" alt="" loading="lazy" decoding="async"></figure>
+    <figure class="shot shot--tall"><img src="assets/img/studio-03-tall-400.webp" srcset="assets/img/studio-03-tall-400.webp 400w, assets/img/studio-03-tall-600.webp 600w" sizes="(min-width: 900px) 22vw, 46vw" width="400" height="533" alt="" loading="lazy" decoding="async"></figure>
+    <figure class="shot shot--wide"><img src="assets/img/studio-04-wide-600.webp" srcset="assets/img/studio-04-wide-600.webp 600w, assets/img/studio-04-wide-900.webp 900w, assets/img/studio-04-wide-1100.webp 1100w" sizes="(min-width: 900px) 42vw, 92vw" width="600" height="466" alt="" loading="lazy" decoding="async"></figure>
+    <figure class="shot shot--wide"><img src="assets/img/studio-05-wide-600.webp" srcset="assets/img/studio-05-wide-600.webp 600w, assets/img/studio-05-wide-900.webp 900w, assets/img/studio-05-wide-1100.webp 1100w" sizes="(min-width: 900px) 42vw, 92vw" width="600" height="466" alt="" loading="lazy" decoding="async"></figure>
     <div class="studio__roles">
       <h3 class="m-text-7" data-8b-motion="rise">Competenze integrate<span class="m-dot" aria-hidden="true"></span></h3>
       <ul>
@@ -781,16 +798,16 @@ textarea.m-field { min-height: 112px; resize: vertical; }
   </div>
   <div class="journal__body">
     <div class="journal__frame">
-      <img class="journal__shot" src="https://images.pexels.com/photos/256502/pexels-photo-256502.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1000&amp;h=1250&amp;fit=crop" width="1000" height="1250" alt="" loading="lazy">
-      <img class="journal__shot" src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1000&amp;h=1250&amp;fit=crop" width="1000" height="1250" alt="" loading="lazy">
-      <img class="journal__shot" src="https://images.pexels.com/photos/4497197/pexels-photo-4497197.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1000&amp;h=1250&amp;fit=crop" width="1000" height="1250" alt="" loading="lazy">
-      <img class="journal__shot" src="https://images.pexels.com/photos/17489150/pexels-photo-17489150.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1000&amp;h=1250&amp;fit=crop" width="1000" height="1250" alt="" loading="lazy">
+      <img class="journal__shot" src="assets/img/journal-01-600.webp" srcset="assets/img/journal-01-600.webp 600w, assets/img/journal-01-900.webp 900w, assets/img/journal-01-1100.webp 1100w" sizes="(min-width: 900px) 46vw, 92vw" width="600" height="750" alt="" loading="lazy" decoding="async">
+      <img class="journal__shot" src="assets/img/journal-02-600.webp" srcset="assets/img/journal-02-600.webp 600w, assets/img/journal-02-900.webp 900w, assets/img/journal-02-1100.webp 1100w" sizes="(min-width: 900px) 46vw, 92vw" width="600" height="750" alt="" loading="lazy" decoding="async">
+      <img class="journal__shot" src="assets/img/journal-03-600.webp" srcset="assets/img/journal-03-600.webp 600w, assets/img/journal-03-900.webp 900w, assets/img/journal-03-1100.webp 1100w" sizes="(min-width: 900px) 46vw, 92vw" width="600" height="750" alt="" loading="lazy" decoding="async">
+      <img class="journal__shot" src="assets/img/journal-04-600.webp" srcset="assets/img/journal-04-600.webp 600w, assets/img/journal-04-900.webp 900w, assets/img/journal-04-1100.webp 1100w" sizes="(min-width: 900px) 46vw, 92vw" width="600" height="750" alt="" loading="lazy" decoding="async">
     </div>
     <ol class="journal__list">
-      <li class="story"><p class="m-text-6 story__meta"><span>01 · Fondamenta</span></p><h3 class="m-text-7">La qualità inizia dall'architettura</h3><p class="m-text story__text">Struttura, performance e sicurezza vengono considerate fin dalle prime decisioni, non aggiunte alla fine.</p></li>
-      <li class="story"><p class="m-text-6 story__meta"><span>02 · Esperienza</span></p><h3 class="m-text-7">Un'interfaccia deve essere utile prima che bella</h3><p class="m-text story__text">Contenuti, flussi e interazioni sono progettati per rendere ogni attività comprensibile e accessibile.</p></li>
-      <li class="story"><p class="m-text-6 story__meta"><span>03 · Integrazione</span></p><h3 class="m-text-7">Il software ha valore quando si inserisce nel lavoro</h3><p class="m-text story__text">Partiamo dai processi e dai sistemi esistenti per creare strumenti coerenti con il modo in cui l'impresa opera.</p></li>
-      <li class="story"><p class="m-text-6 story__meta"><span>04 · Continuità</span></p><h3 class="m-text-7">Un rilascio è l'inizio della manutenzione</h3><p class="m-text story__text">Documentazione e scelte sostenibili rendono più semplice correggere, aggiornare e ampliare un prodotto.</p></li>
+      <li class="story"><figure class="story__media" data-8b-motion="iris"><img class="story__img" src="assets/img/journal-01-600.webp" srcset="assets/img/journal-01-600.webp 600w, assets/img/journal-01-900.webp 900w, assets/img/journal-01-1100.webp 1100w" sizes="92vw" width="600" height="750" alt="" loading="lazy" decoding="async"></figure><p class="m-text-6 story__meta"><span>01 · Fondamenta</span></p><h3 class="m-text-7">La qualità inizia dall'architettura</h3><p class="m-text story__text">Struttura, performance e sicurezza vengono considerate fin dalle prime decisioni, non aggiunte alla fine.</p></li>
+      <li class="story"><figure class="story__media" data-8b-motion="iris"><img class="story__img" src="assets/img/journal-02-600.webp" srcset="assets/img/journal-02-600.webp 600w, assets/img/journal-02-900.webp 900w, assets/img/journal-02-1100.webp 1100w" sizes="92vw" width="600" height="750" alt="" loading="lazy" decoding="async"></figure><p class="m-text-6 story__meta"><span>02 · Esperienza</span></p><h3 class="m-text-7">Un'interfaccia deve essere utile prima che bella</h3><p class="m-text story__text">Contenuti, flussi e interazioni sono progettati per rendere ogni attività comprensibile e accessibile.</p></li>
+      <li class="story"><figure class="story__media" data-8b-motion="iris"><img class="story__img" src="assets/img/journal-03-600.webp" srcset="assets/img/journal-03-600.webp 600w, assets/img/journal-03-900.webp 900w, assets/img/journal-03-1100.webp 1100w" sizes="92vw" width="600" height="750" alt="" loading="lazy" decoding="async"></figure><p class="m-text-6 story__meta"><span>03 · Integrazione</span></p><h3 class="m-text-7">Il software ha valore quando si inserisce nel lavoro</h3><p class="m-text story__text">Partiamo dai processi e dai sistemi esistenti per creare strumenti coerenti con il modo in cui l'impresa opera.</p></li>
+      <li class="story"><figure class="story__media" data-8b-motion="iris"><img class="story__img" src="assets/img/journal-04-600.webp" srcset="assets/img/journal-04-600.webp 600w, assets/img/journal-04-900.webp 900w, assets/img/journal-04-1100.webp 1100w" sizes="92vw" width="600" height="750" alt="" loading="lazy" decoding="async"></figure><p class="m-text-6 story__meta"><span>04 · Continuità</span></p><h3 class="m-text-7">Un rilascio è l'inizio della manutenzione</h3><p class="m-text story__text">Documentazione e scelte sostenibili rendono più semplice correggere, aggiornare e ampliare un prodotto.</p></li>
     </ol>
   </div>
 </section>
@@ -841,7 +858,7 @@ textarea.m-field { min-height: 112px; resize: vertical; }
 
 <!-- footer: closing greeting with the round photo full stop, section links and the Design: 8B credit (animation: scene:footer) -->
 <footer id="footer" data-8b-section="footer">
-  <p class="m-text-2 footer__bye" style="--len:4"><span class="footer__word">Ciao</span><span class="footer__period" aria-hidden="true"><span class="footer__aperture"><img class="footer__img" src="https://images.pexels.com/photos/28428587/pexels-photo-28428587.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200&amp;h=1200&amp;fit=crop" width="1200" height="1200" alt=""><span class="footer__tint"></span></span></span></p>
+  <p class="m-text-2 footer__bye" style="--len:4"><span class="footer__word">Ciao</span><span class="footer__period" aria-hidden="true"><span class="footer__aperture"><img class="footer__img" src="assets/img/hero-700.webp" srcset="assets/img/hero-700.webp 700w, assets/img/hero-1400.webp 1400w" sizes="(min-width: 900px) 24vw, 30vw" width="700" height="700" alt="" loading="lazy" decoding="async"><span class="footer__tint"></span></span></span></p>
   <div class="footer__grid">
     <nav class="footer__col" aria-label="Footer">
       <p class="m-text-6 footer__label">Esplora</p>
@@ -906,6 +923,27 @@ textarea.m-field { min-height: 112px; resize: vertical; }
   const hero = document.getElementById('hero');
   if (!('IntersectionObserver' in window)) return;
   new IntersectionObserver(([entry]) => hero.classList.toggle('is-offscreen', !entry.isIntersecting)).observe(hero);
+})();
+</script>
+<script data-8b-part="image-warmup">
+(() => {
+  const journal = document.getElementById('journal');
+  if (!journal) return;
+  const warm = () => journal.querySelectorAll(innerWidth < 900 ? '.story__img' : '.journal__shot').forEach(image => {
+    if (image.dataset.warm) return;
+    image.dataset.warm = '1';
+    const preload = new Image();
+    preload.srcset = image.srcset;
+    preload.sizes = image.sizes;
+    preload.src = image.src;
+  });
+  if (!('IntersectionObserver' in window)) { window.addEventListener('load', warm, { once: true }); return; }
+  const watch = new IntersectionObserver(entries => {
+    if (!entries.some(entry => entry.isIntersecting)) return;
+    watch.disconnect();
+    warm();
+  }, { rootMargin: '150% 0px' });
+  watch.observe(journal);
 })();
 </script>
 <script data-8b-part="motion-queue">
@@ -1142,10 +1180,12 @@ queueMotion(() => {
     };
     measure();
     ScrollTrigger.addEventListener('refreshInit', measure);
-    gsap.fromTo(wheel, { rotation: () => step * 0.55 }, { rotation: () => -(cards.length - 0.45) * step, ease: 'none', scrollTrigger: { id: 'again', trigger: again, start: 'top 30%', end: 'bottom bottom', scrub: true, invalidateOnRefresh: true } });
+    const lead = () => (innerWidth < 700 ? 0 : step * 0.55);
+    const rest = () => (innerWidth < 700 ? -(cards.length - 1) * step : -(cards.length - 0.45) * step);
+    gsap.fromTo(wheel, { rotation: () => lead() }, { rotation: () => rest(), ease: 'none', scrollTrigger: { id: 'again', trigger: again, start: () => (innerWidth < 700 ? 'top top' : 'top 30%'), end: 'bottom bottom', scrub: true, invalidateOnRefresh: true } });
     if (adjacent('work', 'again')) {
       gsap.timeline({ defaults: { ease: 'none' }, scrollTrigger: { id: 'again:entry', trigger: again, start: 'top bottom', end: 'top 30%', scrub: true, invalidateOnRefresh: true } })
-        .fromTo(swing, { rotation: () => Math.max(4, Math.asin(Math.min(1, innerWidth * 0.3 / radius)) * 180 / Math.PI - step * 0.55) }, { rotation: 0, ease: 'power1.out' }, 0)
+        .fromTo(swing, { rotation: () => Math.max(4, Math.asin(Math.min(1, innerWidth * 0.3 / radius)) * 180 / Math.PI - lead()) }, { rotation: 0, ease: 'power1.out' }, 0)
         .fromTo(swing, { y: () => -(arcTop - 40) }, { y: 0, ease: 'power2.in' }, 0)
         .fromTo(head, { yPercent: 45 }, { yPercent: 0, ease: 'power2.out' }, 0);
     }
@@ -1259,11 +1299,12 @@ queueMotion(() => {
     const journal = document.getElementById('journal');
     const shots = [...journal.querySelectorAll('.journal__shot')];
     const stories = [...journal.querySelectorAll('.story')];
+    const wide = matchMedia('(min-width: 900px)');
     journal.classList.add('is-swap');
     stories.forEach((story, index) => {
       const timeline = gsap.timeline({ defaults: { ease: 'none' }, scrollTrigger: { id: `journal:${index}`, trigger: story, start: 'top 84%', end: 'top 50%', scrub: true } });
       timeline.fromTo(story, { opacity: 0.25 }, { opacity: 1, duration: 0.8 }, 0);
-      if (index && shots[index]) timeline.fromTo(shots[index], { clipPath: 'circle(0% at 50% 50%)' }, { clipPath: 'circle(75% at 50% 50%)', ease: 'power1.inOut', duration: 1 }, 0);
+      if (index && shots[index] && wide.matches) timeline.fromTo(shots[index], { clipPath: 'circle(0% at 50% 50%)' }, { clipPath: 'circle(75% at 50% 50%)', ease: 'power1.inOut', duration: 1 }, 0);
     });
     return () => journal.classList.remove('is-swap');
   });
