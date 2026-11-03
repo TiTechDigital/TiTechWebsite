@@ -65,6 +65,7 @@ L'indirizzo `info@titechdigital.it` è un **segnaposto**: va sostituito con l'in
 
 - **Testi** — in `index.html` (italiano) e `en/index.html` (inglese). Quando si modifica una versione, aggiornare anche l'altra per mantenere allineati contenuti e metadati.
 - **Email** — cercare `info@titechdigital.it` e sostituirla in contatti, footer e script.
+- **Logo e favicon** — il simbolo è in `assets/img/logo.svg`; la versione per la scheda del browser è in `assets/img/favicon.svg`. La navbar usa il simbolo accanto al nome TiTech, mentre il menu mobile lo ripete in alto.
 - **Immagini** — i WebP ottimizzati sono in `assets/img` e referenziati da entrambe le pagine; le attribuzioni sono in [CREDITS.md](CREDITS.md). Le foto sono illustrative e non rappresentano clienti o progetti reali.
 - **Meta e anteprima social** — aggiornare `description`, `og:title`, `og:description` e `og:image` quando saranno disponibili contenuti definitivi.
 - **Dati strutturati** — il blocco JSON-LD `Organization` è presente nell'head; aggiungere solo dati verificati (indirizzo, telefono, profili social).
