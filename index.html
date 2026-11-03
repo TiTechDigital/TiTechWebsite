@@ -211,6 +211,13 @@ textarea.m-field { min-height: 112px; resize: vertical; }
 #navigation .nav__cta { box-shadow: var(--shadow-3); }
 #navigation .nav__links a { display: block; margin: 0 14px; padding-block: 14px; }
 #navigation .nav__links a::after { bottom: 10px; }
+#navigation .nav__lang { display: inline-flex; align-items: center; justify-content: center; min-width: 48px; min-height: 48px; padding: 0 14px; border-radius: var(--radius-3); background: var(--color-1); color: var(--color-2); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--color-2) 26%, transparent); font-family: var(--font-2); font-size: 14px; font-weight: 600; letter-spacing: .06em; text-decoration: none; text-transform: uppercase; }
+#navigation .menu__top { gap: 10px; }
+#navigation .menu__lang { display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border: 1px solid color-mix(in srgb, var(--color-2) 22%, transparent); border-radius: var(--radius-3); color: var(--color-2); font-family: var(--font-2); font-size: 13px; font-weight: 600; letter-spacing: .06em; text-decoration: none; text-transform: uppercase; }
+@media (hover: hover) {
+  #navigation .nav__lang:hover { background: var(--color-3); }
+  #navigation .menu__lang:hover { background: color-mix(in srgb, var(--color-2) 10%, transparent); }
+}
 #navigation .nav__menu { display: none; margin-left: auto; }
 #navigation .menu { position: fixed; inset: 0; z-index: 60; display: grid; grid-template-rows: auto 1fr auto; padding: 14px var(--space-1) 32px; background: var(--color-1); color: var(--color-2); overflow-y: auto; }
 #navigation .menu[hidden] { display: none; }
@@ -220,7 +227,8 @@ textarea.m-field { min-height: 112px; resize: vertical; }
 #navigation .menu__foot { color: var(--color-5); }
 @media (max-width: 899px) {
   #navigation .nav__links, #navigation .nav__cta { display: none; }
-  #navigation .nav__menu { display: inline-flex; }
+  #navigation .nav__lang { margin-left: auto; }
+  #navigation .nav__menu { display: inline-flex; margin-left: 0; }
 }
 }
 </style>
@@ -506,10 +514,11 @@ textarea.m-field { min-height: 112px; resize: vertical; }
       <li><a class="m-link-2" href="#studio">TiTech</a></li>
     </ul>
   </nav>
+  <a class="nav__lang" href="en/index.html" hreflang="en" lang="en" aria-label="Passa alla versione inglese">EN</a>
   <a class="m-btn nav__cta" href="#contact"><span class="m-btn__label">Parliamo del progetto</span></a>
   <button class="m-btn-2 nav__menu" type="button" aria-expanded="false" aria-controls="menu"><span class="m-btn__label">Menu</span></button>
   <div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu" data-lenis-prevent hidden>
-    <div class="menu__top"><button class="m-icon menu__close" type="button" aria-label="Chiudi il menu"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3 3 13"/></svg></button></div>
+    <div class="menu__top"><a class="menu__lang" href="en/index.html" hreflang="en" lang="en" aria-label="Passa alla versione inglese">English</a><button class="m-icon menu__close" type="button" aria-label="Chiudi il menu"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3 3 13"/></svg></button></div>
     <ul class="menu__list">
       <li><a href="#work">Soluzioni<span class="m-dot" aria-hidden="true"></span></a></li>
       <li><a href="#method">Metodo<span class="m-dot" aria-hidden="true"></span></a></li>
