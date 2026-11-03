@@ -24,7 +24,7 @@ Il posizionamento è quello di un partner serio e concreto: competenza tecnica, 
 6. Collage dello studio con competenze integrate.
 7. Sei domande frequenti in `<details>`.
 8. Contatti con modulo.
-9. Footer con saluto, link, email e credito Design: 8B.
+9. Footer con saluto, link, email, dati legali e credito Design e sito web: titechdigital.it.
 
 Le animazioni GSAP/ScrollTrigger e lo smooth scrolling Lenis sono quelli originali del template. Con `prefers-reduced-motion` attivo la pagina resta completa e statica.
 
@@ -71,7 +71,7 @@ L'indirizzo `info@titechdigital.it` è un **segnaposto**: va sostituito con l'in
 - **Meta e anteprima social** — aggiornare `description`, `og:title`, `og:description` e `og:image` quando saranno disponibili contenuti definitivi.
 - **Dati strutturati** — il blocco JSON-LD `Organization` è presente nell'head; aggiungere solo dati verificati (indirizzo, telefono, profili social).
 
-Non rimuovere gli attributi `data-8b-*`, gli ID delle sezioni, i punti decorativi nelle intestazioni, il commento del template, il `<meta name="generator">` e il credito “Design: 8B” nel footer: servono al funzionamento delle animazioni e alla corretta attribuzione del template.
+Non rimuovere gli attributi `data-8b-*`, gli ID delle sezioni, i punti decorativi nelle intestazioni, il commento del template e il `<meta name="generator">`: servono al funzionamento delle animazioni. Il credito visibile nel footer è **Design e sito web: titechdigital.it**.
 
 ## Font e tecnologie
 
