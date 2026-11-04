@@ -1,0 +1,42 @@
+﻿<footer id="footer" class="footer">
+  <p class="m-text-2 footer__bye" style="--len:4"><span class="footer__word">Ciao</span><span class="footer__period" aria-hidden="true"><span class="footer__aperture"><img class="footer__img" src="/assets/img/hero-700.webp" srcset="assets/img/hero-700.webp 700w, assets/img/hero-1400.webp 1400w" sizes="(min-width: 900px) 24vw, 30vw" width="700" height="700" alt="" loading="lazy" decoding="async"><span class="footer__tint"></span></span></span></p>
+  <div class="footer__grid">
+    <nav class="footer__col" aria-label="Footer">
+      <p class="m-text-6 footer__label">Esplora</p>
+      <a class="m-link-2" href="/servizi/">Servizi</a>
+      <a class="m-link-2" href="/settori/">Settori</a>
+      <a class="m-link-2" href="/lavori/">Lavori</a>
+      <a class="m-link-2" href="/come-lavoriamo/">Come lavoriamo</a>
+      <a class="m-link-2" href="/chi-siamo/">Chi siamo</a>
+      <a class="m-link-2" href="/blog/">Blog</a>
+      <a class="m-link-2" href="/contatti/">Contatti</a>
+    </nav>
+    <div class="footer__col">
+      <p class="m-text-6 footer__label">Servizi</p>
+      <a class="m-link-2" href="/servizi/siti-web/">Siti web</a>
+      <a class="m-link-2" href="/servizi/e-commerce/">E-commerce</a>
+      <a class="m-link-2" href="/servizi/software-su-misura/">Software su misura</a>
+      <a class="m-link-2" href="/servizi/automazioni-ai/">Automazioni e AI</a>
+      <a class="m-link-2" href="/servizi/seo/">Consulenza SEO</a>
+      <a class="m-link-2" href="/contatti/">Parliamo di un progetto</a>
+    </div>
+    <div class="footer__col">
+      <p class="m-text-6 footer__label">TiTech Digital</p>
+      <p class="m-text">Partner tecnologico per imprese, dall'Italia ai mercati internazionali.</p>
+      <p class="m-text">Strategia, design e sviluppo con attenzione alla continuità.</p>
+      <a class="m-link-2" href="mailto:info@titechdigital.it">info@titechdigital.it</a>
+    </div>
+    <div class="footer__news">
+      <p class="m-text-7">Hai un progetto digitale da sviluppare?<span class="m-dot" aria-hidden="true"></span></p>
+      <a class="m-link-2" href="/contatti/">Descrivici la tua esigenza</a>
+      <p class="m-text-6 footer__note">Contatta TiTech Digital per valutare la soluzione più adatta.</p>
+    </div>
+  </div>
+  <address class="footer__nap m-text-6">
+    <span>TiTech Digital</span>
+    <a class="m-link-2" href="tel:+393761024080">+39 376 102 4080</a>
+    <a class="m-link-2" href="https://wa.me/393761024080?text=Ciao%20TiTech,%20vi%20scrivo%20dal%20sito%20web.%20Vorrei%20parlare%20del%20mio%20progetto.">WhatsApp</a>
+    <span>Novara, Italia</span>
+  </address>
+  <div class="footer__legal m-text-6"><p>© <span data-year>2026</span> TiTech Digital · P. IVA 02829190038 · <a href="/privacy/">Privacy</a> · <a href="/cookie/">Cookie</a></p><p>Design e sito web: <a href="https://titechdigital.it">titechdigital.it</a></p><p>Soluzioni digitali · Italia e mercati internazionali</p></div>
+</footer>
