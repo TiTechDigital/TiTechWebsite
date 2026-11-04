@@ -1,0 +1,21 @@
+# 知识卡导出索引文件
+schema_version: 1
+locale: en-US
+branch: main
+nodes_managed: true
+exported_at: "2026-11-03T14:09:29Z"
+modules:
+    "":
+        dir_name: TiTech Digital One-Page Website (Italian & English)
+        title: TiTech Digital One-Page Website (Italian & English)
+        scope:
+            - .
+            - CREDITS.md
+            - LICENSE
+            - README.md
+            - index.html
+            - index.original.html
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []

@@ -1,0 +1,10 @@
+# robots.txt per https://titechdigital.it
+# Canonical documents: / (Italian) and /en/ (English).
+
+User-agent: *
+Allow: /
+
+# Template reference copy: kept for maintenance, never a public page.
+Disallow: /index.original.html
+
+Sitemap: https://titechdigital.it/sitemap.xml

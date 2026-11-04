@@ -1,0 +1,335 @@
+<!doctype html>
+<!-- TEMPLATE / CASE STUDY IN ENGLISH. Copy this file to en/work/@@SLUG@@/index.html,
+     replace every @@...@@ token and delete all comments. An unfilled token makes
+     tools/check_site.py fail, so a half-written page cannot be published by accident.
+     Keep this file structurally equal to case-study-it.txt: the checker compares the
+     two languages block by block and reports any section, row or figure that exists
+     in only one of them. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="ga4-id" content="G-1XHPFBBW5Z">
+<title>@@CLIENTE@@: @@PROGETTO_BREVE@@ | TiTech Digital</title>
+<meta name="description" content="@@META_DESCRIZIONE@@">
+<meta name="theme-color" content="#101923">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://titechdigital.it/en/work/@@SLUG@@/">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="TiTech Digital">
+<meta property="og:title" content="@@CLIENTE@@: @@PROGETTO_BREVE@@ | TiTech Digital">
+<meta property="og:description" content="@@META_DESCRIZIONE@@">
+<meta property="og:image" content="https://titechdigital.it/assets/img/og-card-en-1200x630.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://titechdigital.it/assets/img/og-card-en-1200x630.png">
+<link rel="canonical" href="https://titechdigital.it/en/work/@@SLUG@@/">
+<link rel="alternate" hreflang="en" href="https://titechdigital.it/en/work/@@SLUG@@/">
+<link rel="alternate" hreflang="it-IT" href="https://titechdigital.it/lavori/@@SLUG@@/">
+<link rel="alternate" hreflang="x-default" href="https://titechdigital.it/lavori/@@SLUG@@/">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/assets/css/pages.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://titechdigital.it/#organization",
+      "name": "TiTech Digital",
+      "url": "https://titechdigital.it/",
+      "logo": "https://titechdigital.it/assets/img/logo-512x512.png",
+      "email": "info@titechdigital.it",
+      "telephone": "+39 376 102 4080",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Novara",
+        "addressCountry": "IT"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://titechdigital.it/en/work/@@SLUG@@/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://titechdigital.it/en/" },
+        { "@type": "ListItem", "position": 2, "name": "Work", "item": "https://titechdigital.it/en/work/" },
+        { "@type": "ListItem", "position": 3, "name": "@@CLIENTE@@", "item": "https://titechdigital.it/en/work/@@SLUG@@/" }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://titechdigital.it/#enea-muja",
+      "name": "Enea Muja",
+      "jobTitle": "CEO",
+      "worksFor": { "@id": "https://titechdigital.it/#organization" }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://titechdigital.it/en/work/@@SLUG@@/#article",
+      "headline": "@@CLIENTE@@: @@PROGETTO_BREVE@@",
+      "description": "@@META_DESCRIZIONE@@",
+      "url": "https://titechdigital.it/en/work/@@SLUG@@/",
+      "inLanguage": "en",
+      "author": { "@id": "https://titechdigital.it/#enea-muja" },
+      "publisher": { "@id": "https://titechdigital.it/#organization" },
+      "datePublished": "@@DATA_PUBBLICAZIONE@@",
+      "dateModified": "@@DATA_AGGIORNAMENTO@@",
+      "about": { "@id": "@@URL_SERVIZIO_EN@@#service" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://titechdigital.it/en/work/@@SLUG@@/#webpage",
+      "url": "https://titechdigital.it/en/work/@@SLUG@@/",
+      "name": "@@CLIENTE@@: @@PROGETTO_BREVE@@",
+      "inLanguage": "en",
+      "author": { "@id": "https://titechdigital.it/#enea-muja" },
+      "breadcrumb": { "@id": "https://titechdigital.it/en/work/@@SLUG@@/#breadcrumb" },
+      "mainEntity": { "@id": "https://titechdigital.it/en/work/@@SLUG@@/#article" },
+      "datePublished": "@@DATA_PUBBLICAZIONE@@",
+      "dateModified": "@@DATA_AGGIORNAMENTO@@"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <a class="nav__brand" href="/en/" aria-label="TiTech Digital, home"><img src="/assets/img/logo.svg" width="30" height="30" alt=""><span>TiTech</span></a>
+  <nav class="nav__links" aria-label="Main navigation">
+    <ul>
+      <li><a class="m-link-2" href="/en/services/">Services</a></li>
+      <li><a class="m-link-2" href="/en/work/" aria-current="true">Work</a></li>
+      <li><a class="m-link-2" href="/en/how-we-work/">How we work</a></li>
+      <li><a class="m-link-2" href="/en/about/">About</a></li>
+      <li><a class="m-link-2" href="/en/blog/">Blog</a></li>
+    </ul>
+  </nav>
+  <a class="nav__lang" href="/lavori/@@SLUG@@/" hreflang="it" lang="it" aria-label="Switch to Italian">IT</a>
+  <a class="m-btn nav__cta" href="/en/contact/"><span class="m-btn__label">Tell us about the project</span></a>
+  <button class="m-btn-2 nav__menu" type="button" aria-expanded="false" aria-controls="menu"><span class="m-btn__label">Menu</span></button>
+  <div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu" data-lenis-prevent hidden>
+    <div class="menu__top">
+      <a class="menu__brand" href="/en/" aria-label="TiTech Digital, home"><img src="/assets/img/logo.svg" width="30" height="30" alt=""></a>
+      <a class="menu__lang" href="/lavori/@@SLUG@@/" hreflang="it" lang="it" aria-label="Switch to Italian">Italiano</a>
+      <button class="m-icon menu__close" type="button" aria-label="Close the menu"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3 3 13"/></svg></button>
+    </div>
+    <ul class="menu__list">
+      <li><a href="/en/services/">Services<span class="m-dot" aria-hidden="true"></span></a></li>
+      <li><a href="/en/industries/">Industries<span class="m-dot" aria-hidden="true"></span></a></li>
+      <li><a href="/en/work/">Work<span class="m-dot" aria-hidden="true"></span></a></li>
+      <li><a href="/en/how-we-work/">How we work<span class="m-dot" aria-hidden="true"></span></a></li>
+      <li><a href="/en/about/">About<span class="m-dot" aria-hidden="true"></span></a></li>
+      <li><a href="/en/blog/">Blog<span class="m-dot" aria-hidden="true"></span></a></li>
+      <li><a href="/en/contact/">Contact<span class="m-dot" aria-hidden="true"></span></a></li>
+    </ul>
+    <p class="m-text menu__foot">Technology and digital solutions · Italy and international markets</p>
+  </div>
+</header>
+<main id="main">
+  <div class="shell page">
+    <nav aria-label="Breadcrumb">
+      <ol class="crumbs">
+        <li><a href="/en/">Home</a></li>
+        <li><a href="/en/work/">Work</a></li>
+        <li aria-current="page">@@CLIENTE@@</li>
+      </ol>
+    </nav>
+    <div class="head">
+      <p class="m-eyebrow">Work · @@SETTORE@@ · @@ANNO@@</p>
+      <h1 class="m-text-3 head__title">@@TITOLO@@<span class="m-dot" aria-hidden="true"></span></h1>
+      <p class="m-text-5 head__lead">@@SUBTITLE. One or two sentences: the client's problem, not the technology you used.@@</p>
+      <div class="head__actions">
+        <a class="m-btn" href="@@URL_SERVIZIO_EN@@"><span>@@SERVIZIO_EN@@</span></a>
+        <a class="m-link" href="/en/contact/"><span class="m-link__label">Talk it through with us</span><svg class="m-link__arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5"/></svg></a>
+      </div>
+      <p class="byline"><span class="byline__name">Enea Muja</span><span class="byline__role">CEO, TiTech Digital</span><time class="byline__date" datetime="@@DATA_AGGIORNAMENTO@@">Updated @@DATA_AGGIORNAMENTO_UOMO@@</time></p>
+    </div>
+
+    <section class="sect" id="starting-point" aria-labelledby="contesto-title">
+      <div class="sect__top">
+        <h2 class="m-text-4" id="contesto-title">Where @@CLIENTE@@ started</h2>
+        <p class="m-text">@@One sentence on why this project existed: what was not working, or what did not exist yet.@@</p>
+      </div>
+      <div class="prose">
+        <p>@@Paragraph 1: the situation before the work, with the details only someone in the room would know. This is where the first-hand experience lives: real roles, real constraints, the decision that started the project.@@</p>
+        <p>@@Paragraph 2: what the client had already tried and why it was not enough. If you do not remember a detail, say it was never tracked instead of inventing it.@@</p>
+      </div>
+      <ul class="facts">
+        <li><span class="facts__num">@@NUM_1@@</span><span class="facts__label">@@a project commitment, not a result: duration, weeks, revisions included@@</span></li>
+        <li><span class="facts__num">@@NUM_2@@</span><span class="facts__label">@@second project commitment@@</span></li>
+        <li><span class="facts__num">@@NUM_3@@</span><span class="facts__label">@@third project commitment@@</span></li>
+      </ul>
+    </section>
+
+    <section class="sect" id="what-we-built" aria-labelledby="costruito-title">
+      <div class="sect__top">
+        <h2 class="m-text-4" id="costruito-title">What we built</h2>
+        <p class="m-text">@@One sentence: the shape of the solution, before any product names.@@</p>
+      </div>
+      <div class="prose">
+        <p>@@Paragraph: the choices that carry a cost or a consequence, explained in plain words. Then the table with the technical specifics, which is the part competitors cannot copy.@@</p>
+      </div>
+      <div class="table-wrap">
+        <table class="table">
+          <caption>Technical details of the @@SLUG@@ project</caption>
+          <thead>
+            <tr><th scope="col">Area</th><th scope="col">What we used and why</th><th scope="col">Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Platform</th><td>@@Why this platform and not another one, in one line.@@</td><td>@@short@@</td></tr>
+            <tr><th scope="row">Hosting</th><td>@@Where it runs, who administers it, what changes for the client.@@</td><td>@@short@@</td></tr>
+            <tr><th scope="row">Payments</th><td>@@Gateway, cards, bank transfer, cash on delivery: what is actually live.@@</td><td>@@short@@</td></tr>
+            <tr><th scope="row">Integrations</th><td>@@ERP, stock, CRM, electronic invoicing.@@</td><td>@@short@@</td></tr>
+            <tr><th scope="row">Measurement</th><td>@@What is measured after launch and with which tool.@@</td><td>@@short@@</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note"><p><strong>The last column stays short.</strong> The table grid does not wrap the final cell: a long sentence there pushes the table wider than a phone screen.</p></div>
+    </section>
+
+    <section class="sect sect--paper" id="before-after" aria-labelledby="prima-dopo-title">
+      <div class="sect__top">
+        <h2 class="m-text-4" id="prima-dopo-title">Before and after</h2>
+        <p class="m-text">Two real screens, same viewport and same device. If the earlier version no longer exists, say so instead of rebuilding it.</p>
+      </div>
+      <figure class="figure">
+        <img src="/assets/img/casi/@@SLUG@@-prima-700.webp" srcset="/assets/img/casi/@@SLUG@@-prima-700.webp 700w, /assets/img/casi/@@SLUG@@-prima-1400.webp 1400w" sizes="(min-width: 900px) 900px, 92vw" width="700" height="420" alt="@@CLIENTE@@, the site before the work: @@what is visible and what cannot be done@@" loading="lazy" decoding="async">
+        <figcaption>@@Before: what you are looking at in this screen.@@</figcaption>
+      </figure>
+      <figure class="figure">
+        <img src="/assets/img/casi/@@SLUG@@-dopo-700.webp" srcset="/assets/img/casi/@@SLUG@@-dopo-700.webp 700w, /assets/img/casi/@@SLUG@@-dopo-1400.webp 1400w" sizes="(min-width: 900px) 900px, 92vw" width="700" height="420" alt="@@CLIENTE@@, the site after launch: @@what changed in this screen@@" loading="lazy" decoding="async">
+        <figcaption>@@After: the same page, with what genuinely changed.@@</figcaption>
+      </figure>
+      <div class="note"><p>@@If you only have the after, write it: "no full copy of the previous site survives, so we show only the result". That is honest and it does not weaken the work.@@</p></div>
+    </section>
+
+    <section class="sect" id="how-we-worked" aria-labelledby="lavorato-title">
+      <div class="sect__top">
+        <h2 class="m-text-4" id="lavorato-title">How we worked</h2>
+        <p class="m-text">@@One sentence: the step that mattered most on this project.@@</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <h3 class="m-text-7">@@Step 1@@</h3>
+          <p class="m-text">@@What actually happened, with one concrete detail.@@</p>
+        </div>
+        <div class="step">
+          <h3 class="m-text-7">@@Step 2@@</h3>
+          <p class="m-text">@@The hard decision and how you resolved it.@@</p>
+        </div>
+        <div class="step">
+          <h3 class="m-text-7">@@Step 3@@</h3>
+          <p class="m-text">@@The moment the client touched the result.@@</p>
+        </div>
+        <div class="step">
+          <h3 class="m-text-7">@@After launch@@</h3>
+          <p class="m-text">@@Who maintains what, and for how long.@@</p>
+        </div>
+      </div>
+      <ul class="checks">
+        <li><strong>@@A choice we would make again@@</strong><span>@@Reason.@@</span></li>
+        <li><strong>@@A choice we would revisit@@</strong><span>@@Reason, and what we would do today.@@</span></li>
+      </ul>
+    </section>
+
+    <!-- data-results is the switch the checker reads: "verified" requires the .facts
+         block with the source of each measure, "not-measured" requires only the honest
+         note. Any other value stops the page from passing. -->
+    <section class="sect" id="results" data-results="@@MISURATO@@" aria-labelledby="risultati-title">
+      <div class="sect__top">
+        <h2 class="m-text-4" id="risultati-title">Results</h2>
+        <p class="m-text">@@Numbers someone measured end up here. If there are none, this section says why: that is a real answer, not a shorter page.@@</p>
+      </div>
+      <ul class="facts">
+        <li><span class="facts__num">@@NUM_RESULT_1@@</span><span class="facts__label">@@measure, period and source: "online orders, March to October 2026, the client's own ERP"@@</span></li>
+        <li><span class="facts__num">@@NUM_RESULT_2@@</span><span class="facts__label">@@second measure with source@@</span></li>
+        <li><span class="facts__num">@@NUM_RESULT_3@@</span><span class="facts__label">@@third measure with source@@</span></li>
+      </ul>
+      <div class="note"><p><strong>@@SOURCE@@.</strong> @@How these numbers were collected, by whom, over which period. Write what was NOT measured either: more traffic is not more revenue, and that distinction is what makes the rest believable.@@</p></div>
+      <div class="prose">
+        <p>@@Version to keep when there are no numbers yet: replace the .facts block and the note with one paragraph saying when the figures will be available and with which tool they will be measured. Do not leave a gap, and do not fill it with an estimate.@@</p>
+      </div>
+    </section>
+
+    <section class="sect sect--paper" id="client-voice" aria-labelledby="voce-title">
+      <div class="sect__top">
+        <h2 class="m-text-4" id="voce-title">@@CLIENTE@@ in their own words</h2>
+        <p class="m-text">@@One sentence: how and when you collected this statement.@@</p>
+      </div>
+      <div class="quotes" data-single>
+        <blockquote class="quote" data-permission="@@PERMESSO@@">
+          <span class="quote__mark" aria-hidden="true">&ldquo;</span>
+          <p class="quote__text">@@The client's words, received in writing. Quotes are passed on, not rewritten.@@</p>
+          <footer class="quote__who">
+            <p class="quote__role">@@Full name@@</p>
+            <p class="quote__job">@@role, @@CLIENTE@@ · city@@</p>
+          </footer>
+        </blockquote>
+      </div>
+      <div class="note"><p><code>data-permission</code> has to hold the proof that publishing the name and the statement was approved: an email, a message, a signature. @@Without that proof the testimonial does not go live.@@</p></div>
+    </section>
+
+    <section class="sect" aria-labelledby="cta-title">
+      <div class="cta">
+        <h2 class="m-text-4 cta__title" id="cta-title">@@A similar problem in your business?@@</h2>
+        <p class="m-text">@@Two lines connecting this project to the service sold: what we assess together, how long a reply takes.@@</p>
+        <div class="cta__actions">
+          <a class="m-btn-2" href="/en/contact/"><span>Write to TiTech</span></a>
+          <a class="m-link" href="@@URL_SERVIZIO_EN@@" style="color:inherit"><span class="m-link__label">@@SERVIZIO_EN@@</span><svg class="m-link__arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5"/></svg></a>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+<footer id="footer" class="footer">
+  <p class="m-text-2 footer__bye" style="--len:3"><span class="footer__word">Bye</span><span class="footer__period" aria-hidden="true"><span class="footer__aperture"><img class="footer__img" src="/assets/img/hero-700.webp" srcset="/assets/img/hero-700.webp 700w, /assets/img/hero-1400.webp 1400w" sizes="(min-width: 900px) 24vw, 30vw" width="700" height="700" alt="" loading="lazy" decoding="async"><span class="footer__tint"></span></span></span></p>
+  <div class="footer__grid">
+    <nav class="footer__col" aria-label="Footer">
+      <p class="m-text-6 footer__label">Explore</p>
+      <a class="m-link-2" href="/en/services/">Services</a>
+      <a class="m-link-2" href="/en/industries/">Industries</a>
+      <a class="m-link-2" href="/en/work/">Work</a>
+      <a class="m-link-2" href="/en/how-we-work/">How we work</a>
+      <a class="m-link-2" href="/en/about/">About</a>
+      <a class="m-link-2" href="/en/blog/">Blog</a>
+      <a class="m-link-2" href="/en/contact/">Contact</a>
+    </nav>
+    <div class="footer__col">
+      <p class="m-text-6 footer__label">Services</p>
+      <a class="m-link-2" href="/en/services/website-design/">Website design</a>
+      <a class="m-link-2" href="/en/services/ecommerce/">E-commerce</a>
+      <a class="m-link-2" href="/en/services/custom-software/">Custom software</a>
+      <a class="m-link-2" href="/en/services/ai-automation/">Automation and AI</a>
+      <a class="m-link-2" href="/en/services/seo/">SEO consulting</a>
+      <a class="m-link-2" href="/en/contact/">Tell us about a project</a>
+    </div>
+    <div class="footer__col">
+      <p class="m-text-6 footer__label">TiTech Digital</p>
+      <p class="m-text">Technology partner for businesses, from Italy to international markets.</p>
+      <p class="m-text">Strategy, design and development with attention to continuity.</p>
+      <a class="m-link-2" href="mailto:info@titechdigital.it">info@titechdigital.it</a>
+    </div>
+    <div class="footer__news">
+      <p class="m-text-7">Have a digital project to build?<span class="m-dot" aria-hidden="true"></span></p>
+      <a class="m-link-2" href="/en/contact/">Describe what you need</a>
+      <p class="m-text-6 footer__note">Contact TiTech Digital to work out the solution that fits.</p>
+    </div>
+  </div>
+  <address class="footer__nap m-text-6">
+    <span>TiTech Digital</span>
+    <a class="m-link-2" href="tel:+393761024080">+39 376 102 4080</a>
+    <span>Novara, Italy</span>
+  </address>
+  <div class="footer__legal m-text-6"><p>© <span data-year>2026</span> TiTech Digital · VAT 02829190038 · <a href="/en/privacy/">Privacy</a> · <a href="/en/cookies/">Cookies</a></p><p>Design and website: <a href="https://titechdigital.it">titechdigital.it</a></p><p>Digital solutions · Italy and international markets</p></div>
+</footer>
+<script src="/assets/js/pages.js" defer></script>
+<script src="/assets/js/motion.js" defer></script>
+<script src="/assets/js/attribution.js" defer></script>
+<script src="/assets/js/experiments.js" defer></script>
+<script src="/assets/js/measure.js" defer></script>
+</body>
+</html>

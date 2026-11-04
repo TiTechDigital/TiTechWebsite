@@ -1,0 +1,54 @@
+README.md:1| # TiTech Digital — Sito web
+README.md:11| - **Siti web ed e-commerce** — sviluppo su misura, prestazioni, accessibilità e gestione.
+README.md:12| - **Design e identità digitale** — brand identity, UI/UX, design di prodotto e direzione creativa.
+README.md:13| - **Software e automazione** — web app, dashboard, API, integrazioni, AI e automazione.
+README.md:14| - **SEO e crescita digitale** — SEO tecnica, performance, contenuti e CRO.
+README.md:15| - **Supporto continuo** — manutenzione, hosting, assistenza e partnership nel tempo.
+README.md:54| | `/privacy/`, `/cookie/` | `/en/privacy/`, `/en/cookies/` | — | conformità GDPR |
+README.md:60| | `404.html` | — | risposta per URL inesistenti (Vercel la serve da sola) | bilingue per necessità: un solo fil
+README.md:81| - `assets/css/pages.css` — font (subset latino), token della home, tipografia, componenti e barra di navigazione. Non con
+README.md:82| - `assets/js/pages.js` — apertura del menu mobile, anno corrente del footer e composizione del modulo di contatto. Circ
+README.md:83| - `assets/js/motion.js` — animazioni, caricate con `defer`: aggiungono `html.motion` solo a librerie caricate, così senz
+README.md:91| 1. **`h1` con la query, in italiano semplice** — «Realizzazione di siti web per aziende», non uno slogan. Il posizionamento emotivo sta nel `he
+README.md:126| - `/` + ventuno pagine interne — italiano
+README.md:127| - `/en/` + ventuno pagine interne — inglese
+README.md:139| - `https://titechdigital.it/...` — italiano, `canonical` su sé stessa, `hreflang` `it-IT` e `x-default`
+README.md:140| - `https://titechdigital.it/en/...` — inglese, `canonical` su sé stessa, `hreflang` `en`
+README.md:144| - `robots.txt` — consente la scansione completa, esclude la copia del template (`index.original.html`) e indica
+README.md:145| - `sitemap.xml` — contiene le quarantaquattro URL pubblicate, ognuna con i tre `<xhtml:link>` `hreflang` della p
+README.md:146| - `vercel.json` — configurazione dell'hosting: `trailingSlash: true` mantiene lo slash finale (`/en/services/seo
+README.md:147| - `.vercelignore` — esclude dal deploy la copia del template, i due file di servizio (`og-card.html`, `brand-logo.
+README.md:193| - **Testi** — la home è in `index.html` (italiano) e `en/index.html` (inglese); le pagine interne sono in `<
+README.md:194| - **Email** — cercare `info@titechdigital.it` e sostituirla in contatti, footer e script.
+README.md:195| - **Logo e favicon** — il simbolo è in `assets/img/logo.svg`; la versione per la scheda del browser è in `assets/img/
+README.md:196| - **Dati legali** — copyright, P. IVA e crediti sono nella riga finale del footer, presente in entrambe le pagine.
+README.md:197| - **Immagini** — i WebP ottimizzati sono in `assets/img` e referenziati da entrambe le pagine; le attribuzioni
+README.md:198| - **Progetti dimostrativi** — la sezione `#lavori` contiene sei casi fittizi (nomi, testi e immagini di esempio) con una not
+README.md:198| ory__stack` con i progetti reali, aggiornare il contatore `Solo alcuni dei nostri lavori · 2023—2026` e rimuovere la nota `lavori__note` prima della pubblicazione. La riga di contesto e l'ape
+README.md:199| - **Prezzi** — il sito non pubblica prezzi: la tabella con le fasce indicative che stava in `/come-lavoriamo/
+README.md:200| - **Casi di studio** — `/lavori/` elenca gli stessi sei progetti dimostrativi della home, con la stessa nota visibile
+README.md:201| - **Meta e anteprima social** — aggiornare `description`, `og:title` e `og:description` quando saranno disponibili contenuti d
+README.md:202| - **Dati strutturati** — l'head contiene un unico blocco JSON-LD con `@graph`: `Organization` (nome, URL, logo raster,
+README.md:218| Il footer di ogni pagina pubblica ora il NAP verificato — nome, città (Novara), telefono — e gli stessi valori sono nei dati strutturati `Organization`
+README.md:218| Il footer di ogni pagina pubblica ora il NAP verificato — nome, città (Novara), telefono — e gli stessi valori sono nei dati strutturati `Organization` e `ProfessionalService`. Restano
+README.md:221| - `assets/snippets/footer-credit.txt` — link «Realizzato da TiTech Digital» per i siti clienti.
+README.md:222| - `assets/snippets/nap-block.txt` — blocco NAP consistente.
+README.md:223| - `assets/snippets/review-schema.txt` — schema per recensioni reali. I valori sono token (`@@MEDIA_VALUTAZIONE@@`, `@@NUMERO_RECENSION
+README.md:224| - `assets/snippets/case-study-it.txt` e `assets/snippets/case-study-en.txt` —
+README.md:277| - `/strumenti/calcolo-costo-sito-web/` e `/en/tools/website-cost-calculator/` — intervallo di investimento e settimane.
+README.md:278| - `/strumenti/calcolo-margine-ecommerce/` e `/en/tools/ecommerce-margin-calculator/` — quanto resta su ogni ordine, costo di acquisizione massimo sostenibile, ROAS di pareggio, ordi
+README.md:280| i che il lettore vede restano nell'HTML. Le caselle non sono precompilate con medie di settore — il calcolatore dice «riempi le caselle» invece di inventarle — e i verdetti sono cinque stati
+README.md:280| ecompilate con medie di settore — il calcolatore dice «riempi le caselle» invece di inventarle — e i verdetti sono cinque stati distinti (`incomplete`, `loss`, `uncovered`, `thin`, `ok`), per
+README.md:286| Resta fuori, non rinviato: tutto ciò che interrogare un sistema esterno — audit URL, scrape della SERP, un tool che chiede un dominio e torna un rapporto. Un sito stati
+assets/js/article.js:2| Same rule as pages.js — the file carries no language. Every string a reader
+assets/js/article.js:110| data.labels[i] + ' — ' + series.name + ': ' + fmtTick(series.values[i], data.locale) + (data.unitSuffix || ''));
+assets/js/article.js:146| labelText + ' — ' + series.name + ': ' + fmtTick(value, data.locale) + (data.unitSuffix || ''));
+assets/js/margin.js:2| guessed and nothing is looked up — no market average, no "typical AOV", no
+assets/js/margin.js:25| const dash = '—';
+CREDITS.md:40| - Gabarito — Google Fonts: https://fonts.google.com/specimen/Gabarito
+CREDITS.md:41| - Onest — Google Fonts: https://fonts.google.com/specimen/Onest
+CREDITS.md:45| - GSAP 3.13.0, GreenSock — licenza standard "no charge": https://gsap.com/standard-license
+CREDITS.md:46| - Lenis 1.3.4, darkroom.engineering — MIT: https://github.com/darkroomengineering/lenis
+CREDITS.md:50| Design e sviluppo originali del template: [8B](https://8b.com/) — [design studio website template](https://8b.com/templates/). Codice del template distribuito c
+og-card.html:11| <title>TiTech Digital — social card</title>
+robots.txt:1| # robots.txt — https://titechdigital.it

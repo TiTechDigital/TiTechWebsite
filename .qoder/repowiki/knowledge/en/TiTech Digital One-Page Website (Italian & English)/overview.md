@@ -1,0 +1,1 @@
+Static one-page marketing site for TiTech Digital, adapted from the 8B design-studio template, served in Italian and English with inline CSS/JS and GSAP animations.

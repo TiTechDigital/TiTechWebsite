@@ -1,0 +1,78 @@
+docs/phase-5-authority.md:1| # Phase 5 — Authority: execution kit
+docs/phase-5-authority.md:43| form (`02 1234 5678`) — never a different number.
+docs/phase-5-authority.md:72| Bing Places | Same record as GBP; supports import | After importing, re-check the phone format — it often rewrites it |
+docs/phase-5-authority.md:74| 28×191), tagline, industry, location | The website field is nofollow but drives branded search — keep it exact |
+docs/phase-5-authority.md:79| | Europages | Company address, B2B categories, product/service list | B2B only — consumer wording reads wrong there |
+docs/phase-5-authority.md:110| Request email — Italian:
+docs/phase-5-authority.md:119| puoi lasciare una recensione qui — bastano due minuti e puoi scrivere quello
+docs/phase-5-authority.md:129| Request message — WhatsApp, shorter:
+docs/phase-5-authority.md:154| for citations, referral traffic and credibility — not for PageRank.
+docs/phase-5-authority.md:181| rejected) — no link in the post, link in the first comment.
+docs/phase-5-authority.md:199| - "Quanto costa un sito web in Italia nel 2026: le fasce di mercato" — a
+docs/phase-5-authority.md:201| - "Perché non pubblichiamo un listino" — an agency-transparency angle.
+docs/phase-5-authority.md:202| - "B2B e-commerce: quando conviene davvero" — with the order-volume formula.
+docs/phase-5-authority.md:235| | GBP verification | Nothing on the site — needs the Google account and a service area |
+docs/phase-6-measurement.md:1| # Phase 6 — Measure and prune
+docs/phase-6-measurement.md:50| ### Weekly — Monday, 20 minutes
+docs/phase-6-measurement.md:60| ### Monthly — first Monday, 60–90 minutes
+docs/phase-6-measurement.md:204| The ratio the roadmap asks for — leads divided by organic sessions — needs two
+docs/phase-6-measurement.md:204| The ratio the roadmap asks for — leads divided by organic sessions — needs two
+docs/phase-6-measurement.md:244| - **Search Console** — Performance for clicks, impressions, CTR, position;
+docs/phase-6-measurement.md:246| - **CrUX / PageSpeed Insights** — field Core Web Vitals. It needs traffic. Until
+docs/phase-6-measurement.md:249| - **GA4** — Realtime for verification, Engagement → Events for
+docs/phase-6-measurement.md:253| - **GBP** — Performance: calls, messages, website clicks, direction requests.
+docs/phase-6-measurement.md:255| - **Rank tracker** — the 20 terms, Novara, desktop and mobile. Treat it as an
+docs/phase-6-measurement.md:286| > **Cookie di statistica** — Google Analytics 4, attivo solo con consenso:
+docs/phase-6-measurement.md:288| > `_ga` e `_ga_<id>`, durata 13 mesi. — *Attivo con consenso*
+docs/phase-6-measurement.md:290| > **Memoria locale** — salva la sola scelta sul consenso (`titech-consent`) nel
+docs/phase-6-measurement.md:291| > browser. — *Attiva*
+docs/phase-6-measurement.md:299| > **Statistics cookies** — Google Analytics 4, only with consent: aggregate
+docs/phase-6-measurement.md:300| > page views and traffic sources. Cookies `_ga` and `_ga_<id>`, 13 months. —
+docs/phase-6-measurement.md:303| > **Local storage** — stores only the consent choice (`titech-consent`). —
+docs/phase-6-measurement.md:303| > **Local storage** — stores only the consent choice (`titech-consent`). —
+docs/phase-6-measurement.md:337| | — | — | — | — | — | — |
+docs/phase-6-measurement.md:337| | — | — | — | — | — | — |
+docs/phase-6-measurement.md:337| | — | — | — | — | — | — |
+docs/phase-6-measurement.md:337| | — | — | — | — | — | — |
+docs/phase-6-measurement.md:337| | — | — | — | — | — | — |
+docs/phase-6-measurement.md:337| | — | — | — | — | — | — |
+docs/phase-7-topical-authority.md:1| # Phase 7 — Advanced topical authority: topic clusters
+docs/phase-7-topical-authority.md:34| ### Cluster A — Realizzazione siti web (pillar: `/servizi/siti-web/`)
+docs/phase-7-topical-authority.md:45| ### Cluster B — E-commerce (pillar: `/servizi/e-commerce/`)
+docs/phase-7-topical-authority.md:55| ### Cluster C — Software su misura (pillar: `/servizi/software-su-misura/`)
+docs/phase-7-topical-authority.md:65| ### Cluster D — Automazione e AI (pillar: `/servizi/automazioni-ai/`)
+docs/phase-7-topical-authority.md:75| ### Cluster E — SEO (pillar: `/servizi/seo/`)
+docs/phase-7-topical-authority.md:97| | B — E-commerce | 1 of 5 (`e-commerce-b2b-quando-conviene`) | 4 to write | |
+docs/phase-7-topical-authority.md:98| | C — Software | 0 of 5 | 5 to write | |
+docs/phase-7-topical-authority.md:99| | D — Automazione | 1 of 5 (`automazione-ai-pmi-5-processi`) | 4 to write | |
+docs/phase-7-topical-authority.md:100| | E — SEO | 0 of 5 | 5 to write | |
+docs/phase-7-topical-authority.md:116| posts" box at the bottom — that is where links go to die.
+docs/phase-7-topical-authority.md:134| 3. `.takeaways` — 3–5 bullets, the answer in 30 seconds
+docs/phase-7-topical-authority.md:135| 4. `.toc` — numbered, one entry per section
+docs/phase-8-conversion.md:1| # Phase 8 — Conversion intelligence
+docs/phase-8-conversion.md:227| | — | — | — | — | — | — | — |
+docs/phase-8-conversion.md:227| | — | — | — | — | — | — | — |
+docs/phase-8-conversion.md:227| | — | — | — | — | — | — | — |
+docs/phase-8-conversion.md:227| | — | — | — | — | — | — | — |
+docs/phase-8-conversion.md:227| | — | — | — | — | — | — | — |
+docs/phase-8-conversion.md:227| | — | — | — | — | — | — | — |
+docs/phase-8-conversion.md:227| | — | — | — | — | — | — | — |
+docs/phase-9-case-studies.md:1| # Phase 9 — Case-study engine
+docs/phase-9-case-studies.md:5| conversation — "build a case-study engine". Same work, two labels; the
+docs/phase-9-case-studies.md:21| - `assets/snippets/case-study-it.txt` — the Italian stamp: a complete,
+docs/phase-9-case-studies.md:24| - `assets/snippets/case-study-en.txt` — the English stamp, structurally equal to
+docs/phase-9-case-studies.md:26| - `audit_case()` in `tools/check_site.py` — the five refusals listed below.
+docs/phase-9-case-studies.md:27| - `case_rule()` in `tools/selftest.py` — proves the rule fires on an incomplete
+docs/phase-9-case-studies.md:30| - `.quotes[data-single]` in `assets/css/pages.css` — a one-voice testimonial
+docs/phase-9-case-studies.md:53| means they were not, and the section must say so. Any other value — including
+docs/phase-9-case-studies.md:54| the unfilled token — stops the page.
+docs/phase-9-case-studies.md:76| | `@@MISURATO@@` | `verified` or `not-measured` — nothing else |
+docs/phase-9-case-studies.md:113| (`.table td:last-child` does not wrap — the last column holds short values
+docs/phase-9-case-studies.md:124| > **IT** — Ti ho mandato una riga sul progetto, quella che preferisci: se ti
+docs/phase-9-case-studies.md:129| > **EN** — I wrote a short line about the project, the part you liked most: if
+docs/phase-9-case-studies.md:132| > free to change any word — we print what you write.
+docs/phase-11-monthly-loop.md:1| # Phase 11 — The monthly SEO intelligence loop
+docs/phase-11-monthly-loop.md:5| conversation — "review what Search Console actually says, monthly". Same work,
+docs/phase-11-monthly-loop.md:52| verdict — the script says so in its own output.
+docs/phase-11-monthly-loop.md:118| One row per week in `docs/scorecard.csv`, written once — the header is already
+docs/phase-11-monthly-loop.md:130| | Positions to compare against | nothing — the first month is the baseline, and that is normal |

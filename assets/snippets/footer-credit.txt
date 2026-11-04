@@ -1,0 +1,5 @@
+<!-- Snippet da inserire nel footer dei siti realizzati da TiTech Digital.
+     Un solo link contestuale per sito, testo naturale, nessuna manipolazione. -->
+<footer class="titech-credit">
+  <p>Realizzato da <a href="https://titechdigital.it" rel="noopener">TiTech Digital</a></p>
+</footer>

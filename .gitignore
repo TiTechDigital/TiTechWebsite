@@ -1,0 +1,5 @@
+# Private measurement exports: Search Console CSVs and reports.
+reports/
+
+# Python cache from tools/.
+__pycache__/

@@ -1,0 +1,40 @@
+<section class="sect" aria-labelledby="non-title">
+      <div class="sect__top">
+        <h2 class="m-text-4" id="non-title">Cosa non facciamo</h2>
+        <p class="m-text">Dirlo prima è più utile che dirlo dopo: sono le quattro richieste che decliniamo più spesso.</p>
+      </div>
+      <ul class="checks">
+        <li><strong>Pagine clonate per ogni città</strong><span>Trenta pagine identiche con il nome del comune cambiato non portano clienti. Se lavori su un territorio, si curano la scheda Google e la pagina contatti.</span></li>
+        <li><strong>Garanzie di posizione su Google</strong><span>Nessuno controlla l'algoritmo. Chi promette la prima posizione sta vendendo qualcosa che non può mantenere.</span></li>
+        <li><strong>Link comprati e recensioni finte</strong><span>Sono scorciatoie che si pagano dopo, quando Google se ne accorge. Preferiamo perdere un cliente che proporle.</span></li>
+        <li><strong>Vincoli sugli accessi</strong><span>Dominio, codice e contenuti restano del cliente. Non tratteniamo gli accessi come leva negoziale, né ora né alla fine del progetto.</span></li>
+      </ul>
+    </section>
+
+    <section class="sect" aria-labelledby="dati-title">
+      <div class="sect__top">
+        <h2 class="m-text-4" id="dati-title">Dove siamo e come contattarci</h2>
+        <p class="m-text">Lavoriamo da remoto con aziende in Italia e in Albania, e con clienti che operano su mercati internazionali.</p>
+      </div>
+      <ul class="checks">
+        <li><strong>TiTech Digital</strong><span>Partita IVA 02829190038</span></li>
+        <li><strong>Sede</strong><span>Italia</span></li>
+        <li><strong>Email</strong><span><a href="mailto:info@titechdigital.it">info@titechdigital.it</a></span></li>
+        <li><strong>Aree servite</strong><span>Italia, Albania e mercati internazionali</span></li>
+      </ul>
+      <div class="note">
+        <p><strong>Nota.</strong> Indirizzo della sede operativa e numero di telefono non sono pubblicati su questa pagina. Se ti servono per una verifica o per la fatturazione, scrivici: rispondiamo con i dati completi, gli stessi che troverai in preventivo e in fattura.</p>
+      </div>
+    </section>
+
+    <section class="sect" aria-labelledby="cta-title">
+      <div class="cta">
+        <h2 class="m-text-4 cta__title" id="cta-title">La prima conversazione serve a capire se siamo utili<span class="m-dot" aria-hidden="true"></span></h2>
+        <p class="m-text">Trenta minuti, senza costo e senza impegno. Se dalla conversazione emerge che il progetto non è il nostro lavoro, te lo diciamo lì.</p>
+        <div class="cta__actions">
+          <a class="m-btn-2" href="/contatti/"><span>Scrivi a TiTech</span></a>
+          <a class="m-link" href="/servizi/" style="color:inherit"><span class="m-link__label">Vedi i servizi</span><svg class="m-link__arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5"/></svg></a>
+        </div>
+      </div>
+    </section>
+  </div>

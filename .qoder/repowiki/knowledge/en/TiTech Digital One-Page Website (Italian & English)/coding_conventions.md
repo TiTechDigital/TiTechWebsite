@@ -1,0 +1,4 @@
+- Each language version is an independent full HTML document sharing identical section IDs and `data-8b-*` attributes so the shared GSAP/ScrollTrigger animations bind consistently across locales.
+- Images are provided as multiple WebP variants per scene (e.g. `-480`, `-720`, `-900`, `-1100`, `-wide`, `-tall` suffixes) referenced by the pages rather than resized at runtime.
+- Third-party assets (fonts, GSAP, Lenis) are loaded from CDN URLs directly in the HTML head/body; there is no bundler or local dependency tree.
+- Placeholder email `info@titechdigital.it` appears in the contact script, footer, and social meta tags and is flagged in README as a placeholder to replace before publishing.

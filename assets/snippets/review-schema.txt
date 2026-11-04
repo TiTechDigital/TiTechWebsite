@@ -1,0 +1,34 @@
+<!-- Schema per recensioni reali. Da popolare solo con feedback verificati.
+     Non inventare mai valutazioni o nomi.
+
+     I due valori sono token, non numeri: "ratingValue" deve essere la media
+     effettiva delle recensioni che hai in mano e "reviewCount" il loro conteggio.
+     Un numero che non torna con l'elenco sotto è dati strutturati falsi, ed è
+     il tipo di markup che può costare una manual action.
+
+     Per arrivare fin qui: le recensioni devono esistere anche sulla pagina, in
+     testo leggibile, con nome e ruolo dichiarati. Il markup ripete ciò che il
+     visitatore legge, non promette ciò che vorresti fosse vero. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://titechdigital.it/#organization",
+  "name": "TiTech Digital",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "@@MEDIA_VALUTAZIONE@@",
+    "reviewCount": "@@NUMERO_RECENSIONI@@",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "@@NOME_AUTORE@@" },
+      "reviewRating": { "@type": "Rating", "ratingValue": "@@VALUTAZIONE@@", "bestRating": "5" },
+      "reviewBody": "@@TESTO_RECENSIONE@@"
+    }
+  ]
+}
+</script>

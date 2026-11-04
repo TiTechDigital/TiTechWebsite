@@ -37,14 +37,14 @@ Caricata da `images.unsplash.com`. Libera per uso commerciale secondo la [Unspla
 
 ## Font (SIL Open Font License 1.1)
 
-- Gabarito — Google Fonts: https://fonts.google.com/specimen/Gabarito
-- Onest — Google Fonts: https://fonts.google.com/specimen/Onest
+- Gabarito: Google Fonts: https://fonts.google.com/specimen/Gabarito
+- Onest: Google Fonts: https://fonts.google.com/specimen/Onest
 
 ## Librerie
 
-- GSAP 3.13.0, GreenSock — licenza standard "no charge": https://gsap.com/standard-license
-- Lenis 1.3.4, darkroom.engineering — MIT: https://github.com/darkroomengineering/lenis
+- GSAP 3.13.0, GreenSock: licenza standard "no charge": https://gsap.com/standard-license
+- Lenis 1.3.4, darkroom.engineering: MIT: https://github.com/darkroomengineering/lenis
 
 ## Template
 
-Design e sviluppo originali del template: [8B](https://8b.com/) — [design studio website template](https://8b.com/templates/). Codice del template distribuito con licenza MIT; vedere [LICENSE](LICENSE).
+Design e sviluppo originali del template: [8B](https://8b.com/): [design studio website template](https://8b.com/templates/). Codice del template distribuito con licenza MIT; vedere [LICENSE](LICENSE).

@@ -1,0 +1,16 @@
+# Not part of the published site.
+index.original.html
+og-card.html
+brand-logo.html
+
+# Build and verification scratch, never to be served.
+_*
+
+# Maintenance scripts: they read the site, they are not part of it.
+tools/
+__pycache__/
+
+# Project documentation.
+README.md
+docs/
+reports/

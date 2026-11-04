@@ -1,0 +1,124 @@
+<main id="main">
+  <div class="shell page">
+    <nav aria-label="Breadcrumb">
+      <ol class="crumbs">
+        <li><a href="/en/">Home</a></li>
+        <li aria-current="page">Contact</li>
+      </ol>
+    </nav>
+<div class="head">
+  <p class="m-eyebrow">Contact</p>
+  <h1 class="m-text-3 head__title">What has to change, and by when<span class="m-dot" aria-hidden="true"></span></h1>
+  <p class="m-text-5 head__lead">No brief required. A few lines written the way you would say it to a colleague is enough: what the company does, what is not working today, what you would want to get. From that we understand whether we can be useful and at what order of investment.</p>
+</div>
+
+<section class="sect" aria-labelledby="scrivi-title">
+  <div class="sect__top">
+    <h2 class="m-text-4" id="scrivi-title">Write to us</h2>
+    <p class="m-text">The form composes the message and opens your mail program: no data passes through an intermediate server.</p>
+  </div>
+  <div class="cta">
+    <h2 class="m-text-4 cta__title" id="cta-scrivi-title">Prefer a direct contact?<span class="m-dot" aria-hidden="true"></span></h2>
+    <p class="m-text">Write to info@titechdigital.it or start a WhatsApp chat. We reply with an initial assessment of the project and, if it makes sense, book a twenty-minute call.</p>
+    <div class="cta__actions">
+      <a class="m-btn-2" href="mailto:info@titechdigital.it"><svg class="m-btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg><span>Write an email</span></a>
+      <a class="m-btn" href="https://wa.me/393761024080?text=Hi%2C+I%27d+like+more+information+about+your+digital+services." rel="noopener" target="_blank" style="color:inherit"><svg class="m-btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5c-1.5 0-2.9-.3-4.2-1l-3 .9 1-.9a8.38 8.38 0 0 1-1.4-4.8A8.38 8.38 0 1 1 21 11.5z"/></svg><span>Start a WhatsApp chat</span></a>
+    </div>
+  </div>
+  <form class="form" data-mailto-form="info@titechdigital.it" novalidate
+    data-msg-subject="Enquiry from the site"
+    data-msg-incomplete="Please fill in your name, email and message: those are the three fields we need in order to reply."
+    data-msg-invalid="Check the email address and the box about how your data is processed."
+    data-msg-sent="We are opening your mail program with the message already written. If it does not open, write to {email}.">
+    <div class="form__row">
+      <label class="field">
+        <span>First name and surname</span>
+        <input class="m-field" type="text" name="nome" data-mail-label="Name" autocomplete="name" required>
+      </label>
+      <label class="field">
+        <span>Email</span>
+        <input class="m-field" type="email" name="email" data-mail-label="Email" autocomplete="email" required>
+      </label>
+    </div>
+    <label class="field">
+      <span>Company or business <em>(optional)</em></span>
+      <input class="m-field" type="text" name="azienda" data-mail-label="Company" autocomplete="organization">
+    </label>
+    <label class="field">
+      <span>The project in a few lines</span>
+      <textarea class="m-field" name="messaggio" data-mail-label="" rows="6" required placeholder="What the company does, what has to change, by when."></textarea>
+    </label>
+    <label class="form__check">
+      <input type="checkbox" name="consenso" required>
+      <span>I have read the <a href="/en/privacy/">privacy policy</a> and I agree to my data being processed in order to reply to this enquiry.</span>
+    </label>
+    <div class="form__actions">
+      <button class="m-btn" type="submit"><span>Send the enquiry</span></button>
+      <p class="form__status" role="status" aria-live="polite"></p>
+    </div>
+  </form>
+  <div class="note">
+    <p><strong>Reply times.</strong> We answer within one working day, Monday to Friday. If the enquiry arrives on a Friday afternoon, the reply may slip to Monday. Every enquiry gets an answer, even when the answer is no.</p>
+  </div>
+</section>
+
+<section class="sect" aria-labelledby="cosa-title">
+  <div class="sect__top">
+    <h2 class="m-text-4" id="cosa-title">What makes a useful reply possible</h2>
+    <p class="m-text">Four pieces of information turn a generic quote into an answer you can actually use.</p>
+  </div>
+  <ul class="checks">
+    <li><strong>The sector</strong><span>Craft trade, restaurant, services, manufacturing, professional practice: they change the priorities, not only the content.</span></li>
+    <li><strong>Today's problem</strong><span>An old site nobody can update, orders handled by hand, enquiries that get lost. The real starting point counts more than the stated objective.</span></li>
+    <li><strong>The deadline</strong><span>A real date, even a rough one. If the deadline is tight we say so immediately, with what it costs.</span></li>
+    <li><strong>An indicative budget</strong><span>It is not a negotiation: it tells us whether it even makes sense to talk. If the budget is below the minimum threshold, it is useful to know that first.</span></li>
+  </ul>
+</section>
+
+<section class="sect" aria-labelledby="dove-title">
+  <div class="sect__top">
+    <h2 class="m-text-4" id="dove-title">Where we work</h2>
+  </div>
+  <div class="prose">
+    <p>TiTech Digital is based in Italy and works remotely with Italian companies, with companies in Albania and on international markets. Meetings on video, shared files and one reference person: distance is not the problem, the absence of a reference person is.</p>
+    <p>When a project needs meetings in person, a workshop to photograph, a warehouse process to watch, we arrange them on site. We put it in the proposal as travel, rather than hiding it inside a generic line.</p>
+    <p>For tax details and invoicing: TiTech Digital, VAT number 02829190038. The complete registered address is supplied on request, in the proposal and on the invoice.</p>
+  </div>
+</section>
+
+<section class="sect sect--paper" aria-labelledby="faq-title">
+  <div class="sect__top">
+    <h2 class="m-text-4" id="faq-title">Before you write</h2>
+  </div>
+  <div class="faq">
+    <details>
+      <summary>What does a first conversation cost?</summary>
+      <p>Nothing. Thirty minutes on video or on the phone to work out whether the project is within reach for both sides. If a deeper analysis is needed, with access to the systems, a check of the content and an estimate of timings, that is separate work with a cost we agree beforehand.</p>
+    </details>
+    <details>
+      <summary>Do you take on small budgets?</summary>
+      <p>Yes, if the work makes sense. A small showcase site of a few pages can sit in a contained band. What we say clearly is when a budget is not enough for the objective: in that case it is better to reduce the scope than to reduce the quality.</p>
+    </details>
+    <details>
+      <summary>Do you reply even when we cannot work together?</summary>
+      <p>Always. If the project is not our work, we write it with the reason: a technology outside our perimeter, an incompatible budget, an impossible deadline. A reasoned no is more useful than silence.</p>
+    </details>
+    <details>
+      <summary>Can I write in English or Albanian?</summary>
+      <p>Yes. We work and write in Italian, English and Albanian. The site is in Italian and English; project communication we handle in whichever language you prefer.</p>
+    </details>
+  </div>
+</section>
+
+<section class="sect" aria-labelledby="cta-title">
+  <div class="cta">
+    <h2 class="m-text-4 cta__title" id="cta-title">Would you rather read first?<span class="m-dot" aria-hidden="true"></span></h2>
+    <p class="m-text">Timings, phases and what moves the numbers are explained without hedging. If the project is within your reach, you will understand it in two minutes.</p>
+    <div class="cta__actions">
+      <a class="m-btn-2" href="/en/how-we-work/"><span>Timelines and investment</span></a>
+      <a class="m-link" href="mailto:info@titechdigital.it" style="color:inherit"><span class="m-link__label">info@titechdigital.it</span><svg class="m-link__arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5"/></svg></a>
+    </div>
+  </div>
+</section>
+  </div>
+</main>

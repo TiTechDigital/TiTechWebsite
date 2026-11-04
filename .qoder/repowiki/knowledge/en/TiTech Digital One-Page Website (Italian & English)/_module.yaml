@@ -1,0 +1,13 @@
+schema_version: 1
+module_path: ""
+title: TiTech Digital One-Page Website (Italian & English)
+scope:
+    - .
+    - CREDITS.md
+    - LICENSE
+    - README.md
+    - index.html
+    - index.original.html
+source_files: []
+depends_on: []
+related_to: []

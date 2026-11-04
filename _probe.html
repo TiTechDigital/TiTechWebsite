@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="it">
+<meta charset="utf-8">
+<title>probe</title>
+<style>
+  body { margin: 0 }
+  #f { border: 0; display: block }
+</style>
+<iframe id="f"></iframe>
+<script>
+  const q = new URLSearchParams(location.search);
+  const w = q.get('w') || '390';
+  const h = q.get('h') || '844';
+  const f = document.getElementById('f');
+  f.style.width = w + 'px';
+  f.style.height = h + 'px';
+  f.src = (q.get('u') || '/servizi/e-commerce/') + '?noprefetch';
+</script>
+</html>

@@ -1,0 +1,1 @@
+Pure HTML5/CSS3/ES6; GSAP 3.13.0 + ScrollTrigger for scroll-driven animations; Lenis 1.3.4 for smooth scrolling; Google Fonts (Gabarito, Onest); images served as WebP; MIT-licensed 8B template base.
