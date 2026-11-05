@@ -1404,45 +1404,6 @@ queueMotion(() => {
 }, { id: 'scene:method' });
 </script>
 
-<script data-8b-part="section-script:contact">
-(() => {
-  const form = document.querySelector('#contact .contact__form');
-  const status = form.querySelector('.contact__status');
-  const recipient = 'info@titechdigital.it';
-  form.addEventListener('submit', event => {
-    event.preventDefault();
-    if (!form.checkValidity()) {
-      status.textContent = status.dataset.error;
-      form.querySelector(':invalid')?.focus();
-      return;
-    }
-    const data = new FormData(form);
-    const value = key => String(data.get(key) || '').trim();
-    const topic = value('topic') || 'Non specificato';
-    const subject = `Richiesta progetto: ${topic}`;
-    let body = [
-      `Nome: ${value('name')}`,
-      `Email: ${value('email')}`,
-      `Azienda: ${value('company') || 'Non indicata'}`,
-      `Area: ${topic}`,
-      '',
-      value('message')
-    ].join('\n');
-    const _a = window.titechAttribution || {};
-    const _al = [];
-    if (_a.source) _al.push('Fonte: ' + _a.source);
-    if (_a.medium) _al.push('Mezzo: ' + _a.medium);
-    if (_a.campaign) _al.push('Campagna: ' + _a.campaign);
-    if (_a.landing) _al.push('Landing: ' + _a.landing);
-    if (_a.referrer) _al.push('Referrer: ' + _a.referrer);
-    if (_al.length) body = body + '\n\n--- Attribuzione ---\n' + _al.join('\n');
-    status.textContent = status.dataset.success;
-    if (window.titechExperimentConvert) { Object.keys((window.titechExperiments || {}).assignments || {}).forEach(n => window.titechExperimentConvert(n)); }
-    document.dispatchEvent(new CustomEvent('titech:contact-submit', { detail: { form: 'home' } }));
-    window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  });
-})();
-</script>
 <script data-8b-part="section-script:footer">
 (() => {
   const footer = document.getElementById('footer');
