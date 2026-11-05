@@ -175,6 +175,11 @@ export default async function handler(req, res) {
 
   } catch (error) {
     console.error('Error sending email:', error);
+    console.error('Error details:', {
+      message: error.message,
+      name: error.name,
+      statusCode: error.statusCode
+    });
     
     // Return user-friendly error
     return res.status(500).json({ 
