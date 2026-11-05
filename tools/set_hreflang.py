@@ -10,7 +10,7 @@ import os
 import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SITE = 'https://titechdigital.it'
+SITE = 'https://www.titechdigital.it'
 CANON = re.compile(r'<link rel="canonical" href="([^"]+)">')
 IT_ALT = re.compile(r'<link rel="alternate" hreflang="it-IT" href="([^"]+)">')
 

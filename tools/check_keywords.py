@@ -72,7 +72,7 @@ def main():
         if language == 'it' and url.startswith('/en/'):
             problems.append('%s: Italian keyword must not point inside /en/' % where)
 
-        if 'https://titechdigital.it' + url not in locs:
+        if 'https://www.titechdigital.it' + url not in locs:
             problems.append('%s: %s is not in sitemap.xml' % (where, url))
         page = ROOT / url.strip('/') / 'index.html' if url != '/' else ROOT / 'index.html'
         if not page.exists():

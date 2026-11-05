@@ -12,8 +12,8 @@ README.md:83| - `assets/js/motion.js` — animazioni, caricate con `defer`: aggi
 README.md:91| 1. **`h1` con la query, in italiano semplice** — «Realizzazione di siti web per aziende», non uno slogan. Il posizionamento emotivo sta nel `he
 README.md:126| - `/` + ventuno pagine interne — italiano
 README.md:127| - `/en/` + ventuno pagine interne — inglese
-README.md:139| - `https://titechdigital.it/...` — italiano, `canonical` su sé stessa, `hreflang` `it-IT` e `x-default`
-README.md:140| - `https://titechdigital.it/en/...` — inglese, `canonical` su sé stessa, `hreflang` `en`
+README.md:139| - `https://www.titechdigital.it/...` — italiano, `canonical` su sé stessa, `hreflang` `it-IT` e `x-default`
+README.md:140| - `https://www.titechdigital.it/en/...` — inglese, `canonical` su sé stessa, `hreflang` `en`
 README.md:144| - `robots.txt` — consente la scansione completa, esclude la copia del template (`index.original.html`) e indica
 README.md:145| - `sitemap.xml` — contiene le quarantaquattro URL pubblicate, ognuna con i tre `<xhtml:link>` `hreflang` della p
 README.md:146| - `vercel.json` — configurazione dell'hosting: `trailingSlash: true` mantiene lo slash finale (`/en/services/seo
@@ -51,4 +51,4 @@ CREDITS.md:45| - GSAP 3.13.0, GreenSock — licenza standard "no charge": https:
 CREDITS.md:46| - Lenis 1.3.4, darkroom.engineering — MIT: https://github.com/darkroomengineering/lenis
 CREDITS.md:50| Design e sviluppo originali del template: [8B](https://8b.com/) — [design studio website template](https://8b.com/templates/). Codice del template distribuito c
 og-card.html:11| <title>TiTech Digital — social card</title>
-robots.txt:1| # robots.txt — https://titechdigital.it
+robots.txt:1| # robots.txt — https://www.titechdigital.it

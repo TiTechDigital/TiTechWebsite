@@ -35,8 +35,8 @@ def plant():
     source = open(os.path.join(ROOT, 'settori', 'index.html'), encoding='utf-8').read()
     broken = source
     # 1. a canonical that does not match the address it sits on
-    broken = broken.replace('<link rel="canonical" href="https://titechdigital.it/settori/">',
-                            '<link rel="canonical" href="https://titechdigital.it/settore/">', 1)
+    broken = broken.replace('<link rel="canonical" href="https://www.titechdigital.it/settori/">',
+                            '<link rel="canonical" href="https://www.titechdigital.it/settore/">', 1)
     # 2. a link to a page that does not exist
     broken = broken.replace('href="/come-lavoriamo/"', 'href="/come-lavoriam/"', 1)
     # 3. a tag left open

@@ -149,7 +149,7 @@ export default async function handler(req, res) {
   <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #999;">
     <strong>TiTech Digital</strong><br>
     ${isItalian ? 'Soluzioni digitali · Novara, Italia' : 'Digital solutions · Novara, Italy'}<br>
-    <a href="https://titechdigital.it" style="color: #315cdb;">titechdigital.it</a>
+    <a href="https://www.titechdigital.it" style="color: #315cdb;">titechdigital.it</a>
   </div>
   
 </body>

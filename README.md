@@ -134,19 +134,19 @@ Le due home condividono struttura, animazioni e attributi `data-8b-*`; cambiano 
 
 ## URL canonici, robots e sitemap
 
-Il dominio di riferimento è **`https://titechdigital.it`**, pubblicato su **Vercel**. Ogni pagina pubblicata esiste nelle due lingue, per un totale di **quarantaquattro URL**:
+Il dominio di riferimento è **`https://www.titechdigital.it`**, pubblicato su **Vercel**. Ogni pagina pubblicata esiste nelle due lingue, per un totale di **cinquanta URL**:
 
-- `https://titechdigital.it/...`: italiano, `canonical` su sé stessa, `hreflang` `it-IT` e `x-default`
-- `https://titechdigital.it/en/...`: inglese, `canonical` su sé stessa, `hreflang` `en`
+- `https://www.titechdigital.it/...`: italiano, `canonical` su sé stessa, `hreflang` `it-IT` e `x-default`
+- `https://www.titechdigital.it/en/...`: inglese, `canonical` su sé stessa, `hreflang` `en`
 
 Il nome file `index.html` non compare mai nelle URL canoniche. Il pulsante `EN`/`IT` non riporta alla home dell'altra lingua ma alla **pagina equivalente**: chi cambia lingua resta sullo stesso argomento (`/servizi/seo/` ↔ `/en/services/seo/`).
 
 - `robots.txt`: consente la scansione completa, esclude la copia del template (`index.original.html`) e indica la posizione della sitemap.
-- `sitemap.xml`: contiene le quarantaquattro URL pubblicate, ognuna con i tre `<xhtml:link>` `hreflang` della propria coppia. Gli alternati in sitemap devono coincidere con quelli dichiarati nelle pagine: quando si aggiunge una pagina, si aggiornano entrambi i posti.
-- `vercel.json`: configurazione dell'hosting: `trailingSlash: true` mantiene lo slash finale (`/en/services/seo/`) coerente con `canonical` e sitemap; due redirect **301** portano `/index.html` su `/` e `/en/index.html` su `/en/`; gli header impostano la cache degli asset e tre opzioni di sicurezza. Il redirect `www` → apex e il certificato HTTPS si gestiscono in Vercel (Project → Settings → Domains), non nel file.
+- `sitemap.xml`: contiene le cinquanta URL pubblicate, ognuna con i tre `<xhtml:link>` `hreflang` della propria coppia. Gli alternati in sitemap devono coincidere con quelli dichiarati nelle pagine: quando si aggiunge una pagina, si aggiornano entrambi i posti.
+- `vercel.json`: configurazione dell'hosting: `trailingSlash: true` mantiene lo slash finale (`/en/services/seo/`) coerente con `canonical` e sitemap; un redirect **308** porta l'apex `titechdigital.it` su `www.titechdigital.it`; due redirect **301** portano `/index.html` su `/` e `/en/index.html` su `/en/`; gli header impostano la cache degli asset e tre opzioni di sicurezza. Il certificato HTTPS si gestisce in Vercel (Project → Settings → Domains), non nel file.
 - `.vercelignore`: esclude dal deploy la copia del template, i due file di servizio (`og-card.html`, `brand-logo.html`), la documentazione e i file di lavorazione (`_*`), che restano nel repository ma non vengono pubblicati.
 
-I redirect valgono solo su Vercel: l'anteprima con `python -m http.server` li ignora e serve `/` e `/en/` leggendo i rispettivi `index.html`. Dopo il deploy verificare con `curl -I https://titechdigital.it/index.html`: deve rispondere `301` verso `/`.
+I redirect valgono solo su Vercel: l'anteprima con `python -m http.server` li ignora e serve `/` e `/en/` leggendo i rispettivi `index.html`. Dopo il deploy verificare con `curl -I https://www.titechdigital.it/index.html`: deve rispondere `301` verso `/`.
 
 ## Controlli
 

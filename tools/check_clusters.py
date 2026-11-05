@@ -74,7 +74,7 @@ def main():
     problems = []
     sitemap = SITEMAP.read_text(encoding='utf-8')
     locs = set(re.findall(r'<loc>(.*?)</loc>', sitemap))
-    base = 'https://titechdigital.it'
+    base = 'https://www.titechdigital.it'
 
     for pillar, articles in CLUSTERS.items():
         it_pillar = ROOT / pillar.strip('/') / 'index.html'
