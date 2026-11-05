@@ -357,4 +357,10 @@
     <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.titechdigital.it/blog/case-study-sartoria-novara/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.titechdigital.it/blog/case-study-sartoria-novara/"/>
   </url>
+  <url>
+    <loc>https://www.titechdigital.it/novara/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.titechdigital.it/novara/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.titechdigital.it/novara/"/>
+  </url>
 </urlset>
