@@ -1,4 +1,4 @@
-<main id="main">
+﻿<main id="main">
   <div class="shell page">
     <nav aria-label="Breadcrumb">
       <ol class="crumbs">
@@ -80,7 +80,7 @@
     <h2 class="m-text-4" id="dove-title">Where we work</h2>
   </div>
   <div class="prose">
-    <p>TiTech Digital is based in Italy and works remotely with Italian companies, with companies in Albania and on international markets. Meetings on video, shared files and one reference person: distance is not the problem, the absence of a reference person is.</p>
+    <p>TiTech Digital is based in Italy and works remotely with Italian companies and on international markets. Meetings on video, shared files and one reference person: distance is not the problem, the absence of a reference person is.</p>
     <p>When a project needs meetings in person, a workshop to photograph, a warehouse process to watch, we arrange them on site. We put it in the proposal as travel, rather than hiding it inside a generic line.</p>
     <p>For tax details and invoicing: TiTech Digital, VAT number 02829190038. The complete registered address is supplied on request, in the proposal and on the invoice.</p>
   </div>
@@ -104,8 +104,8 @@
       <p>Always. If the project is not our work, we write it with the reason: a technology outside our perimeter, an incompatible budget, an impossible deadline. A reasoned no is more useful than silence.</p>
     </details>
     <details>
-      <summary>Can I write in English or Albanian?</summary>
-      <p>Yes. We work and write in Italian, English and Albanian. The site is in Italian and English; project communication we handle in whichever language you prefer.</p>
+      <summary>Can I write in English??</summary>
+      <p>Yes. We work and write in Italian and English. The site is in Italian and English; project communication we handle in whichever language you prefer.</p>
     </details>
   </div>
 </section>

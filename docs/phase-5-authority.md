@@ -1,4 +1,4 @@
-# Phase 5 — Authority: execution kit
+﻿# Phase 5 — Authority: execution kit
 
 Phase 5 is almost entirely off-site: it depends on accounts, clients and real
 business data that do not live in this repository. What follows is the
@@ -28,7 +28,7 @@ common reason a local entity never consolidates.
 | Postcode / province | `[DA COMPLETARE]` |
 | Country | `IT` |
 | Website | `https://www.titechdigital.it` |
-| Areas served | `Italia`, `Albania` |
+| Areas served | `Italia` |
 | Languages | `italiano`, `inglese` |
 
 The site now publishes name, city and phone in the footer of every page and in

@@ -1,4 +1,4 @@
-# TiTech Digital: Sito web
+﻿# TiTech Digital: Sito web
 
 Sito bilingue in italiano e inglese per **TiTech Digital**, partner tecnologico per imprese. Il progetto parte dal template design studio di 8B e ne conserva layout, sistema visivo, tipografia e animazioni: il contenuto è stato riscritto per raccontare posizionamento, servizi e metodo di TiTech Digital.
 
@@ -14,7 +14,7 @@ La pagina copre:
 - **SEO e crescita digitale**: SEO tecnica, performance, contenuti e CRO.
 - **Supporto continuo**: manutenzione, hosting, assistenza e partnership nel tempo.
 
-Il posizionamento è quello di un partner serio e concreto: competenza tecnica, scelte motivate, attenzione alla qualità e continuità dopo il lancio. La sede è in Italia, con un orizzonte internazionale e un'attenzione particolare al mercato albanese.
+Il posizionamento è quello di un partner serio e concreto: competenza tecnica, scelte motivate, attenzione alla qualità e continuità dopo il lancio. La sede è in Italia, con un orizzonte internazionale.
 
 ## Struttura della pagina
 

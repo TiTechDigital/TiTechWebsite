@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 path = r'C:\Users\eneam\Downloads\TiTechWebsite\contatti\index.html'
 s = open(path, encoding='utf-8', newline='').read()
 
@@ -88,7 +88,7 @@ clean_main = r'''<main id="main">
         <h2 class="m-text-4" id="dove-title">Dove lavoriamo</h2>
       </div>
       <div class="prose">
-        <p>TiTech Digital è in Italia e lavora da remoto con aziende italiane, con aziende in Albania e su mercati internazionali. Riunioni in video, file condivisi e una persona di riferimento: la distanza non è il problema, l'assenza di un riferimento sì.</p>
+        <p>TiTech Digital è in Italia e lavora da remoto con aziende italiane e su mercati internazionali. Riunioni in video, file condivisi e una persona di riferimento: la distanza non è il problema, l'assenza di un riferimento sì.</p>
         <p>Quando un progetto richiede incontri in presenza, un workshop da fotografare, un processo di magazzino da osservare, li organizziamo in sede. Lo mettiamo in proposta come viaggio, non lo nascondiamo dentro una riga generica.</p>
         <p>Per i dati fiscali e la fatturazione: TiTech Digital, partita IVA 02829190038. L'indirizzo completo della sede è fornito su richiesta, in proposta e in fattura.</p>
       </div>
@@ -112,8 +112,8 @@ clean_main = r'''<main id="main">
           <p>Sempre. Se il progetto non è il nostro lavoro, lo scriviamo con il motivo: una tecnologia fuori dal nostro perimetro, un budget incompatibile, una scadenza impossibile. Un no motivato è più utile di un silenzio.</p>
         </details>
         <details>
-          <summary>Posso scrivere in inglese o in albanese?</summary>
-          <p>Sì. Scriviamo e lavoriamo in italiano, inglese e albanese. Il sito è in italiano e in inglese; le comunicazioni di progetto le gestiamo nella lingua che preferisci.</p>
+          <summary>Posso scrivere in inglese??</summary>
+          <p>Sì. Scriviamo e lavoriamo in italiano e inglese. Il sito è in italiano e in inglese; le comunicazioni di progetto le gestiamo nella lingua che preferisci.</p>
         </details>
       </div>
     </section>
