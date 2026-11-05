@@ -1421,7 +1421,7 @@ queueMotion(() => {
     const topic = value('topic') || 'Non specificato';
     const subject = `Richiesta progetto: ${topic}`;
     let body = [
-      ome: ${value('name')}`,
+      `Nome: ${value('name')}`,
       `Email: ${value('email')}`,
       `Azienda: ${value('company') || 'Non indicata'}`,
       `Area: ${topic}`,
@@ -1529,5 +1529,3 @@ queueMotion(() => {
 <script src="/assets/js/measure.js" defer></script>
 </body>
 </html>
-
-
