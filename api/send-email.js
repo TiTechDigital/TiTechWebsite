@@ -17,7 +17,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { name, email, message, phone, company, service, language } = req.body;
+    const { name, email, message, phone, company, service, language, attribution } = req.body;
 
     // Validate required fields
     if (!name || !email || !message) {
@@ -108,7 +108,7 @@ export default async function handler(req, res) {
 
     // Send notification email to TiTech Digital
     const notificationEmail = await resend.emails.send({
-      from: 'Website <website@titechdigital.it>',
+      from: 'TiTech Digital Website <noreply@titechdigital.it>',
       to: 'info@titechdigital.it',
       replyTo: email,
       subject: `${subjectPrefix} - ${name}`,
@@ -175,11 +175,6 @@ export default async function handler(req, res) {
 
   } catch (error) {
     console.error('Error sending email:', error);
-    console.error('Error details:', {
-      message: error.message,
-      name: error.name,
-      statusCode: error.statusCode
-    });
     
     // Return user-friendly error
     return res.status(500).json({ 
