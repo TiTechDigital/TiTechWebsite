@@ -351,4 +351,10 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.titechdigital.it/en/tools/website-cost-calculator/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.titechdigital.it/strumenti/calcolo-costo-sito-web/"/>
   </url>
+  <url>
+    <loc>https://www.titechdigital.it/blog/case-study-sartoria-novara/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.titechdigital.it/blog/case-study-sartoria-novara/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.titechdigital.it/blog/case-study-sartoria-novara/"/>
+  </url>
 </urlset>
