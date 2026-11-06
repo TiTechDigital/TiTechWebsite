@@ -71,16 +71,22 @@
   };
 
   const assignments = read();
+  // Drop pre-namespacing entries: they carried the other language's text.
+  for (const key of Object.keys(assignments)) if (!key.includes(':')) delete assignments[key];
   const applied = {};
 
   const assign = (name) => {
-    if (assignments[name]) return assignments[name];
+    const key = (isEn ? 'en' : 'it') + ':' + name;
     const variants = EXPERIMENTS[name];
     if (!variants || variants.length < 2) return null;
-    const idx = hash(visitorId + ':' + name) % variants.length;
-    assignments[name] = { variant: idx, value: variants[idx], assigned: new Date().toISOString() };
+    const stored = assignments[key];
+    // A variant stored in the other language, or from an older word list, is
+    // not valid here: reassign instead of writing Italian text on an EN page.
+    if (stored && variants.includes(stored.value)) return stored;
+    const idx = hash(visitorId + ':' + key) % variants.length;
+    assignments[key] = { variant: idx, value: variants[idx], assigned: new Date().toISOString() };
     write(assignments);
-    return assignments[name];
+    return assignments[key];
   };
 
   const apply = () => {
@@ -105,7 +111,7 @@
 
   // Conversion: call window.titechExperimentConvert(name) on a successful lead.
   window.titechExperimentConvert = (name) => {
-    const a = assignments[name];
+    const a = assignments[(isEn ? 'en' : 'it') + ':' + name];
     if (!a) return;
     if (window.titechTrack) {
       window.titechTrack('experiment_conversion', {

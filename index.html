@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="it">
 <head>
 <meta charset="utf-8">
@@ -1154,7 +1154,7 @@ textarea.m-field { min-height: 112px; resize: vertical; }
     return false;
   };
   let firsts = Promise.resolve(), tail = null, pending = 0, lazy = null, building = 0;
-  window.queueMotion = (setup, { first = false, near, id } = {}) => {
+  const enqueueMotion = (setup, { first = false, near, id } = {}) => {
     if (!window.gsap || typeof setup !== 'function') return;
     const name = id || document.currentScript?.getAttribute('data-8b-part') || 'motion';
     if (near instanceof Element && window.IntersectionObserver) {
@@ -1175,6 +1175,17 @@ textarea.m-field { min-height: 112px; resize: vertical; }
     }
     window.motionReady = Promise.all([firsts, tail]);
   };
+  const earlyMotion = [];
+  window.queueMotion = (setup, options = {}) => {
+    if (typeof setup !== 'function') return;
+    if (window.gsap) return enqueueMotion(setup, options);
+    earlyMotion.push([setup, options]);
+  };
+  const flushMotion = () => {
+    for (const [setup, options] of earlyMotion.splice(0)) enqueueMotion(setup, options);
+  };
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', flushMotion, { once: true });
+  else flushMotion();
   window.adjacent = (a, b) => {
     const order = [...document.querySelectorAll('[data-8b-section]')].filter(section => section.getAttribute('data-8b-section') !== 'navigation').map(section => section.id);
     return order.indexOf(a) >= 0 && order[order.indexOf(a) + 1] === b;
@@ -1182,6 +1193,8 @@ textarea.m-field { min-height: 112px; resize: vertical; }
 })();
 </script>
 <script data-8b-part="page-init">
+document.addEventListener('DOMContentLoaded', () => {
+if (!window.gsap || !window.ScrollTrigger) return;
 gsap.registerPlugin(ScrollTrigger);
 ScrollTrigger.config({ ignoreMobileResize: true });
 function refreshScroll() {
@@ -1207,6 +1220,7 @@ addEventListener('load', () => {
   if ('requestIdleCallback' in window) requestIdleCallback(warm, { timeout: 1500 });
   else setTimeout(warm, 300);
 }, { once: true });
+});
 </script>
 <script data-8b-part="motion">
 const effects = {
