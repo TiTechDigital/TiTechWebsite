@@ -14,3 +14,12 @@ __pycache__/
 README.md
 docs/
 reports/
+
+# Working dumps and one-off scripts left in the root: never public pages.
+*.txt
+!robots.txt
+*.py
+*.ps1
+*.md
+LICENSE
+package-lock.json

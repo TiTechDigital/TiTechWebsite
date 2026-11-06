@@ -1,5 +1,9 @@
 keyword,language,intent,priority,target_url,notes
-web agency novara,it,commercial,1,/contatti/,"Only city term with a real claim: GBP, NAP, service area"
+sviluppo siti web novara,it,commercial,1,/novara/,"Local landing page; title and H1 match"
+realizzazione siti web novara,it,commercial,1,/novara/,"Variant, same page"
+siti web novara,it,commercial,1,/novara/,"Variant, same page"
+web agency novara,it,commercial,1,/novara/,"Only city with a real claim: GBP, NAP, service area"
+agenzia web,it,commercial,1,/,"National home: no city term on the home, to avoid cannibalizing /novara/"
 realizzazione siti web,it,commercial,1,/servizi/siti-web/,"Primary service term; title already matches"
 sito web aziendale,it,commercial,1,/servizi/siti-web/,"Variant of the previous term, same page"
 creare e-commerce,it,commercial,1,/servizi/e-commerce/,""
