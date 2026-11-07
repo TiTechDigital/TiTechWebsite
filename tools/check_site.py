@@ -213,6 +213,22 @@ def audit_page(p):
         own = p.alternates.get(p.own_tag, '')
         if own != p.canonical:
             problems.append('hreflang %s does not point at self' % p.own_tag)
+        # every indexable page allows large image previews (Discover, rich results)
+        if 'max-image-preview:large' not in p.robots:
+            problems.append('robots meta lacks max-image-preview:large')
+        # a BreadcrumbList with two or more items must have a visible breadcrumb
+        # too: the markup has to describe what the reader sees
+        crumbs = 0
+        for block in p.ld:
+            try:
+                data = json.loads(block)
+            except ValueError:
+                continue
+            for node in (data.get('@graph', [data]) if isinstance(data, dict) else []):
+                if node.get('@type') == 'BreadcrumbList':
+                    crumbs = max(crumbs, len(node.get('itemListElement', [])))
+        if crumbs >= 2 and not re.search(r'<nav aria-label="(Percorso|Breadcrumb)"', p.raw):
+            problems.append('BreadcrumbList without a visible breadcrumb')
         if p.alternates.get('x-default') != p.alternates.get('it-IT'):
             problems.append('x-default should equal the Italian alternate')
         if p.lang != p.language:
