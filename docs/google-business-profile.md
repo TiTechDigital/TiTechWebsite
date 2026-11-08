@@ -5,9 +5,9 @@ TiTech Digital non ha un ufficio aperto al pubblico a Novara. La formula giusta
 la verifica e non viene mostrato, la scheda mostra invece le zone servite.
 
 Questa guida adatta la procedura del vecchio progetto (DevPortfolioHub,
-`GOOGLE_BUSINESS_SETUP.md`) ai dati veri di TiTech. Non copia da lì: il telefono,
-il nome del brand e l'elenco di dieci città (Roma, Napoli, Venezia...) non
-valgono per questo sito.
+`GOOGLE_BUSINESS_SETUP.md`) ai dati veri di TiTech. Non copia da lì il telefono né
+il nome del brand; delle città tiene quelle dove si lavora davvero, distinguendo
+tra quelle da mettere nella scheda e quelle da tenere solo sul sito.
 
 Dati da usare **identici** ovunque: vedi `docs/phase-5-authority.md`, sezione 1.
 
@@ -28,10 +28,15 @@ Dati da usare **identici** ovunque: vedi `docs/phase-5-authority.md`, sezione 1.
 5. **Indirizzo:** inserisci l'indirizzo reale da cui lavori. Serve alla
    verifica e Google lo tiene nascosto con questa impostazione. Non usare
    caselle postali né uffici virtuali: non sono ammessi.
-6. **Aree di servizio** (le stesse del sito, `/novara/`):
-   Novara, Galliate, Trecate, Arona, Borgomanero, Oleggio.
-   Non aggiungere Milano, Torino, Roma o altre città lontane: Google chiede aree
-   dove si lavora davvero, e un elenco troppo largo peggiora la scheda.
+6. **Aree di servizio** (massimo 20). Quelle che lavori davvero, dal più vicino:
+   Novara, Galliate, Trecate, Arona, Borgomanero, Oleggio, Milano, Torino,
+   Biella, Vercelli, Alessandria, Asti. Sono le città a una distanza
+   ragionevole da Novara, dove puoi anche incontrare i clienti.
+   Roma, Napoli, Firenze, Bologna, Genova e Venezia sono sul sito come clienti a
+   distanza, ma conviene **non metterle nella scheda Google**: Google chiede
+   aree dove l'attività presta davvero il servizio e può sospendere una scheda
+   con aree troppo lontane. Se vuoi comunque aggiungerne qualcuna, mettile
+   dopo la verifica e osserva se la scheda resta attiva.
 7. **Telefono:** `+39 350 920 5365`.
 8. **Sito web:** `https://www.titechdigital.it/novara/`
    (la pagina locale, non la home).
