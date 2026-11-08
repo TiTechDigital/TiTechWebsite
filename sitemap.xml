@@ -363,4 +363,22 @@
     <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.titechdigital.it/novara/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.titechdigital.it/novara/"/>
   </url>
+  <url>
+    <loc>https://www.titechdigital.it/vercelli/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.titechdigital.it/vercelli/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.titechdigital.it/vercelli/"/>
+  </url>
+  <url>
+    <loc>https://www.titechdigital.it/como/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.titechdigital.it/como/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.titechdigital.it/como/"/>
+  </url>
+  <url>
+    <loc>https://www.titechdigital.it/milano/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.titechdigital.it/milano/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.titechdigital.it/milano/"/>
+  </url>
 </urlset>

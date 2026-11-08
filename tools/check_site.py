@@ -330,8 +330,18 @@ def audit_page(p):
     return problems
 
 
+# Italian-only by design: local landing pages and the case study have no English
+# twin, and must not pretend to have one (hreflang would point at a missing page).
+ITALIAN_ONLY = {
+    'novara/index.html', 'vercelli/index.html', 'como/index.html', 'milano/index.html',
+    'blog/case-study-sartoria-novara/index.html',
+}
+
+
 def audit_twin(p):
     """what the other language has to look like for this page to be honest"""
+    if p.rel in ITALIAN_ONLY:
+        return []
     problems = []
     other = p.other_tag
     twin_url = p.alternates.get(other)
