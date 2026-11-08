@@ -109,7 +109,7 @@ export default async function handler(req, res) {
     // Send notification email to TiTech Digital
     const notificationEmail = await resend.emails.send({
       from: 'TiTech Digital Website <noreply@titechdigital.it>',
-      to: 'info@titechdigital.it',
+      to: 'titechdigital.it@gmail.com',
       replyTo: email,
       subject: `${subjectPrefix} - ${name}`,
       html: emailBody,
