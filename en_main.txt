@@ -22,7 +22,7 @@
     <p class="m-text">Write to info@titechdigital.it or start a WhatsApp chat. We reply with an initial assessment of the project and, if it makes sense, book a twenty-minute call.</p>
     <div class="cta__actions">
       <a class="m-btn-2" href="mailto:info@titechdigital.it"><svg class="m-btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg><span>Write an email</span></a>
-      <a class="m-btn" href="https://wa.me/393761024080?text=Hi%2C+I%27d+like+more+information+about+your+digital+services." rel="noopener" target="_blank" style="color:inherit"><svg class="m-btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5c-1.5 0-2.9-.3-4.2-1l-3 .9 1-.9a8.38 8.38 0 0 1-1.4-4.8A8.38 8.38 0 1 1 21 11.5z"/></svg><span>Start a WhatsApp chat</span></a>
+      <a class="m-btn" href="https://wa.me/393509205365?text=Hi%2C+I%27d+like+more+information+about+your+digital+services." rel="noopener" target="_blank" style="color:inherit"><svg class="m-btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5c-1.5 0-2.9-.3-4.2-1l-3 .9 1-.9a8.38 8.38 0 0 1-1.4-4.8A8.38 8.38 0 1 1 21 11.5z"/></svg><span>Start a WhatsApp chat</span></a>
     </div>
   </div>
   <form class="form" data-mailto-form="info@titechdigital.it" novalidate

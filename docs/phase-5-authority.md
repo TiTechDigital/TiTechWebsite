@@ -22,13 +22,13 @@ common reason a local entity never consolidates.
 | Legal name | `[DA CONFERMARE]` |
 | VAT | `IT02829190038` |
 | Email | `info@titechdigital.it` |
-| Phone | `+39 376 102 4080` |
+| Phone | `+39 350 920 5365` |
 | Street address | non pubblicato |
 | City | `Novara` |
 | Postcode / province | `[DA COMPLETARE]` |
 | Country | `IT` |
 | Website | `https://www.titechdigital.it` |
-| Areas served | `Italia` |
+| Areas served | `Novara e provincia (Galliate, Trecate, Arona, Borgomanero, Oleggio)`; clienti in tutta Italia a distanza |
 | Languages | `italiano`, `inglese` |
 
 The site now publishes name, city and phone in the footer of every page and in
@@ -51,14 +51,14 @@ Paste block for directory forms:
 ```
 TiTech Digital
 Novara, Italy
-+39 376 102 4080
++39 350 920 5365
 info@titechdigital.it
 https://www.titechdigital.it
 VAT IT02829190038
 ```
 
 **Street address and postcode are still missing.** Google Business Profile can
-work as a service-area business, so verification is not blocked, but the
+work as a service-area business (full setup: `docs/google-business-profile.md`), so verification is not blocked, but the
 address fields on PagineGialle and Europages will stay incomplete until they
 exist.
 
