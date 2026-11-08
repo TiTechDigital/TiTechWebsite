@@ -20,6 +20,20 @@
     menu.querySelectorAll('.menu__list a').forEach(link => link.addEventListener('click', () => setOpen(false)));
     matchMedia('(min-width: 960px)').addEventListener('change', event => { if (event.matches) setOpen(false); });
   }
+  /* Tables turn into cards below 860px, each cell labelled by its column. Tables
+     written without data-label get it from the header row, so the labels cannot
+     drift from the headings. */
+  document.querySelectorAll('.table').forEach(table => {
+    const heads = Array.prototype.map.call(table.querySelectorAll('thead th'), th => th.textContent.trim());
+    if (!heads.length) return;
+    table.querySelectorAll('tbody tr').forEach(row => {
+      Array.prototype.forEach.call(row.children, (cell, index) => {
+        if (cell.tagName === 'TD' && !cell.hasAttribute('data-label') && heads[index]) {
+          cell.setAttribute('data-label', heads[index]);
+        }
+      });
+    });
+  });
   const year = document.querySelector('[data-year]');
   if (year) year.textContent = String(new Date().getFullYear());
 

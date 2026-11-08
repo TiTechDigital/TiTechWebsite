@@ -691,3 +691,22 @@ body {
   @keyframes footer-turn { to { transform: rotate(360deg); } }
 }
 }
+
+/* Tables: the base rules assume a dark section (light text), so on a paper
+   (light) section the last column was white on white and the mobile cards were
+   pale grey on pale grey. Rules for paper sections, plus no empty label line
+   where a cell has no data-label. */
+.sect--paper .table caption, .sect--paper .table thead th { color: var(--color-6); }
+.sect--paper .table th, .sect--paper .table td { border-color: var(--line-paper); }
+.sect--paper .table tbody th { color: var(--color-1); }
+.sect--paper .table td { color: var(--color-6); }
+.sect--paper .table td:last-child { color: var(--color-1); white-space: normal; }
+@media (hover: hover) { .sect--paper .table tbody tr:hover { background: color-mix(in srgb, var(--color-1) 4%, transparent); } }
+.table tbody td:not([data-label])::before { display: none; }
+@media (max-width: 860px) {
+  .sect--paper .table tbody tr { border-color: var(--line-paper); background: color-mix(in srgb, var(--color-1) 3%, transparent); }
+  .sect--paper .table tbody th { border-bottom-color: var(--line-paper); }
+  .sect--paper .table tbody td { color: var(--color-6); }
+  .sect--paper .table tbody td:last-child { color: var(--color-1); }
+  .sect--paper .table tbody td::before { color: var(--color-6); }
+}
