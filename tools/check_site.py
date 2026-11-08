@@ -337,7 +337,7 @@ ITALIAN_ONLY = {
     'blog/case-study-sartoria-novara/index.html',
     'blog/sito-web-aziende-agroalimentari/index.html',
     'blog/sito-web-hotel-ristoranti-lago-di-como/index.html',
-    'blog/come-scegliere-web-agency-milano/index.html',
+    'blog/preventivo-sito-web-milano/index.html',
 }
 
 

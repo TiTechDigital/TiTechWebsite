@@ -110,7 +110,7 @@ CITIES = [
         'h1': 'Siti web a Milano per PMI, studi e aziende B2B',
         'lead': "Realizziamo siti web, e-commerce e software su misura per le imprese di Milano. Siamo una web agency di Novara: un solo referente, un preventivo scritto con perimetro, tempi e costi e un sito costruito sul tuo processo, non su un pacchetto uguale per tutti.",
         'territory_title': 'Cosa serve alle aziende di Milano',
-        'territory_lead': "A Milano le agenzie sono tante e la concorrenza online è alta. Per questo conta meno promettere tutto e più decidere con precisione cosa serve al tuo caso.",
+        'territory_lead': "A Milano la concorrenza online è alta. Per questo conta meno promettere tutto e più decidere con precisione cosa serve al tuo caso.",
         'territory': [
             ("PMI e aziende B2B", "Un sito che spiega l'offerta a chi decide, con casi, schede e una richiesta di contatto breve. Se i processi interni rallentano, si valuta anche un gestionale o un'automazione."),
             ("Studi e consulenti", "Pagine servizi chiare, profilo di chi lavora, contatti e un sito che trasmette fiducia nei primi dieci secondi."),
@@ -139,7 +139,7 @@ CITIES = [
             ("Quanto costa un sito web per un'azienda di Milano?", RANGES),
         ],
         'prov': 'Città metropolitana di Milano',
-        'article': ('/blog/come-scegliere-web-agency-milano/', 'Come scegliere una web agency a Milano', 'Otto domande da fare prima di firmare, con le nostre risposte.'),
+        'article': ('/blog/preventivo-sito-web-milano/', 'Preventivo sito web a Milano: 8 domande', 'Otto domande da fare prima di firmare, con le nostre risposte.'),
         'others': ['vercelli', 'como'],
     },
 ]
