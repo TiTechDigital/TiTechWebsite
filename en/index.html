@@ -584,22 +584,6 @@ textarea.m-field { min-height: 112px; resize: vertical; }
 }
 }
 </style>
-<style data-8b-part="ai">
-#ai { position: relative; display: grid; gap: clamp(28px, 4vw, 56px); padding: var(--space-2) var(--space-1); background: var(--color-3); color: var(--color-2); }
-#ai .ai__tag { margin: 0; font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: color-mix(in srgb, var(--color-2) 78%, transparent); }
-#ai .ai__title { font-family: var(--font-1); font-size: clamp(38px, 6vw, 96px); font-weight: 800; line-height: .95; letter-spacing: -.05em; margin: 10px 0 0; max-width: 14ch; }
-#ai .ai__lead { margin: 0; max-width: 62ch; color: color-mix(in srgb, var(--color-2) 90%, transparent); }
-#ai .ai__grid { display: grid; gap: 22px clamp(20px, 3vw, 48px); grid-template-columns: minmax(0, 1fr); margin: 0; padding: 0; list-style: none; }
-@media (min-width: 700px) { #ai .ai__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (min-width: 1100px) { #ai .ai__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
-#ai .ai__item { display: grid; gap: 8px; align-content: start; padding-top: 18px; border-top: 1px solid color-mix(in srgb, var(--color-2) 38%, transparent); }
-#ai .ai__item h3 { font-family: var(--font-1); font-size: clamp(22px, 2vw, 28px); font-weight: 800; line-height: 1.05; letter-spacing: -.03em; margin: 0; }
-#ai .ai__item p { margin: 0; font-size: 15px; line-height: 1.5; color: color-mix(in srgb, var(--color-2) 86%, transparent); }
-#ai .ai__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 28px; }
-#ai .ai__btn { display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border-radius: var(--radius-2); background: var(--color-2); color: var(--color-1); font-weight: 700; text-decoration: none; }
-#ai .ai__link { color: var(--color-2); font-weight: 600; text-underline-offset: .2em; }
-@media (hover: hover) { #ai .ai__btn:hover { background: #fff; } }
-</style>
 <!-- Structured data: name, phone, city and sameAs are verified. streetAddress and postalCode
      are left out until confirmed: they must match the Google Business Profile exactly.
      See README.md, "Dati strutturati". -->
@@ -749,25 +733,6 @@ textarea.m-field { min-height: 112px; resize: vertical; }
         <li><a class="m-link" href="#contact"><span class="m-link__label">Contact us</span><svg class="m-link__arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5"/></svg></a></li>
       </ul>
     </nav>
-  </div>
-</section>
-
-<!-- ai: custom AI and chatbots, a highlighted band between the statement and the services -->
-<section id="ai" aria-labelledby="ai-title">
-  <div>
-    <p class="ai__tag">AI automation</p>
-    <h2 class="ai__title" id="ai-title">Custom AI for your business</h2>
-  </div>
-  <p class="m-text-5 ai__lead">A specialist agency in AI automation and chatbots for companies in Italy. We develop and train our own models, built on your data and your process: from the simplest chatbot to more advanced systems.</p>
-  <ul class="ai__grid">
-    <li class="ai__item"><h3>Chatbots and assistants</h3><p>They answer customers on your site or WhatsApp and hand the conversation to a person when needed.</p></li>
-    <li class="ai__item"><h3>Documents and data</h3><p>They read invoices, contracts and emails and enter the data into your system.</p></li>
-    <li class="ai__item"><h3>Forecasts and analysis</h3><p>Sales, demand and stock forecast from the data you already have, with anomaly alerts.</p></li>
-    <li class="ai__item"><h3>Computer vision</h3><p>Recognition and checks on photos and video: counting, quality, label reading.</p></li>
-  </ul>
-  <div class="ai__actions">
-    <a class="ai__btn" href="/en/services/ai-automation/">Discover AI automation</a>
-    <a class="ai__link" href="#contact">Tell us the process to automate</a>
   </div>
 </section>
 
