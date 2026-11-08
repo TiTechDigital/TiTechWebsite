@@ -335,6 +335,9 @@ def audit_page(p):
 ITALIAN_ONLY = {
     'novara/index.html', 'vercelli/index.html', 'como/index.html', 'milano/index.html',
     'blog/case-study-sartoria-novara/index.html',
+    'blog/sito-web-aziende-agroalimentari/index.html',
+    'blog/sito-web-hotel-ristoranti-lago-di-como/index.html',
+    'blog/come-scegliere-web-agency-milano/index.html',
 }
 
 

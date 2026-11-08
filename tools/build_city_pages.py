@@ -61,6 +61,7 @@ CITIES = [
              "Sì: scheda Google, una pagina che spiega servizi e zona, testi che citano davvero il territorio. Non promettiamo posizioni e non facciamo pagine clonate per ogni comune."),
         ],
         'prov': 'Provincia di Vercelli',
+        'article': ('/blog/sito-web-aziende-agroalimentari/', 'Sito web per aziende agroalimentari', 'Prodotti, origine, ordini dei buyer e vendita diretta: le pagine che servono.'),
         'others': ['como', 'milano'],
     },
     {
@@ -99,6 +100,7 @@ CITIES = [
             ("Quanto costa un sito web per un'azienda di Como?", RANGES),
         ],
         'prov': 'Provincia di Como',
+        'article': ('/blog/sito-web-hotel-ristoranti-lago-di-como/', 'Sito web per hotel e ristoranti sul Lago di Como', 'Prenotazioni dirette, più lingue, scheda Google e foto.'),
         'others': ['vercelli', 'milano'],
     },
     {
@@ -137,6 +139,7 @@ CITIES = [
             ("Quanto costa un sito web per un'azienda di Milano?", RANGES),
         ],
         'prov': 'Città metropolitana di Milano',
+        'article': ('/blog/come-scegliere-web-agency-milano/', 'Come scegliere una web agency a Milano', 'Otto domande da fare prima di firmare, con le nostre risposte.'),
         'others': ['vercelli', 'como'],
     },
 ]
@@ -279,6 +282,10 @@ def page(c):
       </div>
       <div class="tiles">
         <article class="tile">
+          <h3><a href="%(art_url)s">%(art_title)s</a></h3>
+          <p>%(art_text)s</p>
+        </article>
+        <article class="tile">
           <h3><a href="/novara/">Sviluppo siti web a Novara</a></h3>
           <p>La nostra sede: incontri di persona, SEO locale e Google Business Profile nello stesso progetto.</p>
         </article>
@@ -301,7 +308,7 @@ def page(c):
 ''' % {'name': name, 'h1': esc(c['h1']), 'lead': c['lead'], 'territory_title': esc(c['territory_title']),
        'territory_lead': c['territory_lead'], 'checks': checks, 'work_title': esc(c['work_title']),
        'steps': steps, 'tiles': tiles, 'cases': cases_inner,
-       'faq': faq, 'near': near}
+       'faq': faq, 'near': near, 'art_url': c['article'][0], 'art_title': esc(c['article'][1]), 'art_text': c['article'][2]}
     return head + ld + header_block + main + footer_block
 
 

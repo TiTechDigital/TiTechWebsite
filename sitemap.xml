@@ -122,7 +122,7 @@
   </url>
   <url>
     <loc>https://www.titechdigital.it/blog/</loc>
-    <lastmod>2026-11-06</lastmod>
+    <lastmod>2026-11-08</lastmod>
     <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.titechdigital.it/blog/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.titechdigital.it/en/blog/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.titechdigital.it/blog/"/>
@@ -380,5 +380,23 @@
     <lastmod>2026-11-08</lastmod>
     <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.titechdigital.it/milano/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.titechdigital.it/milano/"/>
+  </url>
+  <url>
+    <loc>https://www.titechdigital.it/blog/sito-web-aziende-agroalimentari/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.titechdigital.it/blog/sito-web-aziende-agroalimentari/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.titechdigital.it/blog/sito-web-aziende-agroalimentari/"/>
+  </url>
+  <url>
+    <loc>https://www.titechdigital.it/blog/sito-web-hotel-ristoranti-lago-di-como/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.titechdigital.it/blog/sito-web-hotel-ristoranti-lago-di-como/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.titechdigital.it/blog/sito-web-hotel-ristoranti-lago-di-como/"/>
+  </url>
+  <url>
+    <loc>https://www.titechdigital.it/blog/come-scegliere-web-agency-milano/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.titechdigital.it/blog/come-scegliere-web-agency-milano/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.titechdigital.it/blog/come-scegliere-web-agency-milano/"/>
   </url>
 </urlset>
