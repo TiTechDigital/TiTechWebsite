@@ -107,13 +107,23 @@ export default async function handler(req, res) {
     `.trim();
 
     // Send notification email to TiTech Digital
-    const notificationEmail = await resend.emails.send({
+    // resend v3 does not throw on API errors: it returns { data, error }.
+    // The field for the reply address in this SDK version is reply_to.
+    const notification = await resend.emails.send({
       from: 'TiTech Digital Website <noreply@titechdigital.it>',
       to: 'info@titechdigital.it',
-      replyTo: email,
+      reply_to: email,
       subject: `${subjectPrefix} - ${name}`,
       html: emailBody,
     });
+    if (notification.error) {
+      console.error('Resend notification error:', JSON.stringify(notification.error));
+      return res.status(502).json({
+        error: isItalian
+          ? 'Errore durante l\'invio. Riprova o scrivi a info@titechdigital.it'
+          : 'Error sending message. Please try again or email info@titechdigital.it'
+      });
+    }
 
     // Send simple thank you email to the customer
     const thankYouBody = `
@@ -156,7 +166,7 @@ export default async function handler(req, res) {
 </html>
     `.trim();
 
-    const thankYouEmail = await resend.emails.send({
+    const thankYou = await resend.emails.send({
       from: 'TiTech Digital <info@titechdigital.it>',
       to: email,
       subject: isItalian 
@@ -165,11 +175,16 @@ export default async function handler(req, res) {
       html: thankYouBody,
     });
 
+    // The enquiry reached us; a failed thank-you must not turn it into an error.
+    if (thankYou.error) {
+      console.error('Resend thank-you error:', JSON.stringify(thankYou.error));
+    }
+
     // Return success
     return res.status(200).json({ 
       success: true, 
-      messageId: notificationEmail.id,
-      thankYouId: thankYouEmail.id,
+      messageId: notification.data && notification.data.id,
+      thankYouId: thankYou.data && thankYou.data.id,
       message: isItalian ? 'Richiesta inviata con successo' : 'Enquiry sent successfully'
     });
 
