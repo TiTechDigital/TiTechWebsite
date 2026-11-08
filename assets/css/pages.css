@@ -710,3 +710,7 @@ body {
   .sect--paper .table tbody td:last-child { color: var(--color-1); }
   .sect--paper .table tbody td::before { color: var(--color-6); }
 }
+
+/* Six links in the bar: keep each on one line and tighten the gaps on narrow desktops. */
+.nav__links a { white-space: nowrap; }
+@media (min-width: 960px) and (max-width: 1199px) { .nav__links a { margin: 0 9px; } }

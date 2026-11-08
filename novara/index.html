@@ -220,6 +220,8 @@ textarea.m-field { min-height: 112px; resize: vertical; }
 #navigation .nav__cta { box-shadow: var(--shadow-3); position: relative; z-index: 45; }
 #navigation .nav__links a { display: block; margin: 0 14px; padding-block: 14px; }
 #navigation .nav__links a::after { bottom: 10px; }
+#navigation .nav__links a { white-space: nowrap; }
+@media (min-width: 960px) and (max-width: 1199px) { #navigation .nav__links a { margin: 0 9px; } }
 #navigation .nav__lang { display: inline-flex; align-items: center; justify-content: center; min-width: 48px; min-height: 48px; padding: 0 14px; border-radius: var(--radius-3); background: var(--color-1); color: var(--color-2); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--color-2) 26%, transparent); font-family: var(--font-2); font-size: 14px; font-weight: 600; letter-spacing: .06em; text-decoration: none; text-transform: uppercase; }
 #navigation .menu__top { gap: 10px; align-items: center; }
 #navigation .menu__brand { display: block; margin-right: auto; }
@@ -997,6 +999,7 @@ textarea.m-field { min-height: 112px; resize: vertical; }
   <nav class="nav__links" aria-label="Navigazione principale">
     <ul>
       <li><a class="m-link-2" href="/servizi/">Servizi</a></li>
+      <li><a class="m-link-2" href="/servizi/automazioni-ai/">Automazione AI</a></li>
       <li><a class="m-link-2" href="/lavori/">Lavori</a></li>
       <li><a class="m-link-2" href="/come-lavoriamo/">Come lavoriamo</a></li>
       <li><a class="m-link-2" href="/chi-siamo/">Chi siamo</a></li>
@@ -1010,6 +1013,7 @@ textarea.m-field { min-height: 112px; resize: vertical; }
     <div class="menu__top"><a class="menu__brand" href="#hero" aria-label="TiTech Digital, torna all'inizio"><img src="/assets/img/logo.svg" width="30" height="30" alt="" decoding="async"></a><a class="menu__lang" href="/en/" hreflang="en" lang="en" aria-label="Passa alla versione inglese">English</a><button class="m-icon menu__close" type="button" aria-label="Chiudi il menu"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3 3 13"/></svg></button></div>
     <ul class="menu__list">
       <li><a href="/servizi/">Servizi<span class="m-dot" aria-hidden="true"></span></a></li>
+      <li><a href="/servizi/automazioni-ai/">Automazione AI<span class="m-dot" aria-hidden="true"></span></a></li>
       <li><a href="/settori/">Settori<span class="m-dot" aria-hidden="true"></span></a></li>
       <li><a href="/lavori/">Lavori<span class="m-dot" aria-hidden="true"></span></a></li>
       <li><a href="/come-lavoriamo/">Come lavoriamo<span class="m-dot" aria-hidden="true"></span></a></li>
