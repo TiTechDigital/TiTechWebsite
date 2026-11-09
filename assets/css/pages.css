@@ -714,3 +714,13 @@ body {
 /* Six links in the bar: keep each on one line and tighten the gaps on narrow desktops. */
 .nav__links a { white-space: nowrap; }
 @media (min-width: 960px) and (max-width: 1199px) { .nav__links a { margin: 0 9px; } }
+
+/* The chatbot launcher sits bottom-right, where the call bar ends: on phones the bar leaves
+   room for it, and gives the longer WhatsApp label twice the width of the call button. */
+@media (max-width: 640px) {
+  .mbar { right: 92px; margin: 0; }
+  .mbar a { padding: 0 8px; font-size: 14px; white-space: nowrap; }
+  .mbar a.mbar__wa { flex: 2 1 0; }
+  .mbar a.mbar__tel { flex: 1 1 0; }
+}
+@media (max-width: 359px) { .mbar a { font-size: 13px; } }
