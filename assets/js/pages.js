@@ -1,4 +1,4 @@
-/* Inner page behaviour: phone menu dialog, current year, mailto form. Deliberately tiny. */
+/* Inner page behaviour: phone menu dialog, current year. Deliberately tiny. */
 (() => {
   'use strict';
   /* the full-screen menu, same dialog as the home page */
@@ -37,69 +37,6 @@
   const year = document.querySelector('[data-year]');
   if (year) year.textContent = String(new Date().getFullYear());
 
-  /* Contact form: no backend, so compose the message and hand it to the mail client.
-     Every sentence a visitor can read lives in the markup rather than here: the form
-     says which label each field carries in the email and which message to show when
-     something is missing. That keeps this file free of language, so the same script
-     serves the Italian and the English form without a branch. */
-  const form = document.querySelector('[data-mailto-form]');
-  if (form) {
-    const to = form.dataset.mailtoForm;
-    const status = form.querySelector('.form__status');
-    const say = (message, state) => {
-      if (!status) return;
-      status.textContent = message;
-      status.dataset.state = state;
-    };
-    const answered = field => field.type === 'checkbox'
-      ? field.checked
-      : String(field.value).trim() !== '';
-    form.addEventListener('submit', event => {
-      event.preventDefault();
-      const fields = Array.prototype.slice.call(form.querySelectorAll('[data-mail-label]'));
-      if (fields.some(field => field.hasAttribute('required') && !answered(field))) {
-        say(form.dataset.msgIncomplete, 'error');
-        return;
-      }
-      if (!form.checkValidity()) {
-        say(form.dataset.msgInvalid, 'error');
-        return;
-      }
-      const lines = [];
-      fields.forEach(field => {
-        if (field.type === 'checkbox') return;
-        const value = String(field.value).trim();
-        if (!value) return;
-        /* a field without a label is the message: it goes last, after a blank line */
-        if (field.dataset.mailLabel) lines.push(field.dataset.mailLabel + ': ' + value);
-        else lines.push('', value);
-      });
-      // Append attribution for lead source tracking.
-      const attr = window.titechAttribution || {};
-      const attrLines = [];
-      if (attr.source) attrLines.push('Fonte: ' + attr.source);
-      if (attr.medium) attrLines.push('Mezzo: ' + attr.medium);
-      if (attr.campaign) attrLines.push('Campagna: ' + attr.campaign);
-      if (attr.landing) attrLines.push('Landing: ' + attr.landing);
-      if (attr.referrer) attrLines.push('Referrer: ' + attr.referrer);
-      if (attrLines.length) {
-        lines.push('', '--- Attribuzione ---');
-        attrLines.forEach(l => lines.push(l));
-      }
-      const href = 'mailto:' + to + '?subject=' +
-        encodeURIComponent(form.dataset.msgSubject + ' · ' + String(fields[0].value).trim()) +
-        '&body=' + encodeURIComponent(lines.join('\n'));
-      say(form.dataset.msgSent.replace('{email}', to), 'ok');
-      // Track conversion for any active A/B test.
-      if (window.titechExperimentConvert) {
-        Object.keys((window.titechExperiments || {}).assignments || {}).forEach(name => {
-          window.titechExperimentConvert(name);
-        });
-      }
-      document.dispatchEvent(new CustomEvent('titech:contact-submit', { detail: { form: 'contact_page' } }));
-      window.location.href = href;
-    });
-  }
   /* Below 960px the navbar hides both its links and its CTA, so a phone visitor
      has exactly one path to a human: opening the hamburger. This bar appears
      after the first screen of scrolling and never on the contact page, where the

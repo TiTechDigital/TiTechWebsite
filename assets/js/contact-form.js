@@ -29,7 +29,13 @@
       }
     };
 
-    const msg = messages[language];
+    // A form can carry its own wording (data-msg-*), so the Italian and English
+    // contact pages keep their own sentences without a branch in this file.
+    const msg = Object.assign({}, messages[language]);
+    if (form.dataset.msgIncomplete) msg.incomplete = form.dataset.msgIncomplete;
+    if (form.dataset.msgInvalid) msg.invalidEmail = form.dataset.msgInvalid;
+    if (form.dataset.msgSuccess) msg.success = form.dataset.msgSuccess;
+    if (form.dataset.msgError) msg.error = form.dataset.msgError;
 
     // Update status message
     const updateStatus = (message, state = '') => {
@@ -57,12 +63,20 @@
 
       // Get form data
       const formData = new FormData(form);
-      const name = formData.get('name')?.trim() || '';
-      const email = formData.get('email')?.trim() || '';
-      const message = formData.get('message')?.trim() || '';
-      const phone = formData.get('phone')?.trim() || '';
-      const company = formData.get('company')?.trim() || '';
-      const service = formData.get('topic') || formData.get('service') || '';
+      // Home pages use name/message/company, the contact pages nome/messaggio/azienda.
+      const pick = (...keys) => {
+        for (const key of keys) {
+          const value = formData.get(key);
+          if (value && String(value).trim()) return String(value).trim();
+        }
+        return '';
+      };
+      const name = pick('name', 'nome');
+      const email = pick('email');
+      const message = pick('message', 'messaggio');
+      const phone = pick('phone', 'telefono');
+      const company = pick('company', 'azienda');
+      const service = pick('topic', 'service');
 
       // Validate required fields
       if (!name || !email || !message) {
@@ -72,6 +86,13 @@
 
       // Validate email format
       if (!isValidEmail(email)) {
+        updateStatus(msg.invalidEmail, 'error');
+        return;
+      }
+
+      // The contact pages carry a privacy consent box: it has to be ticked.
+      const consent = form.querySelector('input[name="consenso"]');
+      if (consent && !consent.checked) {
         updateStatus(msg.invalidEmail, 'error');
         return;
       }
