@@ -359,9 +359,27 @@
   </url>
   <url>
     <loc>https://www.titechdigital.it/novara/</loc>
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.titechdigital.it/novara/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.titechdigital.it/novara/"/>
+  </url>
+  <url>
+    <loc>https://www.titechdigital.it/galliate/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.titechdigital.it/galliate/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.titechdigital.it/galliate/"/>
+  </url>
+  <url>
+    <loc>https://www.titechdigital.it/trecate/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.titechdigital.it/trecate/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.titechdigital.it/trecate/"/>
+  </url>
+  <url>
+    <loc>https://www.titechdigital.it/arona/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.titechdigital.it/arona/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.titechdigital.it/arona/"/>
   </url>
   <url>
     <loc>https://www.titechdigital.it/vercelli/</loc>
