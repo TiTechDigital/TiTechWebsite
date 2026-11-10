@@ -86,8 +86,7 @@ modo per saltarla: senza verifica la scheda non compare su Maps.
 
 1. **Recensioni:** manda ai clienti il link diretto, con i testi in
    `docs/phase-5-authority.md`, sezione 3. Mai recensioni scritte da noi.
-2. **Aggiungi l'URL del profilo a `sameAs`** nei dati strutturati di
-   `index.html` e `novara/index.html` (lo faccio io, mandami il link).
+2. **Collegamenti sul sito (fatto):** il link a Google Maps (`https://maps.app.goo.gl/D2tHJGsZuTfMurwo6`) è in `hasMap` nei dati strutturati di home e `/novara/`, e nel footer di ogni pagina insieme a Instagram e TikTok. I profili social sono anche in `sameAs`.
 3. **Un post al mese** sulla scheda (nuovo articolo, nuovo lavoro).
 4. **Domande e risposte:** rispondi tu per primo alle domande più comuni
    (costi, tempi, zone servite), con le stesse risposte delle FAQ di `/novara/`.
