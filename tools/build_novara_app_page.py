@@ -20,9 +20,9 @@ DATE = '2026-11-10'
 OUT = 'novara/app-mobile/index.html'
 
 TITLE = 'Sviluppo app a Novara | App iOS e Android | TiTech Digital'
-DESC = "Sviluppo di app per iOS e Android a Novara e provincia: quando serve un'app, esempi per logistica, turismo, agroalimentare e studi, come lavoriamo e zone servite."
+DESC = "Sviluppo e creazione di app iOS e Android a Novara e provincia: quando serve un'app, scenari locali, come lavoriamo e zone servite. Preventivo scritto."
 H1 = 'Sviluppo di app a Novara per aziende e professionisti'
-LEAD = "Sviluppiamo app per iOS e Android per le aziende di Novara e provincia. La sede è a Novara: si parte da una videochiamata o da un incontro di persona e, prima di scrivere codice, verifichiamo se un'app è davvero la risposta giusta."
+LEAD = "Sviluppo app per le aziende di Novara e provincia: creiamo app per iOS e Android dalla nostra sede di Novara. Si parte da una videochiamata o da un incontro di persona e, prima di scrivere codice, verifichiamo se un'app è davvero la risposta giusta."
 
 SCENARIOS = [
     ('Logistica e trasporti', "Novara è un nodo logistico, con il suo interporto. Per autisti, magazzinieri e operatori sul campo un'app può gestire presa in carico, firma di consegna e foto dei colli, anche dove la rete è debole."),
@@ -44,6 +44,7 @@ FAQ = [
     ("Sviluppate app a Novara?", "Sì. TiTech Digital ha sede a Novara e sviluppa app per iOS e Android per aziende e professionisti di Novara e provincia, e lavora anche a distanza con clienti di tutta Italia."),
     ("Dove ci si incontra?", "A Novara, oppure in videochiamata. Per clienti della provincia (Galliate, Trecate, Arona, Borgomanero, Oleggio e comuni vicini) si concorda l'incontro più comodo."),
     ("Per un'attività locale è meglio un'app o un sito?", "Dipende da come viene usato. Se i clienti consultano, prenotano o ordinano di rado, un sito veloce o una web app bastano e costano meno. Un'app serve quando l'uso è frequente, servono funzioni del telefono o il lavoro deve funzionare senza rete. Si decide nell'analisi: trovi i criteri nella pagina <a href=\"/servizi/app-mobile/\">sviluppo di app mobile</a>."),
+    ("Come si crea un'app? Da dove si parte?", "La creazione di un'app parte dall'analisi, non dal codice: chi la userà, ogni quanto e cosa deve poter fare. Poi arrivano il prototipo, lo sviluppo per rilasci, i test su dispositivi reali e la pubblicazione sugli store. Le fasi sono descritte qui sopra."),
     ("Quanto costa un'app?", "Dipende da quante funzioni ha, da quante piattaforme copre e da quanto si collega ad altri sistemi. Non pubblichiamo un listino: dopo l'analisi ricevi un preventivo scritto con perimetro, tempi e costi."),
 ]
 
@@ -145,7 +146,7 @@ main = '''<main id="main">
 
     <section class="sect" aria-labelledby="metodo-title">
       <div class="sect__top">
-        <h2 class="m-text-4" id="metodo-title">Come lavoriamo da Novara</h2>
+        <h2 class="m-text-4" id="metodo-title">Creazione di un'app: come lavoriamo da Novara</h2>
         <p class="m-text">Un solo referente, un preventivo scritto e rilasci a pezzi, così si vede cosa funziona prima della fine.</p>
       </div>
       <div class="steps">
