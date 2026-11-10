@@ -10,7 +10,7 @@
   </url>
   <url>
     <loc>https://www.titechdigital.it/servizi/</loc>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.titechdigital.it/servizi/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.titechdigital.it/en/services/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.titechdigital.it/servizi/"/>
@@ -31,7 +31,7 @@
   </url>
   <url>
     <loc>https://www.titechdigital.it/servizi/software-su-misura/</loc>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.titechdigital.it/servizi/software-su-misura/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.titechdigital.it/en/services/custom-software/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.titechdigital.it/servizi/software-su-misura/"/>
@@ -234,7 +234,7 @@
   </url>
   <url>
     <loc>https://www.titechdigital.it/en/services/</loc>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.titechdigital.it/servizi/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.titechdigital.it/en/services/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.titechdigital.it/servizi/"/>
@@ -311,7 +311,7 @@
   </url>
   <url>
     <loc>https://www.titechdigital.it/en/services/custom-software/</loc>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.titechdigital.it/servizi/software-su-misura/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.titechdigital.it/en/services/custom-software/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.titechdigital.it/servizi/software-su-misura/"/>
@@ -398,5 +398,19 @@
     <lastmod>2026-11-08</lastmod>
     <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.titechdigital.it/blog/preventivo-sito-web-milano/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.titechdigital.it/blog/preventivo-sito-web-milano/"/>
+  </url>
+  <url>
+    <loc>https://www.titechdigital.it/servizi/app-mobile/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.titechdigital.it/servizi/app-mobile/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.titechdigital.it/en/services/mobile-apps/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.titechdigital.it/servizi/app-mobile/"/>
+  </url>
+  <url>
+    <loc>https://www.titechdigital.it/en/services/mobile-apps/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.titechdigital.it/servizi/app-mobile/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.titechdigital.it/en/services/mobile-apps/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.titechdigital.it/servizi/app-mobile/"/>
   </url>
 </urlset>
