@@ -338,6 +338,7 @@ ITALIAN_ONLY = {
     'blog/sito-web-aziende-agroalimentari/index.html',
     'blog/sito-web-hotel-ristoranti-lago-di-como/index.html',
     'blog/preventivo-sito-web-milano/index.html',
+    'novara/app-mobile/index.html',
 }
 
 

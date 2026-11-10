@@ -86,6 +86,7 @@ PAGES = {
         'related': [
             ('/servizi/software-su-misura/', 'Software su misura', "Gestionali, portali clienti e dashboard sul tuo processo. Spesso è il lato server dell'app."),
             ('/servizi/automazioni-ai/', 'Automazioni e AI', "Meno passaggi manuali e assistenti che rispondono ai clienti, anche dentro un'app."),
+            ('/novara/app-mobile/', 'App a Novara', "Per le aziende di Novara e provincia: scenari tipici, zone servite e come lavoriamo dalla sede."),
             ('/servizi/siti-web/', 'Siti web', "Quando basta un sito veloce e ben fatto, senza passare dagli store."),
             ('/settori/', 'Settori', "Cosa cambia quando il lavoro serve un'azienda artigiana, un ristorante o uno studio."),
         ],
