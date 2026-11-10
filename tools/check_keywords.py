@@ -12,7 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 CSV_PATH = ROOT / 'docs' / 'keywords.csv'
 SITEMAP = ROOT / 'sitemap.xml'
-EXPECTED = 38
+EXPECTED = 39
 COLUMNS = ['keyword', 'language', 'intent', 'priority', 'target_url', 'notes']
 LANGUAGES = {'it', 'en'}
 INTENTS = {'commercial', 'transactional', 'informational'}
