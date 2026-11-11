@@ -32,7 +32,7 @@ PAGES = {
         'out': 'servizi/app-mobile/index.html',
         'url': IT_URL, 'lang': 'it-IT',
         'title': 'Sviluppo app mobile iOS e Android | TiTech Digital',
-        'description': "Sviluppo di app mobile per aziende: quando serve davvero un'app, native o multipiattaforma, cosa comprende il progetto, tempi, costi e pubblicazione sugli store.",
+        'description': "Sviluppo di app mobile per aziende: quando serve davvero un'app, native o multipiattaforma, cosa comprende il progetto e la pubblicazione sugli store.",
         'service_name': 'Sviluppo di app mobile',
         'service_type': 'Sviluppo di app mobile per iOS e Android',
         'service_desc': "Progettazione e sviluppo di app mobile per iOS e Android per aziende: analisi delle funzioni, design, sviluppo, test su dispositivi reali, pubblicazione sugli store e aggiornamenti.",
@@ -103,7 +103,7 @@ PAGES = {
         'out': 'en/services/mobile-apps/index.html',
         'url': EN_URL, 'lang': 'en',
         'title': 'Mobile app development for iOS and Android | TiTech Digital',
-        'description': 'Mobile app development for companies: when an app is really needed, native or cross-platform, what a project includes, timing, costs and publishing on the stores.',
+        'description': 'Mobile app development for companies: when an app is really needed, native or cross-platform, what a project includes and publishing on the stores.',
         'service_name': 'Mobile app development',
         'service_type': 'Mobile app development for iOS and Android',
         'service_desc': 'Design and development of iOS and Android mobile apps for companies: analysis of the features, design, development, testing on real devices, publishing on the stores and updates.',
@@ -242,7 +242,7 @@ def build(key):
         <a class="m-btn" href="%(cta1u)s"><span>%(cta1t)s</span></a>
         <a class="m-link" href="%(cta2u)s"><span class="m-link__label">%(cta2t)s</span>%(arrow)s</a>
       </div>
-      <p class="byline"><span class="byline__name">Enea Muja</span><span class="byline__role">%(role)s</span><time class="byline__date" datetime="%(date)s">%(bdate)s</time></p>
+      <p class="byline"><a class="byline__name" href="%(about)s" style="color:inherit">Enea Muja</a><span class="byline__role">%(role)s</span><time class="byline__date" datetime="%(date)s">%(bdate)s</time></p>
     </div>
 
     <section class="sect" aria-labelledby="%(sid)s-title">
@@ -328,7 +328,7 @@ def build(key):
     </section>
   </div>
 </main>
-''' % {'navlabel': 'Percorso' if key == 'it' else 'Breadcrumb', 'home': home, 'services': services,
+''' % {'about': '/chi-siamo/#enea-muja' if key == 'it' else '/en/about/#enea-muja', 'navlabel': 'Percorso' if key == 'it' else 'Breadcrumb', 'home': home, 'services': services,
        'ch': c['crumbs_home'], 'cs': c['crumbs_services'], 'crumb': esc(c['crumb']), 'eyebrow': c['eyebrow'],
        'h1': esc(c['h1']), 'lead': esc(c['lead']), 'cta1u': c['cta1'][1], 'cta1t': esc(c['cta1'][0]),
        'cta2u': c['cta2'][1], 'cta2t': esc(c['cta2'][0]), 'arrow': arrow, 'role': c['byline_role'], 'date': DATE,

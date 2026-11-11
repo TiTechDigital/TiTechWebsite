@@ -128,7 +128,7 @@ main = '''<main id="main">
         <a class="m-btn" href="/contatti/"><span>Raccontaci cosa deve fare l'app</span></a>
         <a class="m-link" href="/servizi/app-mobile/"><span class="m-link__label">Come lavoriamo sulle app</span>%(arrow)s</a>
       </div>
-      <p class="byline"><span class="byline__name">Enea Muja</span><span class="byline__role">CEO, TiTech Digital</span><time class="byline__date" datetime="%(date)s">Aggiornato il 10 novembre 2026</time></p>
+      <p class="byline"><a class="byline__name" href="/chi-siamo/#enea-muja" style="color:inherit">Enea Muja</a><span class="byline__role">CEO, TiTech Digital</span><time class="byline__date" datetime="%(date)s">Aggiornato il 10 novembre 2026</time></p>
     </div>
 
     <section class="sect" aria-labelledby="dove-title">

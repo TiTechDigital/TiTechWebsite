@@ -67,7 +67,7 @@ CITIES = [
     {
         'slug': 'como', 'name': 'Como', 'region': 'Lombardia',
         'title': 'Siti web a Como | Web agency TiTech Digital',
-        'description': 'Siti web, e-commerce e software per aziende e strutture di Como: turismo sul lago, tessile e servizi. Web agency di Novara, lavoro a distanza, preventivo scritto.',
+        'description': 'Siti web, e-commerce e software per aziende e strutture di Como: turismo sul lago, tessile e servizi. Web agency di Novara, preventivo scritto.',
         'h1': 'Siti web a Como per aziende e strutture turistiche',
         'lead': "Realizziamo siti web, e-commerce e software per le aziende di Como e della sua provincia. Siamo una web agency con sede a Novara e lavoriamo a distanza: videochiamate, prototipi online e consegna digitale.",
         'territory_title': 'Cosa serve alle aziende di Como',
@@ -106,7 +106,7 @@ CITIES = [
     {
         'slug': 'milano', 'name': 'Milano', 'region': 'Lombardia',
         'title': 'Siti web a Milano | Web agency TiTech Digital',
-        'description': 'Siti web, e-commerce e software su misura per PMI, studi e aziende B2B di Milano: preventivo scritto e un solo referente. Web agency di Novara, lavoro a distanza.',
+        'description': 'Siti web, e-commerce e software su misura per PMI, studi e aziende B2B di Milano. Web agency di Novara: lavoro a distanza e preventivo scritto.',
         'h1': 'Siti web a Milano per PMI, studi e aziende B2B',
         'lead': "Realizziamo siti web, e-commerce e software su misura per le imprese di Milano. Siamo una web agency di Novara: un solo referente, un preventivo scritto con perimetro, tempi e costi e un sito costruito sul tuo processo, non su un pacchetto uguale per tutti.",
         'territory_title': 'Cosa serve alle aziende di Milano',

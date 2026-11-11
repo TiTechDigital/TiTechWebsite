@@ -146,7 +146,7 @@ ARTICLES = [
     {
         'slug': 'preventivo-sito-web-milano',
         'title': 'Preventivo sito web a Milano: 8 domande prima di firmare',
-        'description': "Otto domande da fare prima di firmare un preventivo per il sito della tua azienda: chi lavora al progetto, cosa è incluso, proprietà, tempi e SEO. Guida per Milano.",
+        'description': "Otto domande da fare prima di firmare un preventivo per un sito web: chi lavora al progetto, cosa è incluso, proprietà, tempi e SEO. Guida per Milano.",
         'section': 'Preventivi', 'minutes': 8,
         'keywords': 'preventivo sito web Milano, realizzazione sito web Milano, web agency Milano, cosa include un preventivo',
         'lead': "Prima di firmare un preventivo per il sito della tua azienda ci sono poche domande che cambiano tutto. Eccone otto, con cosa aspettarsi e come rispondiamo noi, che siamo una web agency di Novara e lavoriamo a distanza con le aziende di Milano.",
@@ -355,7 +355,7 @@ def build(a):
         <a class="m-btn" href="/contatti/"><span>Parliamo del tuo progetto</span></a>
         <a class="m-link" href="%(link_url)s"><span class="m-link__label">%(link_label)s</span><svg class="m-link__arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5"/></svg></a>
       </div>
-      <p class="byline"><span class="byline__name">Enea Muja</span><span class="byline__role">CEO, TiTech Digital · %(minutes)s min di lettura</span><time class="byline__date" datetime="%(date)s">Aggiornato il %(date_it)s</time></p>
+      <p class="byline"><a class="byline__name" href="/chi-siamo/#enea-muja" style="color:inherit">Enea Muja</a><span class="byline__role">CEO, TiTech Digital · %(minutes)s min di lettura</span><time class="byline__date" datetime="%(date)s">Aggiornato il %(date_it)s</time></p>
     </div>
 
     <aside class="takeaways" aria-labelledby="takeaways-title">
