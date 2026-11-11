@@ -340,6 +340,11 @@ ITALIAN_ONLY = {
     'blog/preventivo-sito-web-milano/index.html',
     'novara/app-mobile/index.html',
     'blog/come-scegliere-una-web-agency/index.html',
+    'blog/sito-web-agenzie-immobiliari/index.html',
+    'blog/sito-web-agenzie-immobiliari-novara/index.html',
+    'blog/sito-web-agenzie-immobiliari-milano/index.html',
+    'blog/sito-web-agenzie-immobiliari-como/index.html',
+    'blog/sito-web-agenzia-immobiliare-piccoli-comuni/index.html',
 }
 
 

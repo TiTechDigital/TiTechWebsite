@@ -410,9 +410,14 @@ def build(a):
     return head + ld + header_block + main + footer_block
 
 
-for a in ARTICLES:
-    out = os.path.join(ROOT, 'blog', a['slug'])
-    os.makedirs(out, exist_ok=True)
-    open(os.path.join(out, 'index.html'), 'w', encoding='utf-8', newline='\n').write(build(a))
-    words = len(re.sub(r'<[^>]+>', ' ', open(os.path.join(out, 'index.html'), encoding='utf-8').read().split('<main')[1].split('</main>')[0]).split())
-    print('wrote blog/%s/index.html (%d words)' % (a['slug'], words))
+def main():
+  for a in ARTICLES:
+      out = os.path.join(ROOT, 'blog', a['slug'])
+      os.makedirs(out, exist_ok=True)
+      open(os.path.join(out, 'index.html'), 'w', encoding='utf-8', newline='\n').write(build(a))
+      words = len(re.sub(r'<[^>]+>', ' ', open(os.path.join(out, 'index.html'), encoding='utf-8').read().split('<main')[1].split('</main>')[0]).split())
+      print('wrote blog/%s/index.html (%d words)' % (a['slug'], words))
+
+
+if __name__ == '__main__':
+    main()
