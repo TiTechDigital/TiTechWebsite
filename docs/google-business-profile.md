@@ -102,3 +102,18 @@ modo per saltarla: senza verifica la scheda non compare su Maps.
 - Recensioni inventate, scambi di recensioni, sconti in cambio di recensioni.
 - Telefono diverso da quello del sito. Il vecchio numero (+39 376 102 4080) è
   del vecchio progetto e non va usato.
+
+## Valutazione mostrata sul sito
+
+La riga "★ 5,0 su Google · 3 recensioni" nel footer di ogni pagina, e
+`aggregateRating` nei dati strutturati di home e `/novara/`, vengono dallo
+stesso comando, con i numeri **identici a quelli del profilo Google**:
+
+```
+python tools/set_rating.py 5.0 3     # valutazione media e numero di recensioni
+python tools/set_rating.py off       # toglie la riga e il codice
+```
+
+Va rieseguito a mano quando i numeri del profilo cambiano. Google non mostra le
+stelle nei risultati normali per le recensioni che un'azienda dà di sé stessa:
+le stelle che contano sono quelle della scheda Google (mappa e riquadro).
