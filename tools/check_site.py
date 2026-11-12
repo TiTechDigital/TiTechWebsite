@@ -345,6 +345,9 @@ ITALIAN_ONLY = {
     'blog/sito-web-agenzie-immobiliari-milano/index.html',
     'blog/sito-web-agenzie-immobiliari-como/index.html',
     'blog/sito-web-agenzia-immobiliare-piccoli-comuni/index.html',
+    'blog/sito-web-studio-dentistico/index.html',
+    'blog/sito-web-dentista-novara/index.html',
+    'blog/sito-web-studio-legale-commercialista/index.html',
 }
 
 
