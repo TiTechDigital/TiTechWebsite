@@ -357,6 +357,10 @@ ITALIAN_ONLY = {
     'blog/sito-web-palestra/index.html',
     'blog/sito-web-agenzia-viaggi-fotografo-wedding-planner/index.html',
     'blog/sito-web-aziende-artigiane-manifatturiere/index.html',
+    'blog/sito-web-idraulico-elettricista-novara/index.html',
+    'blog/sito-web-parrucchiere-estetista-novara/index.html',
+    'blog/sito-web-fisioterapista-novara/index.html',
+    'blog/sito-web-palestra-novara/index.html',
 }
 
 
