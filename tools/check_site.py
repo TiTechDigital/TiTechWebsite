@@ -348,6 +348,15 @@ ITALIAN_ONLY = {
     'blog/sito-web-studio-dentistico/index.html',
     'blog/sito-web-dentista-novara/index.html',
     'blog/sito-web-studio-legale-commercialista/index.html',
+    'blog/sito-web-estetista-parrucchiere-centro-benessere/index.html',
+    'blog/sito-web-idraulico-elettricista-impresa-edile/index.html',
+    'blog/sito-web-fisioterapista-osteopata-psicologo/index.html',
+    'blog/sito-web-veterinario/index.html',
+    'blog/sito-web-autofficina-carrozzeria-gommista/index.html',
+    'blog/sito-web-notaio-geometra-architetto-ingegnere/index.html',
+    'blog/sito-web-palestra/index.html',
+    'blog/sito-web-agenzia-viaggi-fotografo-wedding-planner/index.html',
+    'blog/sito-web-aziende-artigiane-manifatturiere/index.html',
 }
 
 
