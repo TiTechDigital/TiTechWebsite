@@ -197,7 +197,7 @@ SQ = {
     "Marketplace": "Marketplace",
     "Discontinued": "E mbyllur",
     "These are some of our projects. Over the years we have delivered dozens of projects for companies across different sectors. We show the cases that best represent our approach and the skills we bring to our clients.":
-        "Këto janë disa nga projektet tona. Tregojmë rastet që përfaqësojnë më mirë qasjen tonë dhe aftësitë që sjellim te klientët.",
+        "Këto janë disa nga projektet tona. Gjithsej kemi realizuar mbi 100 projekte, dhe mbi 40 prej tyre rendisen në vendin e parë në Google për kërkimet e tyre kryesore. Tregojmë rastet që përfaqësojnë më mirë qasjen tonë dhe aftësitë që sjellim te klientët.",
     "Want a project like this?": "Dëshiron një projekt si ky?",
     # ---- faq
     "Common questions": "Pyetje të shpeshta",

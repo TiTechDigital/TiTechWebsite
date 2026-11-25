@@ -329,8 +329,8 @@ def register(page, a, checks, NOTE, REMOTE):
     # ------------------------------------------------------------------ work, method, about
     page(slug='punimet', kind='hub', title='Punimet tona | TiTech Digital', h1='Punimet', eyebrow='Punimet',
          description='Disa nga faqet, dyqanet online dhe platformat që kemi ndërtuar midis 2020 dhe 2026: nga sartoria te sisteme për shëndetësinë publike.',
-         lead='Një përzgjedhje e projekteve tona. Çdo zgjidhje nis nga një objektiv konkret dhe nga procese reale. Tregojmë edhe një projekt që e mbyllëm.',
-         takeaways=[('Nga objektivi.', 'Çdo projekt nis nga një problem i vërtetë.'), ('Pa zbukurime.', 'Tregojmë edhe çfarë nuk funksionoi.')],
+         lead='Një përzgjedhje e projekteve tona. Gjithsej kemi realizuar mbi 100 projekte, dhe mbi 40 prej tyre rendisen në vendin e parë në Google për kërkimet e tyre kryesore. Tregojmë edhe një projekt që e mbyllëm.',
+         takeaways=[('Mbi 100 projekte.', 'Shtatë shembuj më poshtë, një përzgjedhje.'), ('Mbi 40 në vendin e parë në Google.', 'Për kërkimet e tyre kryesore.'), ('Pa zbukurime.', 'Tregojmë edhe çfarë nuk funksionoi.')],
          sections=[('projektet', 'Projektet', 'Shtatë shembuj.', checks([
              ('Sartoria Tagliacuci (2026)', 'Prani profesionale digjitale për një sartori në Novara që paraqet shërbimet dhe artin e punës me dorë. ' + a('https://www.titechdigital.it/blog/case-study-sartoria-novara/', 'Rasti i studimit (në italisht)')),
              ('Ferro e Forma (2025)', 'Faqe editoriale për një studio arkitekture: projekte, galeri fotografish dhe kërkesa të drejtpërdrejta.'),
@@ -367,7 +367,7 @@ def register(page, a, checks, NOTE, REMOTE):
 
     page(slug='rreth-nesh', kind='hub', title='Rreth nesh | TiTech Digital', h1='Rreth nesh', eyebrow='Rreth nesh',
          description='TiTech Digital është një agjenci web e vogël me bazë në Novara (Itali) që punon edhe me biznese në Shqipëri: faqe interneti, dyqane online, softuer dhe SEO.',
-         lead='TiTech Digital është një agjenci web e vogël me bazë në Novara, në Itali. Punojmë me biznese në Itali dhe në Shqipëri, në distancë, me një person kontakti dhe një ofertë të shkruar para se të nisim.',
+         lead='TiTech Digital është një agjenci web e vogël me bazë në Novara, në Itali, me mbi 100 projekte të realizuara. Punojmë me biznese në Itali dhe në Shqipëri, në distancë, me një person kontakti dhe një ofertë të shkruar para se të nisim.',
          takeaways=[('E vogël, e drejtpërdrejtë.', 'Ai që ju ndjek është edhe ai që e zhvillon.'), ('Me bazë në Itali, me vështrim ndërkombëtar.', 'Punojmë edhe në Shqipëri.'), ('Metodë e qartë.', 'Ofertë, fazat, mbështetje.')],
          sections=[
              ('kush', 'Kush jemi', 'Një ekip i vogël.',
