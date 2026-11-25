@@ -41,6 +41,10 @@ BUILT = {
     '/en/services/custom-software/': '/softuer-me-porosi-tirane/',
     '/en/services/mobile-apps/': '/aplikacione-mobile-tirane/',
     '/en/services/seo/': '/seo-tirane/',
+    '/en/services/ai-automation/': '/automatizim-me-ai-shqiperi/',
+    '/en/industries/': '/sektoret/',
+    '/en/privacy/': '/privatesia/', '/en/cookies/': '/cookie/',
+    '/en/work/': '/punimet/', '/en/how-we-work/': '/si-punojme/', '/en/about/': '/rreth-nesh/',
 }
 
 NOISE = re.compile(r'^[\W\d_]*$|@|^\+?\d')

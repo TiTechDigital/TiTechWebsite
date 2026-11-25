@@ -68,11 +68,13 @@ def page(**kw):
 page(slug='sherbimet', kind='hub', title='Shërbimet: faqe interneti, softuer dhe SEO | TiTech Digital',
      h1='Shërbimet', eyebrow='Shërbimet',
      description='Faqe interneti, dyqane online, softuer me porosi, aplikacione mobile dhe SEO për biznese në Tiranë dhe në Shqipëri.',
-     lead='Pesë shërbime, një partner. Zgjidhni atë që ju nevojitet dhe na shkruani: përgjigjemi me një vlerësim të shkruar.',
+     lead='Shërbime të qarta, një partner. Zgjidhni atë që ju nevojitet dhe na shkruani: përgjigjemi me një vlerësim të shkruar.',
      takeaways=[('Një ofertë e shkruar.', 'Faza, afate dhe kosto para se të nisim.'), ('Një person kontakti.', 'Nuk flisni me pesë departamente.'),
                 ('Punë në distancë.', 'Takime me video dhe, kur duhet, në vend.')],
      sections=[('lista', 'Çfarë ofrojmë', 'Secili shërbim ka faqen e vet me hollësi.', checks([
          ('Krijimi i faqeve web', a('/krijimi-i-faqeve-web-tirane/', 'Faqe interneti të shpejta, të qarta dhe të gjetshme në Google.')),
+         ('Hotele, restorante dhe klinika', a('/sektoret/', 'Faqe për sektorë me nevoja të veçanta.')),
+         ('Automatizim me AI', a('/automatizim-me-ai-shqiperi/', 'Përgjigje të shpejta, njoftime dhe raporte, me njeri pas çdo hapi.')),
          ('Dyqan online', a('/dyqan-online-tirane/', 'Katalog, pagesa dhe dërgesa, me platformën që ju përshtatet.')),
          ('Softuer me porosi', a('/softuer-me-porosi-tirane/', 'Paneli dhe sisteme që zëvendësojnë Excel-in dhe punën me dorë.')),
          ('Aplikacione mobile', a('/aplikacione-mobile-tirane/', 'Kur ka kuptim aplikacion dhe kur mjafton një faqe web.')),
@@ -108,7 +110,7 @@ page(slug='tirane', kind='local', title='Faqe interneti dhe softuer në Tiranë 
          ('google', 'Të gjendeni në Google në Tiranë', 'Kur dikush kërkon një shërbim, Google shfaq së pari hartën me profile.',
           ['<p>Për biznesin tuaj kjo do të thotë tre gjëra: një Profil Biznesi në Google i plotë (kategori e saktë, orare, foto të vërteta, vlerësime të klientëve të vërtetë), një faqe që thotë qartë çfarë bëni dhe ku, dhe të dhëna të njëjta kudo (emri, adresa, telefoni). Më shumë te ' + a('/seo-tirane/', 'SEO në Tiranë') + '. ' + NOTE + '</p>']),
          ('projekte', 'Çfarë kemi ndërtuar', 'Disa nga projektet tona, për ta parë se si mendojmë.',
-          ['<p>Kemi ndërtuar faqe interneti, platforma dhe sisteme për biznese të sektorëve të ndryshëm: një sistem rradhësh për shëndetësinë publike (RadhëZero), një platformë për rezervimin e klasave në palestër (GymXam), një platformë për menaxhimin e punonjësve (TiTech Workforce) dhe faqe për biznese të vogla. Shiko ' + a('https://www.titechdigital.it/en/work/', 'punimet') + '.</p>']),
+          ['<p>Kemi ndërtuar faqe interneti, platforma dhe sisteme për biznese të sektorëve të ndryshëm: një sistem rradhësh për shëndetësinë publike (RadhëZero), një platformë për rezervimin e klasave në palestër (GymXam), një platformë për menaxhimin e punonjësve (TiTech Workforce) dhe faqe për biznese të vogla. Shiko ' + a('/punimet/', 'punimet') + '.</p>']),
      ],
      faq=[('A keni zyrë në Tiranë?', 'Jo: ekipi ka bazën në Itali dhe punon në distancë me klientët në Tiranë dhe në Shqipëri. Takimet bëhen me video; kur projekti kërkon një takim në vend, e organizojmë sipas marrëveshjes.'),
           ('Sa kushton një faqe interneti?', 'Varet nga faqet, funksionet dhe teksti. Nuk japim një çmim standard: japim një ofertë të shkruar pasi kuptojmë projektin. Shih ' + a('/blog/sa-kushton-nje-faqe-interneti-ne-shqiperi/', 'çfarë e ndryshon çmimin') + '.'),
@@ -420,11 +422,15 @@ page(slug='blog', kind='hub', title='Blog: udhëzues për faqe interneti dhe SEO
      description='Udhëzues të shkruar në shqip për faqe interneti, dyqane online dhe SEO: çmimet, pagesat në Shqipëri, SEO lokale dhe zgjedhja e një agjencie.',
      lead='Udhëzues të shkurtër, me përgjigje që mund t\'i përdorni. Nuk botojmë për të mbushur një kalendar: çdo artikull përgjigjet një pyetjeje të vërtetë.',
      takeaways=[('Çmimet.', 'Çfarë e ndryshon koston.'), ('Pagesat.', 'Ku ndalen shumë dyqane online.'), ('SEO lokale.', 'Si të gjendeni në qytetin tuaj.')],
-     sections=[('artikujt', 'Artikujt', 'Katër udhëzues për nisje.', checks([
+     sections=[('artikujt', 'Artikujt', 'Udhëzues për nisje.', checks([
          ('Sa kushton një faqe interneti', a('/blog/sa-kushton-nje-faqe-interneti-ne-shqiperi/', 'Çfarë e ndryshon çmimin dhe si krahasohen dy oferta.')),
          ('Dyqan online në Shqipëri', a('/blog/dyqan-online-ne-shqiperi-platforma-dhe-pagesa/', 'Platformat, pagesat dhe dërgesat.')),
          ('SEO lokale', a('/blog/seo-lokale-per-biznese-ne-shqiperi/', 'Profili i Biznesit në Google hap pas hapi.')),
          ('Si të zgjidhni një agjenci web', a('/blog/si-te-zgjidhni-nje-agjenci-web/', 'Shtatë pyetje para se të nënshkruani.')),
+         ('Si të pranoni pagesa online', a('/blog/pagesa-online-ne-shqiperi/', 'Opsionet dhe pyetjet për çdo ofrues.')),
+         ('Rezervime direkte për hotele', a('/blog/rezervime-direkte-hotel-shqiperi/', 'Si t\'i çoni mysafirët te faqja juaj.')),
+         ('Sa kushton SEO', a('/blog/sa-kushton-seo-ne-shqiperi/', 'Çfarë përfshihet dhe si krahasohen ofertat.')),
+         ('Sa kushton një aplikacion', a('/blog/sa-kushton-nje-aplikacion-mobile/', 'Çfarë e ndryshon çmimin.')),
      ]))],
      faq=[('Kush i shkruan artikujt?', 'Ekipi i TiTech Digital. Çdo artikull përgjigjet një pyetjeje që e dëgjojmë vërtet dhe nuk përmban premtime që nuk i mbajmë.')],
      related=[('/sherbimet/', 'Shërbimet', 'Çfarë ofrojmë.'), ('/tirane/', 'Tiranë', 'Si punojmë me bizneset e Tiranës.'), ('/kontakt/', 'Kontakt', 'Na shkruani.')],
@@ -493,19 +499,17 @@ def build(p, shell):
                       'inLanguage': 'sq-AL', 'datePublished': DATE, 'dateModified': DATE,
                       'author': {'@id': 'https://www.titechdigital.it/#organization'}, 'publisher': {'@id': 'https://www.titechdigital.it/#organization'},
                       'mainEntityOfPage': {'@id': url + '#webpage'}})
-    faq_nodes = [{'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': strip_tags(ans)}} for q, ans in p['faq']]
-    graph.append({'@type': 'FAQPage', '@id': url + '#faq', 'isPartOf': {'@id': url + '#webpage'}, 'inLanguage': 'sq-AL', 'mainEntity': faq_nodes})
+    if p.get('faq'):
+        faq_nodes = [{'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': strip_tags(ans)}} for q, ans in p['faq']]
+        graph.append({'@type': 'FAQPage', '@id': url + '#faq', 'isPartOf': {'@id': url + '#webpage'}, 'inLanguage': 'sq-AL', 'mainEntity': faq_nodes})
     ld = '<script type="application/ld+json">\n' + json.dumps({'@context': 'https://schema.org', '@graph': graph}, ensure_ascii=False, indent=2) + '\n</script>\n</head>\n'
 
-    takeaways = '\n'.join('        <li><strong>%s</strong> %s</li>' % (esc(t), esc(d)) for t, d in p['takeaways'])
     toc = '\n'.join('        <li><a href="#%s"><span class="toc__num">%02d</span><span>%s</span></a></li>' % (sid, i + 1, esc(t))
                     for i, (sid, t, _, _) in enumerate(p['sections']))
     sections = '\n\n'.join(
         '    <section class="sect" id="%s" aria-labelledby="%s-title">\n      <div class="sect__top">\n        <h2 class="m-text-4" id="%s-title">%s</h2>\n        <p class="m-text">%s</p>\n      </div>\n      <div class="prose">\n%s\n      </div>\n    </section>'
         % (sid, sid, sid, esc(t), esc(lead), '\n'.join('        ' + b for b in body))
         for sid, t, lead, body in p['sections'])
-    faq = '\n'.join('        <details class="faq__item"><summary class="m-text-7">%s<span class="faq__mark" aria-hidden="true"></span></summary><p class="m-text faq__answer">%s</p></details>' % (esc(q), ans) for q, ans in p['faq'])
-    cards = '\n'.join('        <article class="card card--link">\n          <h3 class="card__title"><a href="%s">%s</a></h3>\n          <p class="card__text">%s</p>\n        </article>' % (u, esc(t), d) for u, t, d in p['related'])
     crumb_html = '        <li><a href="/">Ballina</a></li>\n'
     if kind == 'guide':
         crumb_html += '        <li><a href="/blog/">Blog</a></li>\n'
@@ -513,6 +517,26 @@ def build(p, shell):
     byline = ''
     if kind == 'guide':
         byline = '\n      <p class="byline"><span class="byline__name">Ekipi i TiTech Digital</span><span class="byline__role">%d min lexim</span><time class="byline__date" datetime="%s">Përditësuar më %s</time></p>' % (p['minutes'], DATE, DATE_SQ)
+    actions = ''
+    if kind != 'legal':
+        actions = ('\n      <div class="head__actions">\n        <a class="m-btn" href="/kontakt/"><span>Na shkruani</span></a>\n'
+                   '        <a class="m-link" href="/sherbimet/"><span class="m-link__label">Të gjitha shërbimet</span><svg class="m-link__arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5"/></svg></a>\n      </div>')
+    aside = ''
+    if p.get('takeaways'):
+        aside = ('\n    <aside class="takeaways" aria-labelledby="takeaways-title">\n      <h2 class="m-text-7" id="takeaways-title">Shkurt</h2>\n      <ul>\n%s\n      </ul>\n    </aside>\n'
+                 % '\n'.join('        <li><strong>%s</strong> %s</li>' % (esc(t), esc(d)) for t, d in p['takeaways']))
+    faq_sec = ''
+    if p.get('faq'):
+        faq_items = '\n'.join('        <details class="faq__item"><summary class="m-text-7">%s<span class="faq__mark" aria-hidden="true"></span></summary><p class="m-text faq__answer">%s</p></details>' % (esc(q), ans) for q, ans in p['faq'])
+        faq_sec = ('\n    <section class="sect" id="faq" aria-labelledby="faq-title">\n      <div class="sect__top">\n        <h2 class="m-text-4" id="faq-title">Pyetje të shpeshta</h2>\n      </div>\n      <div class="faq">\n%s\n      </div>\n    </section>\n' % faq_items)
+    rel_sec = ''
+    if p.get('related'):
+        cards = '\n'.join('        <article class="card card--link">\n          <h3 class="card__title"><a href="%s">%s</a></h3>\n          <p class="card__text">%s</p>\n        </article>' % (u, esc(t), d) for u, t, d in p['related'])
+        rel_sec = ('\n    <section class="sect" id="lidhur" aria-labelledby="lidhur-title">\n      <div class="sect__top">\n        <h2 class="m-text-4" id="lidhur-title">Vazhdo me leximin</h2>\n      </div>\n      <div class="cards">\n%s\n      </div>\n    </section>\n' % cards)
+    cta_sec = ''
+    if p.get('cta_title'):
+        cta_sec = ('\n    <section class="sect" aria-labelledby="cta-title">\n      <div class="cta">\n        <h2 class="m-text-4 cta__title" id="cta-title">%s<span class="m-dot" aria-hidden="true"></span></h2>\n        <p class="m-text">%s</p>\n'
+                   '        <div class="cta__actions">\n          <a class="m-btn-2" href="/kontakt/"><span>Shkruani te TiTech</span></a>\n        </div>\n      </div>\n    </section>\n' % (esc(p['cta_title']), esc(p['cta_text'])))
     main = '''<main id="main">
   <div class="shell page">
     <nav aria-label="Rruga e faqes">
@@ -523,20 +547,9 @@ def build(p, shell):
     <div class="head">
       <p class="m-eyebrow">%(eyebrow)s</p>
       <h1 class="m-text-3 head__title">%(h1)s<span class="m-dot" aria-hidden="true"></span></h1>
-      <p class="m-text-5 head__lead">%(lead)s</p>
-      <div class="head__actions">
-        <a class="m-btn" href="/kontakt/"><span>Na shkruani</span></a>
-        <a class="m-link" href="/sherbimet/"><span class="m-link__label">Të gjitha shërbimet</span><svg class="m-link__arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5"/></svg></a>
-      </div>%(byline)s
+      <p class="m-text-5 head__lead">%(lead)s</p>%(actions)s%(byline)s
     </div>
-
-    <aside class="takeaways" aria-labelledby="takeaways-title">
-      <h2 class="m-text-7" id="takeaways-title">Shkurt</h2>
-      <ul>
-%(takeaways)s
-      </ul>
-    </aside>
-
+%(aside)s
     <nav class="toc" aria-label="Në këtë faqe">
       <ol>
 %(toc)s
@@ -544,43 +557,16 @@ def build(p, shell):
     </nav>
 
 %(sections)s
-
-    <section class="sect" id="faq" aria-labelledby="faq-title">
-      <div class="sect__top">
-        <h2 class="m-text-4" id="faq-title">Pyetje të shpeshta</h2>
-      </div>
-      <div class="faq">
-%(faq)s
-      </div>
-    </section>
-
-    <section class="sect" id="lidhur" aria-labelledby="lidhur-title">
-      <div class="sect__top">
-        <h2 class="m-text-4" id="lidhur-title">Vazhdo me leximin</h2>
-      </div>
-      <div class="cards">
-%(cards)s
-      </div>
-    </section>
-
-    <section class="sect" aria-labelledby="cta-title">
-      <div class="cta">
-        <h2 class="m-text-4 cta__title" id="cta-title">%(cta_title)s<span class="m-dot" aria-hidden="true"></span></h2>
-        <p class="m-text">%(cta_text)s</p>
-        <div class="cta__actions">
-          <a class="m-btn-2" href="/kontakt/"><span>Shkruani te TiTech</span></a>
-        </div>
-      </div>
-    </section>
-  </div>
+%(faq)s%(related)s%(cta)s  </div>
 </main>
-''' % {'crumbs': crumb_html, 'eyebrow': esc(p['eyebrow']), 'h1': esc(p['h1']), 'lead': esc(p['lead']), 'byline': byline,
-       'takeaways': takeaways, 'toc': toc, 'sections': sections, 'faq': faq, 'cards': cards,
-       'cta_title': esc(p['cta_title']), 'cta_text': esc(p['cta_text'])}
+''' % {'crumbs': crumb_html, 'eyebrow': esc(p['eyebrow']), 'h1': esc(p['h1']), 'lead': esc(p['lead']), 'actions': actions, 'byline': byline,
+       'aside': aside, 'toc': toc, 'sections': sections, 'faq': faq_sec, 'related': rel_sec, 'cta': cta_sec}
     return head + ld + header_block + main + footer_block
 
 
 def main():
+    import al_pages_more
+    al_pages_more.register(page, a, checks, NOTE, REMOTE)
     shell = load_shell()
     for p in PAGES:
         out = os.path.join(OUT, p['slug'], 'index.html')

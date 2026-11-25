@@ -6,6 +6,11 @@
     <xhtml:link rel="alternate" hreflang="sq-AL" href="https://www.titech.al/aplikacione-mobile-tirane/"/>
   </url>
   <url>
+    <loc>https://www.titech.al/automatizim-me-ai-shqiperi/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sq-AL" href="https://www.titech.al/automatizim-me-ai-shqiperi/"/>
+  </url>
+  <url>
     <loc>https://www.titech.al/blog/dyqan-online-ne-shqiperi-platforma-dhe-pagesa/</loc>
     <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="sq-AL" href="https://www.titech.al/blog/dyqan-online-ne-shqiperi-platforma-dhe-pagesa/"/>
@@ -16,9 +21,29 @@
     <xhtml:link rel="alternate" hreflang="sq-AL" href="https://www.titech.al/blog/"/>
   </url>
   <url>
+    <loc>https://www.titech.al/blog/pagesa-online-ne-shqiperi/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sq-AL" href="https://www.titech.al/blog/pagesa-online-ne-shqiperi/"/>
+  </url>
+  <url>
+    <loc>https://www.titech.al/blog/rezervime-direkte-hotel-shqiperi/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sq-AL" href="https://www.titech.al/blog/rezervime-direkte-hotel-shqiperi/"/>
+  </url>
+  <url>
+    <loc>https://www.titech.al/blog/sa-kushton-nje-aplikacion-mobile/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sq-AL" href="https://www.titech.al/blog/sa-kushton-nje-aplikacion-mobile/"/>
+  </url>
+  <url>
     <loc>https://www.titech.al/blog/sa-kushton-nje-faqe-interneti-ne-shqiperi/</loc>
     <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="sq-AL" href="https://www.titech.al/blog/sa-kushton-nje-faqe-interneti-ne-shqiperi/"/>
+  </url>
+  <url>
+    <loc>https://www.titech.al/blog/sa-kushton-seo-ne-shqiperi/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sq-AL" href="https://www.titech.al/blog/sa-kushton-seo-ne-shqiperi/"/>
   </url>
   <url>
     <loc>https://www.titech.al/blog/seo-lokale-per-biznese-ne-shqiperi/</loc>
@@ -31,9 +56,29 @@
     <xhtml:link rel="alternate" hreflang="sq-AL" href="https://www.titech.al/blog/si-te-zgjidhni-nje-agjenci-web/"/>
   </url>
   <url>
+    <loc>https://www.titech.al/cookie/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sq-AL" href="https://www.titech.al/cookie/"/>
+  </url>
+  <url>
     <loc>https://www.titech.al/dyqan-online-tirane/</loc>
     <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="sq-AL" href="https://www.titech.al/dyqan-online-tirane/"/>
+  </url>
+  <url>
+    <loc>https://www.titech.al/faqe-interneti-per-hotele-shqiperi/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sq-AL" href="https://www.titech.al/faqe-interneti-per-hotele-shqiperi/"/>
+  </url>
+  <url>
+    <loc>https://www.titech.al/faqe-interneti-per-klinika-shqiperi/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sq-AL" href="https://www.titech.al/faqe-interneti-per-klinika-shqiperi/"/>
+  </url>
+  <url>
+    <loc>https://www.titech.al/faqe-interneti-per-restorante-shqiperi/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sq-AL" href="https://www.titech.al/faqe-interneti-per-restorante-shqiperi/"/>
   </url>
   <url>
     <loc>https://www.titech.al/</loc>
@@ -57,6 +102,26 @@
     <xhtml:link rel="alternate" hreflang="sq-AL" href="https://www.titech.al/krijimi-i-faqeve-web-tirane/"/>
   </url>
   <url>
+    <loc>https://www.titech.al/privatesia/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sq-AL" href="https://www.titech.al/privatesia/"/>
+  </url>
+  <url>
+    <loc>https://www.titech.al/punimet/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sq-AL" href="https://www.titech.al/punimet/"/>
+  </url>
+  <url>
+    <loc>https://www.titech.al/rreth-nesh/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sq-AL" href="https://www.titech.al/rreth-nesh/"/>
+  </url>
+  <url>
+    <loc>https://www.titech.al/sektoret/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sq-AL" href="https://www.titech.al/sektoret/"/>
+  </url>
+  <url>
     <loc>https://www.titech.al/seo-tirane/</loc>
     <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="sq-AL" href="https://www.titech.al/seo-tirane/"/>
@@ -65,6 +130,11 @@
     <loc>https://www.titech.al/sherbimet/</loc>
     <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="sq-AL" href="https://www.titech.al/sherbimet/"/>
+  </url>
+  <url>
+    <loc>https://www.titech.al/si-punojme/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sq-AL" href="https://www.titech.al/si-punojme/"/>
   </url>
   <url>
     <loc>https://www.titech.al/softuer-me-porosi-tirane/</loc>

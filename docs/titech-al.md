@@ -46,6 +46,17 @@ raggiunge Keyword Planner. Da compilare a mano prima di decidere le priorità.
   pubblicare e di ogni modifica.
 - Molte ricerche di agenzie sono in inglese: serve una versione `/en/` di titech.al.
 
+## Aggiornamento (25 nov 2026, seconda tornata)
+
+Aggiunte: guida pagamenti online, hotel e B&B (pagina e guida), ristoranti, cliniche, "Automatizim me AI",
+guide sui costi di SEO e app, hub settori, Punimet, Si punojmë, Rreth nesh, **Privatësia e Cookie**
+(scritte sul trattamento reale: modulo → funzione Vercel → Resend; nessun chatbot su titech.al).
+Totale: 28 pagine. La privacy dei siti italiano e inglese è stata corretta: diceva che il modulo
+"non passa da un server intermedio", cosa non più vera.
+
+**Aperto, da decidere:** il chatbot sulle pagine italiane e inglesi invia le conversazioni a un servizio
+su Render non citato nella privacy: serve sapere cosa conserva e se usa un fornitore AI.
+
 ## Prossimi passi
 
 1. Rivedere tutto il testo albanese con un madrelingua.
