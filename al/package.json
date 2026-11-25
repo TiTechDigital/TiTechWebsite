@@ -1,0 +1,13 @@
+{
+  "name": "titech-al-website",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "TiTech Digital, Albanian site (titech.al)",
+  "dependencies": {
+    "resend": "^3.2.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

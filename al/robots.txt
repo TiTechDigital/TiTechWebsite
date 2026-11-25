@@ -1,0 +1,6 @@
+# robots.txt per https://www.titech.al
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.titech.al/sitemap.xml

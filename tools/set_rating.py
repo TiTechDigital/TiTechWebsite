@@ -44,6 +44,8 @@ def main():
     pages = footers = nodes = 0
     for path in sorted(glob.glob(os.path.join(ROOT, '**', 'index.html'), recursive=True)):
         rel = os.path.relpath(path, ROOT).replace(os.sep, '/')
+        if rel.startswith('al/'):
+            continue
         text = open(path, encoding='utf-8').read()
         original = text
         english = rel.startswith('en/')

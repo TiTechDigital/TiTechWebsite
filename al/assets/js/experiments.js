@@ -1,0 +1,137 @@
+/* A/B testing: deterministic variant assignment per visitor, applied to any
+   element carrying data-exp="name" and data-variant="text". Exposure and
+   conversion events are sent through the measurement layer when it is active.
+   With no measurement ID the assignments still happen and are visible in
+   window.titechExperiments, so the setup can be checked without analytics. */
+(() => {
+  'use strict';
+
+  const STORAGE_KEY = 'titech-experiments';
+
+  const read = () => {
+    try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; }
+    catch (error) { return {}; }
+  };
+  const write = (value) => {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(value)); }
+    catch (error) { /* private mode */ }
+  };
+
+  // Deterministic hash: same visitor + experiment = same variant every time.
+  const hash = (text) => {
+    let h = 0;
+    for (let i = 0; i < text.length; i++) {
+      h = ((h << 5) - h + text.charCodeAt(i)) | 0;
+    }
+    return Math.abs(h);
+  };
+
+  // Visitor id: reuse attribution landing or generate a stable random id.
+  const visitorId = (() => {
+    const key = 'titech-visitor';
+    let id = null;
+    try { id = localStorage.getItem(key); } catch (error) { id = null; }
+    if (!id) {
+      id = 'v_' + Math.random().toString(36).slice(2) + Date.now().toString(36);
+      try { localStorage.setItem(key, id); } catch (error) { /* private mode */ }
+    }
+    return id;
+  })();
+
+  const isEn = (document.documentElement.lang || '').slice(0, 2) === 'en';
+  const isSq = (document.documentElement.lang || '').slice(0, 2) === 'sq';
+
+  // Experiment definitions: name -> array of variant values.
+  // Variant 0 is always the control (original text). Language-aware.
+  const EXPERIMENTS = isSq ? {
+    'hero_headline': ['Të flasim', 'Të flasim për projektin'],
+    'cta_primary': ['Të flasim', 'Na tregoni për projektin'],
+    'contact_headline': ['Na shkruani', 'Na tregoni problemin']
+  } : isEn ? {
+    'hero_headline': [
+      "Let's talk",
+      'Let\'s talk about the project'
+    ],
+    'cta_primary': [
+      "Let's talk",
+      'Tell us about the project'
+    ],
+    'contact_headline': [
+      'Write to us',
+      'Tell us the problem'
+    ]
+  } : {
+    'hero_headline': [
+      'Parliamone',
+      'Parliamo del progetto'
+    ],
+    'cta_primary': [
+      'Parliamo del progetto',
+      'Raccontaci il progetto'
+    ],
+    'contact_headline': [
+      'Scrivici',
+      'Raccontaci il problema'
+    ]
+  };
+
+  const assignments = read();
+  // Drop pre-namespacing entries: they carried the other language's text.
+  for (const key of Object.keys(assignments)) if (!key.includes(':')) delete assignments[key];
+  const applied = {};
+
+  const assign = (name) => {
+    const key = (isSq ? 'sq' : isEn ? 'en' : 'it') + ':' + name;
+    const variants = EXPERIMENTS[name];
+    if (!variants || variants.length < 2) return null;
+    const stored = assignments[key];
+    // A variant stored in the other language, or from an older word list, is
+    // not valid here: reassign instead of writing Italian text on an EN page.
+    if (stored && variants.includes(stored.value)) return stored;
+    const idx = hash(visitorId + ':' + key) % variants.length;
+    assignments[key] = { variant: idx, value: variants[idx], assigned: new Date().toISOString() };
+    write(assignments);
+    return assignments[key];
+  };
+
+  const apply = () => {
+    document.querySelectorAll('[data-exp]').forEach((el) => {
+      const name = el.dataset.exp;
+      const assignment = assign(name);
+      if (!assignment || assignment.variant === 0) return; // control: leave as is
+      const original = el.textContent;
+      if (!el.dataset.expOriginal) el.dataset.expOriginal = original;
+      el.textContent = assignment.value;
+      applied[name] = assignment.variant;
+      // Track exposure
+      if (window.titechTrack) {
+        window.titechTrack('experiment_exposure', {
+          experiment: name,
+          variant: String(assignment.variant),
+          variant_value: assignment.value
+        });
+      }
+    });
+  };
+
+  // Conversion: call window.titechExperimentConvert(name) on a successful lead.
+  window.titechExperimentConvert = (name) => {
+    const a = assignments[(isSq ? 'sq' : isEn ? 'en' : 'it') + ':' + name];
+    if (!a) return;
+    if (window.titechTrack) {
+      window.titechTrack('experiment_conversion', {
+        experiment: name,
+        variant: String(a.variant),
+        variant_value: a.value
+      });
+    }
+  };
+
+  window.titechExperiments = { assignments, applied, EXPERIMENTS, visitorId };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', apply);
+  } else {
+    apply();
+  }
+})();
