@@ -11,7 +11,7 @@ SQ = {
     # ---- head and meta
     "TiTech Digital: technology and solutions for businesses": "TiTech Digital: teknologji dhe zgjidhje për bizneset",
     "TiTech Digital is the technology partner for businesses that want to design, build and evolve websites, e-commerce, custom software and automations.":
-        "TiTech Digital është partneri teknologjik për bizneset që duan të projektojnë, ndërtojnë dhe zhvillojnë faqe interneti, dyqane online, softuer me porosi dhe automatizime.",
+        "TiTech Digital: partneri teknologjik për bizneset. Faqe interneti, dyqane online, softuer me porosi dhe automatizime, në Shqipëri dhe Itali.",
     "The technology partner for businesses that want to design, build and evolve their digital presence.":
         "Partneri teknologjik për bizneset që duan të projektojnë, ndërtojnë dhe zhvillojnë praninë e tyre digjitale.",
     "TiTech Digital: technology and digital solutions for businesses": "TiTech Digital: teknologji dhe zgjidhje digjitale për bizneset",

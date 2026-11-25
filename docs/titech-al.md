@@ -24,3 +24,33 @@ stili e stesse animazioni. Se una stringa visibile non ha traduzione, la build s
 - Pagine di sito italiano e inglese: aggiungere l'alternate `sq-AL` (hreflang reciproco), solo a dominio attivo.
 - GA4: stesso ID del sito italiano; valutare una proprietà separata.
 - Chatbot: non presente sulle pagine albanesi (risponde in italiano e usa un host esterno).
+
+## Stato (25 nov 2026)
+
+Costruite in albanese: home, contatti, `/sherbimet/`, `/tirane/`, 5 pagine di servizio
+(`/krijimi-i-faqeve-web-tirane/`, `/dyqan-online-tirane/`, `/softuer-me-porosi-tirane/`,
+`/aplikacione-mobile-tirane/`, `/seo-tirane/`), blog con 4 guide. Rigenerazione:
+`python tools/build_albanian_site.py && python tools/build_albanian_pages.py`.
+
+Parole chiave: `docs/albania-keywords.csv`. **I volumi non sono verificati**: la sandbox non
+raggiunge Keyword Planner. Da compilare a mano prima di decidere le priorità.
+
+## Cosa ha mostrato la ricerca sui risultati
+
+- Per "krijimi i faqeve web Tiranë" e "web design Tiranë" dominano directory (Clutch,
+  TechBehemoths, DesignRush) e freelance, non i siti delle agenzie. Le agenzie a Tiranë sono
+  decine: il mercato non è vuoto.
+- I contenuti in albanese su SEO lokale sono pochi, in gran parte articoli tradotti. Su costi di un
+  sito e pagamenti per un e-commerce in Albania non c'è una risposta chiara: lì stanno le guide.
+- Shopify Payments e WooPayments non elencano l'Albania (a nov 2026): da ricontrollare prima di
+  pubblicare e di ogni modifica.
+- Molte ricerche di agenzie sono in inglese: serve una versione `/en/` di titech.al.
+
+## Prossimi passi
+
+1. Rivedere tutto il testo albanese con un madrelingua.
+2. Privacy e cookie in albanese; immagine di condivisione in albanese.
+3. Profili sulle directory che dominano i risultati (Clutch, TechBehemoths, DesignRush, GoodFirms).
+4. Pagine in inglese per "web design Tirana".
+5. Altre città (Durrës, Shkodër, Vlorë, Elbasan, Korçë): una pagina solo quando c'è qualcosa di vero e
+   di diverso da dire; altrimenti sono pagine in serie.

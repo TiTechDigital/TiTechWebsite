@@ -1,6 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.titech.al/aplikacione-mobile-tirane/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sq-AL" href="https://www.titech.al/aplikacione-mobile-tirane/"/>
+  </url>
+  <url>
+    <loc>https://www.titech.al/blog/dyqan-online-ne-shqiperi-platforma-dhe-pagesa/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sq-AL" href="https://www.titech.al/blog/dyqan-online-ne-shqiperi-platforma-dhe-pagesa/"/>
+  </url>
+  <url>
+    <loc>https://www.titech.al/blog/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sq-AL" href="https://www.titech.al/blog/"/>
+  </url>
+  <url>
+    <loc>https://www.titech.al/blog/sa-kushton-nje-faqe-interneti-ne-shqiperi/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sq-AL" href="https://www.titech.al/blog/sa-kushton-nje-faqe-interneti-ne-shqiperi/"/>
+  </url>
+  <url>
+    <loc>https://www.titech.al/blog/seo-lokale-per-biznese-ne-shqiperi/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sq-AL" href="https://www.titech.al/blog/seo-lokale-per-biznese-ne-shqiperi/"/>
+  </url>
+  <url>
+    <loc>https://www.titech.al/blog/si-te-zgjidhni-nje-agjenci-web/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sq-AL" href="https://www.titech.al/blog/si-te-zgjidhni-nje-agjenci-web/"/>
+  </url>
+  <url>
+    <loc>https://www.titech.al/dyqan-online-tirane/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sq-AL" href="https://www.titech.al/dyqan-online-tirane/"/>
+  </url>
+  <url>
     <loc>https://www.titech.al/</loc>
     <lastmod>2026-11-25</lastmod>
     <xhtml:link rel="alternate" hreflang="sq-AL" href="https://www.titech.al/"/>
@@ -15,5 +50,30 @@
     <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.titechdigital.it/contatti/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.titechdigital.it/en/contact/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.titechdigital.it/contatti/"/>
+  </url>
+  <url>
+    <loc>https://www.titech.al/krijimi-i-faqeve-web-tirane/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sq-AL" href="https://www.titech.al/krijimi-i-faqeve-web-tirane/"/>
+  </url>
+  <url>
+    <loc>https://www.titech.al/seo-tirane/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sq-AL" href="https://www.titech.al/seo-tirane/"/>
+  </url>
+  <url>
+    <loc>https://www.titech.al/sherbimet/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sq-AL" href="https://www.titech.al/sherbimet/"/>
+  </url>
+  <url>
+    <loc>https://www.titech.al/softuer-me-porosi-tirane/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sq-AL" href="https://www.titech.al/softuer-me-porosi-tirane/"/>
+  </url>
+  <url>
+    <loc>https://www.titech.al/tirane/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="sq-AL" href="https://www.titech.al/tirane/"/>
   </url>
 </urlset>

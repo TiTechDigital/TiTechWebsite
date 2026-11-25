@@ -33,7 +33,15 @@ PAGES = {
     'en/contact/index.html': ('kontakt/index.html', '/kontakt/', '/contatti/', '/en/contact/'),
 }
 # English public path -> Albanian public path, for the pages built so far
-BUILT = {'/en/': '/', '/en/contact/': '/kontakt/'}
+BUILT = {
+    '/en/': '/', '/en/contact/': '/kontakt/',
+    '/en/services/': '/sherbimet/', '/en/blog/': '/blog/',
+    '/en/services/website-design/': '/krijimi-i-faqeve-web-tirane/',
+    '/en/services/ecommerce/': '/dyqan-online-tirane/',
+    '/en/services/custom-software/': '/softuer-me-porosi-tirane/',
+    '/en/services/mobile-apps/': '/aplikacione-mobile-tirane/',
+    '/en/services/seo/': '/seo-tirane/',
+}
 
 NOISE = re.compile(r'^[\W\d_]*$|@|^\+?\d')
 
@@ -79,7 +87,7 @@ def rewrite_urls(s):
     s = re.sub(r'href="(/en/(?:[a-z0-9\-]+/)*)(#[^"]*)?"', lambda m: 'href="%s"' % sq_url(m.group(1) + (m.group(2) or '')), s)
     s = s.replace('href="/en/"', 'href="%s"' % sq_url('/en/'))
     # the language switcher: Italian
-    s = re.sub(r'(<a class="(?:nav__lang|menu__lang)" href=")/(")', r'\g<1>%s/\2' % IT, s)
+    s = re.sub(r'(<a class="(?:nav__lang|menu__lang)" href=")(/[^"]*)(")', lambda m: m.group(1) + IT + m.group(2) + m.group(3), s)
     # relative asset paths
     s = s.replace('../assets/', '/assets/')
     # WhatsApp: the prefilled message in Albanian
@@ -226,6 +234,14 @@ def copy_support():
             assert old in t, (name, old)
             t = t.replace(old, new)
         open(g, 'w', encoding='utf-8', newline='\n').write(t)
+    css = os.path.join(OUT, 'assets', 'css', 'pages.css')
+    t = open(css, encoding='utf-8').read()
+    t += ('\n/* titech.al: numbered steps inside .prose */\n'
+          '.prose ol { display: grid; gap: 10px; counter-reset: step; list-style: none; padding: 0; }\n'
+          '.prose ol li { position: relative; padding-left: 34px; counter-increment: step; }\n'
+          '.prose ol li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 22px; height: 22px; border-radius: 50%; '
+          'background: var(--color-3); color: #fff; font-size: 12px; font-weight: 600; display: grid; place-items: center; }\n')
+    open(css, 'w', encoding='utf-8', newline='\n').write(t)
     pkg = {
         'name': 'titech-al-website', 'version': '1.0.0', 'private': True, 'type': 'module',
         'description': 'TiTech Digital, Albanian site (titech.al)',
@@ -253,14 +269,23 @@ def copy_support():
 
 
 def write_sitemap():
+    twins = {path: (it_path, en_path) for _, (dest, path, it_path, en_path) in PAGES.items()}
+    paths = []
+    for p in sorted(glob.glob(os.path.join(OUT, '**', 'index.html'), recursive=True)):
+        rel = os.path.relpath(os.path.dirname(p), OUT).replace(os.sep, '/')
+        if rel.startswith('.shell'):
+            continue
+        paths.append('/' if rel == '.' else '/' + rel + '/')
     rows = []
-    for _, (dest, path, it_path, en_path) in PAGES.items():
+    for path in paths:
         u = BASE + path
-        rows.append('  <url>\n    <loc>%s</loc>\n    <lastmod>2026-11-25</lastmod>\n'
-                    '    <xhtml:link rel="alternate" hreflang="sq-AL" href="%s"/>\n'
-                    '    <xhtml:link rel="alternate" hreflang="it-IT" href="%s"/>\n'
+        alt = '    <xhtml:link rel="alternate" hreflang="sq-AL" href="%s"/>\n' % u
+        if path in twins:
+            it_path, en_path = twins[path]
+            alt += ('    <xhtml:link rel="alternate" hreflang="it-IT" href="%s"/>\n'
                     '    <xhtml:link rel="alternate" hreflang="en" href="%s"/>\n'
-                    '    <xhtml:link rel="alternate" hreflang="x-default" href="%s"/>\n  </url>' % (u, u, IT + it_path, IT + en_path, IT + it_path))
+                    '    <xhtml:link rel="alternate" hreflang="x-default" href="%s"/>\n' % (IT + it_path, IT + en_path, IT + it_path))
+        rows.append('  <url>\n    <loc>%s</loc>\n    <lastmod>2026-11-25</lastmod>\n%s  </url>' % (u, alt))
     xml = ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
            'xmlns:xhtml="http://www.w3.org/1999/xhtml">\n' + '\n'.join(rows) + '\n</urlset>\n')
     open(os.path.join(OUT, 'sitemap.xml'), 'w', encoding='utf-8', newline='\n').write(xml)
