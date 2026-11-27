@@ -743,4 +743,18 @@
     <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.titechdigital.it/blog/sito-web-azienda-artigiana-novara/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.titechdigital.it/blog/sito-web-azienda-artigiana-novara/"/>
   </url>
+  <url>
+    <loc>https://www.titechdigital.it/blog/sito-web-per-ristoranti/</loc>
+    <lastmod>2026-11-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.titechdigital.it/blog/sito-web-per-ristoranti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.titechdigital.it/en/blog/website-for-restaurants/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.titechdigital.it/blog/sito-web-per-ristoranti/"/>
+  </url>
+  <url>
+    <loc>https://www.titechdigital.it/en/blog/website-for-restaurants/</loc>
+    <lastmod>2026-11-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.titechdigital.it/blog/sito-web-per-ristoranti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.titechdigital.it/en/blog/website-for-restaurants/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.titechdigital.it/blog/sito-web-per-ristoranti/"/>
+  </url>
 </urlset>

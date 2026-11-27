@@ -178,7 +178,7 @@ def documents():
         # published English site has a /en/tools/ tree of its own
         dirnames[:] = [d for d in dirnames
                        if d not in ('.git', '.vercel', 'node_modules')
-                       and not (dirpath == ROOT and d == 'tools')]
+                       and not (dirpath == ROOT and d in ('tools', '_scheduled'))]
         for name in filenames:
             if name.endswith('.html') and name != 'index.original.html' \
                     and name not in service and not name.startswith('_'):
