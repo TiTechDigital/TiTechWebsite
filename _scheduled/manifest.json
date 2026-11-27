@@ -82,5 +82,505 @@
       "minutes": 6,
       "card": "Website or social media? What each does, when social is enough and how to make them work together without doubling the work."
     }
+  },
+  {
+    "day": 21,
+    "pub": "2026-11-30",
+    "slot": "A",
+    "it": {
+      "slug": "app-mobile-aziendale-quando-conviene",
+      "title": "App mobile aziendale: quando conviene svilupparne una?",
+      "description": "App mobile o sito che funziona da telefono? Quando un'app aziendale ha senso, cosa serve prima di iniziare, cosa incide sul costo e come partire con poco.",
+      "section": "Software",
+      "minutes": 7,
+      "card": "App mobile o sito da telefono? Quando un'app aziendale ha senso, cosa serve prima di iniziare e come partire con poco."
+    },
+    "en": {
+      "slug": "business-mobile-app-when-worth-it",
+      "title": "Business mobile app: when is it worth building one?",
+      "description": "Mobile app or a mobile-friendly website? When a business app makes sense, what you need before starting, what drives the cost and how to start small.",
+      "section": "Software",
+      "minutes": 7,
+      "card": "Mobile app or mobile-friendly website? When a business app makes sense, what you need first and how to start small."
+    }
+  },
+  {
+    "day": 6,
+    "pub": "2026-11-30",
+    "slot": "B",
+    "it": {
+      "slug": "come-trovare-clienti-online",
+      "title": "Come trovare clienti online: strategie per le piccole imprese",
+      "description": "Come trovare clienti online senza grandi budget: scheda Google, sito, recensioni e social nell'ordine giusto, con un piano semplice da applicare in un mese.",
+      "section": "Marketing",
+      "minutes": 8,
+      "card": "Scheda Google, sito, recensioni e social nell'ordine giusto: un piano semplice per trovare clienti online senza grandi budget."
+    },
+    "en": {
+      "slug": "find-customers-online",
+      "title": "How to find customers online: strategies for small businesses",
+      "description": "How to find customers online without a big budget: Google profile, website, reviews and social media in the right order, with a simple one-month plan.",
+      "section": "Marketing",
+      "minutes": 8,
+      "card": "Google profile, website, reviews and social media in the right order: a simple plan to find customers online without a big budget."
+    }
+  },
+  {
+    "day": 22,
+    "pub": "2026-12-01",
+    "slot": "A",
+    "it": {
+      "slug": "crm-aziendale-cos-e-come-aiuta",
+      "title": "CRM aziendale: cos'è e come aiuta a gestire i clienti",
+      "description": "Cos'è un CRM, quando serve a una piccola impresa, cosa deve fare davvero e quando conviene un CRM su misura invece di un foglio Excel o di un software standard.",
+      "section": "Software",
+      "minutes": 7,
+      "card": "Cos'è un CRM, quando serve a una piccola impresa e quando conviene un CRM su misura invece di Excel o di un software standard."
+    },
+    "en": {
+      "slug": "business-crm-what-it-is",
+      "title": "Business CRM: what it is and how it helps manage customers",
+      "description": "What a CRM is, when a small business needs one, what it should really do and when a custom CRM beats a spreadsheet or standard software.",
+      "section": "Software",
+      "minutes": 7,
+      "card": "What a CRM is, when a small business needs one and when a custom CRM beats a spreadsheet or standard software."
+    }
+  },
+  {
+    "day": 7,
+    "pub": "2026-12-01",
+    "slot": "B",
+    "it": {
+      "slug": "sito-web-professionale-che-converte",
+      "title": "Come creare un sito web professionale che trasforma visitatori in clienti",
+      "description": "Cosa rende un sito professionale che converte: messaggio chiaro, una sola azione per pagina, contatti facili, prove di fiducia e velocità. Una checklist pratica.",
+      "section": "Siti web",
+      "minutes": 7,
+      "card": "Messaggio chiaro, una sola azione per pagina, contatti facili, prove di fiducia e velocità: la checklist di un sito che converte."
+    },
+    "en": {
+      "slug": "professional-website-that-converts",
+      "title": "How to build a professional website that turns visitors into customers",
+      "description": "What makes a professional website convert: a clear message, one action per page, easy contact, trust and speed. A practical checklist.",
+      "section": "Websites",
+      "minutes": 7,
+      "card": "A clear message, one action per page, easy contact, proof and speed: the checklist of a website that converts."
+    }
+  },
+  {
+    "day": 23,
+    "pub": "2026-12-02",
+    "slot": "A",
+    "it": {
+      "slug": "digitalizzare-piccola-impresa-guida",
+      "title": "Come digitalizzare una piccola impresa: guida pratica",
+      "description": "Da dove iniziare a digitalizzare una piccola impresa: sito, scheda Google, processi da semplificare, strumenti giusti. Una guida in cinque passi, senza sprechi.",
+      "section": "Digitale",
+      "minutes": 8,
+      "card": "Da dove iniziare a digitalizzare una piccola impresa: sito, scheda Google, processi da semplificare e strumenti giusti, in cinque passi."
+    },
+    "en": {
+      "slug": "digitalise-small-business-guide",
+      "title": "How to digitalise a small business: a practical guide",
+      "description": "Where to start digitalising a small business: website, Google profile, processes to simplify, the right tools. A five-step guide, without waste.",
+      "section": "Digital",
+      "minutes": 8,
+      "card": "Where to start digitalising a small business: website, Google profile, processes to simplify and the right tools, in five steps."
+    }
+  },
+  {
+    "day": 8,
+    "pub": "2026-12-02",
+    "slot": "B",
+    "it": {
+      "slug": "costo-software-gestionale-personalizzato",
+      "title": "Quanto costa sviluppare un software gestionale personalizzato?",
+      "description": "Cosa incide sul costo di un software gestionale su misura: funzioni, utenti, integrazioni, dati da migrare. Come si prepara una proposta e come partire con poco.",
+      "section": "Software",
+      "minutes": 8,
+      "card": "Cosa incide sul costo di un gestionale su misura: funzioni, utenti, integrazioni e dati. Come si prepara una proposta e come partire con poco."
+    },
+    "en": {
+      "slug": "custom-management-software-cost",
+      "title": "How much does custom management software cost?",
+      "description": "What drives the cost of bespoke management software: features, users, integrations, data to migrate. How a proposal is prepared and how to start small.",
+      "section": "Software",
+      "minutes": 8,
+      "card": "What drives the cost of bespoke management software: features, users, integrations and data. How a proposal is prepared."
+    }
+  },
+  {
+    "day": 24,
+    "pub": "2026-12-03",
+    "slot": "A",
+    "it": {
+      "slug": "chatbot-ai-per-aziende",
+      "title": "Chatbot AI per aziende: come automatizzare il servizio clienti",
+      "description": "Cosa può fare davvero un chatbot AI per il servizio clienti di un'azienda, quali limiti ha, come proteggere i dati e come partire con poco, senza rischi.",
+      "section": "AI",
+      "minutes": 7,
+      "card": "Cosa può fare davvero un chatbot AI per il servizio clienti, quali limiti ha, come proteggere i dati e come partire con poco."
+    },
+    "en": {
+      "slug": "ai-chatbot-for-business",
+      "title": "AI chatbot for businesses: how to automate customer service",
+      "description": "What an AI chatbot can really do for a company's customer service, its limits, how to protect data and how to start small without risk.",
+      "section": "AI",
+      "minutes": 7,
+      "card": "What an AI chatbot can really do for customer service, its limits, how to protect data and how to start small."
+    }
+  },
+  {
+    "day": 9,
+    "pub": "2026-12-03",
+    "slot": "B",
+    "it": {
+      "slug": "software-gestionale-su-misura-quando-conviene",
+      "title": "Software gestionale aziendale: quando conviene svilupparne uno su misura?",
+      "description": "Gestionale su misura, standard o Excel? I segnali che ne giustificano uno personalizzato, i rischi da conoscere e le domande da farsi prima di decidere.",
+      "section": "Software",
+      "minutes": 7,
+      "card": "Gestionale su misura, standard o Excel? I segnali che giustificano uno personalizzato, i rischi e le domande da farsi prima di decidere."
+    },
+    "en": {
+      "slug": "custom-management-software-when",
+      "title": "Business management software: when does a custom one pay off?",
+      "description": "Custom management software, standard or a spreadsheet? The signs that justify a bespoke one, the risks to know and the questions to ask before deciding.",
+      "section": "Software",
+      "minutes": 7,
+      "card": "Custom management software, standard or a spreadsheet? The signs that justify a bespoke one, the risks and the questions to ask."
+    }
+  },
+  {
+    "day": 25,
+    "pub": "2026-12-04",
+    "slot": "A",
+    "it": {
+      "slug": "come-scegliere-hosting-sito-web",
+      "title": "Come scegliere un hosting per il proprio sito web",
+      "description": "Hosting condiviso, VPS o gestito? Cosa conta davvero nella scelta di un hosting: velocità, backup, sicurezza, assistenza e intestazione di dominio e accessi.",
+      "section": "Siti web",
+      "minutes": 6,
+      "card": "Hosting condiviso, VPS o gestito? Cosa conta davvero: velocità, backup, sicurezza, assistenza e intestazione di dominio e accessi."
+    },
+    "en": {
+      "slug": "how-to-choose-website-hosting",
+      "title": "How to choose hosting for your website",
+      "description": "Shared, VPS or managed hosting? What really matters when choosing hosting: speed, backups, security, support, and who owns the domain and the logins.",
+      "section": "Websites",
+      "minutes": 6,
+      "card": "Shared, VPS or managed hosting? What really matters: speed, backups, security, support and who owns the domain and logins."
+    }
+  },
+  {
+    "day": 12,
+    "pub": "2026-12-04",
+    "slot": "B",
+    "it": {
+      "slug": "quanto-costa-ecommerce-2026",
+      "title": "Quanto costa realizzare un e-commerce nel 2026?",
+      "description": "Cosa incide sul costo di un e-commerce: piattaforma, prodotti, pagamenti, spedizioni, integrazioni e costi ricorrenti. Fasce indicative e come evitare i costi nascosti.",
+      "section": "E-commerce",
+      "minutes": 8,
+      "card": "Cosa incide sul costo di un e-commerce: piattaforma, prodotti, pagamenti, spedizioni e costi ricorrenti. Fasce indicative e costi nascosti."
+    },
+    "en": {
+      "slug": "ecommerce-cost-2026",
+      "title": "How much does an e-commerce cost in 2026?",
+      "description": "What drives the cost of an e-commerce: platform, products, payments, shipping, integrations and recurring costs. Indicative ranges and how to avoid hidden costs.",
+      "section": "E-commerce",
+      "minutes": 8,
+      "card": "What drives the cost of an e-commerce: platform, products, payments, shipping and recurring costs. Indicative ranges and hidden costs."
+    }
+  },
+  {
+    "day": 26,
+    "pub": "2026-12-05",
+    "slot": "A",
+    "it": {
+      "slug": "quando-rifare-il-sito-web-aziendale",
+      "title": "Quando è il momento di rifare il sito web aziendale?",
+      "description": "I segnali che un sito va rifatto e quelli per cui basta ottimizzarlo, come non perdere le posizioni su Google nel passaggio e quanto tempo e budget servono.",
+      "section": "Siti web",
+      "minutes": 7,
+      "card": "I segnali che un sito va rifatto e quelli per cui basta ottimizzarlo, e come non perdere le posizioni su Google nel passaggio."
+    },
+    "en": {
+      "slug": "when-to-rebuild-business-website",
+      "title": "When is it time to rebuild your business website?",
+      "description": "The signs a website needs rebuilding and those where optimising is enough, how not to lose Google rankings in the switch, and how much time and budget it takes.",
+      "section": "Websites",
+      "minutes": 7,
+      "card": "The signs a website needs rebuilding versus optimising, and how not to lose Google rankings in the switch."
+    }
+  },
+  {
+    "day": 13,
+    "pub": "2026-12-05",
+    "slot": "B",
+    "it": {
+      "slug": "come-vendere-online",
+      "title": "Come vendere online: cosa serve per aprire un negozio digitale",
+      "description": "Cosa serve per vendere online: margine, piattaforma, pagamenti, spedizioni, schede prodotto e farsi trovare. Una guida in sei passi per aprire un negozio digitale.",
+      "section": "E-commerce",
+      "minutes": 8,
+      "card": "Margine, piattaforma, pagamenti, spedizioni, schede prodotto e visibilità: sei passi per aprire un negozio digitale."
+    },
+    "en": {
+      "slug": "how-to-sell-online",
+      "title": "How to sell online: what you need to open a digital store",
+      "description": "What you need to sell online: margin, platform, payments, shipping, product pages and being found. A six-step guide to opening an online store.",
+      "section": "E-commerce",
+      "minutes": 8,
+      "card": "Margin, platform, payments, shipping, product pages and visibility: six steps to open an online store."
+    }
+  },
+  {
+    "day": 27,
+    "pub": "2026-12-06",
+    "slot": "A",
+    "it": {
+      "slug": "sito-web-lento-come-velocizzarlo",
+      "title": "Sito web lento: come migliorare velocità e prestazioni",
+      "description": "Perché un sito è lento e come velocizzarlo: immagini, script, hosting e Core Web Vitals spiegati semplice. Come misurare e cosa correggere per primo.",
+      "section": "Siti web",
+      "minutes": 7,
+      "card": "Perché un sito è lento e come velocizzarlo: immagini, script, hosting e Core Web Vitals spiegati semplice, e cosa correggere per primo."
+    },
+    "en": {
+      "slug": "slow-website-how-to-speed-up",
+      "title": "Slow website: how to improve speed and performance",
+      "description": "Why a website is slow and how to speed it up: images, scripts, hosting and Core Web Vitals explained simply. How to measure and what to fix first.",
+      "section": "Websites",
+      "minutes": 7,
+      "card": "Why a website is slow and how to speed it up: images, scripts, hosting and Core Web Vitals, and what to fix first."
+    }
+  },
+  {
+    "day": 14,
+    "pub": "2026-12-06",
+    "slot": "B",
+    "it": {
+      "slug": "seo-locale-clienti-nella-tua-citta",
+      "title": "SEO locale: come trovare clienti nella propria città su Google",
+      "description": "La SEO locale in pratica: scheda Google, sito, recensioni e dati coerenti per comparire nelle ricerche con la città. Cosa fare, cosa evitare e come misurare.",
+      "section": "SEO",
+      "minutes": 8,
+      "card": "La SEO locale in pratica: scheda Google, sito, recensioni e dati coerenti per comparire nelle ricerche con la città."
+    },
+    "en": {
+      "slug": "local-seo-guide",
+      "title": "Local SEO: how to get customers in your own city on Google",
+      "description": "Local SEO in practice: Google profile, website, reviews and consistent details to appear in searches with the city. What to do, what to avoid, how to measure.",
+      "section": "SEO",
+      "minutes": 8,
+      "card": "Local SEO in practice: Google profile, website, reviews and consistent details to appear in searches with the city."
+    }
+  },
+  {
+    "day": 28,
+    "pub": "2026-12-07",
+    "slot": "A",
+    "it": {
+      "slug": "quanto-costa-manutenzione-sito-web",
+      "title": "Quanto costa la manutenzione di un sito web?",
+      "description": "Quanto costa mantenere un sito web ogni anno: voci incluse, cosa fa cambiare il canone, come confrontare due offerte e cosa chiedere prima di firmare.",
+      "section": "Costi e preventivi",
+      "minutes": 6,
+      "card": "Quanto costa mantenere un sito ogni anno: cosa include il canone, cosa lo fa variare e come confrontare due offerte."
+    },
+    "en": {
+      "slug": "website-maintenance-cost",
+      "title": "How much does website maintenance cost?",
+      "description": "How much it costs to maintain a website each year: what is included, what changes the fee, how to compare two offers and what to ask before signing.",
+      "section": "Cost and quotes",
+      "minutes": 6,
+      "card": "How much it costs to maintain a website each year: what the fee includes, what makes it vary and how to compare two offers."
+    }
+  },
+  {
+    "day": 15,
+    "pub": "2026-12-07",
+    "slot": "B",
+    "it": {
+      "slug": "migliorare-posizionamento-google",
+      "title": "Come migliorare il posizionamento di un sito web su Google",
+      "description": "Come migliorare il posizionamento di un sito su Google: SEO tecnica, contenuti, intento di ricerca, velocità e collegamenti. Cosa fare per primo e cosa non fare.",
+      "section": "SEO",
+      "minutes": 8,
+      "card": "SEO tecnica, contenuti, intento di ricerca, velocità e collegamenti: come migliorare il posizionamento di un sito su Google."
+    },
+    "en": {
+      "slug": "improve-google-ranking",
+      "title": "How to improve a website's ranking on Google",
+      "description": "How to improve a site's ranking on Google: technical SEO, content, search intent, speed and links. What to do first and what not to do.",
+      "section": "SEO",
+      "minutes": 8,
+      "card": "Technical SEO, content, search intent, speed and links: how to improve a website's ranking on Google."
+    }
+  },
+  {
+    "day": 29,
+    "pub": "2026-12-08",
+    "slot": "A",
+    "it": {
+      "slug": "software-su-misura-o-standard",
+      "title": "Software su misura o software standard: quale scegliere?",
+      "description": "Software su misura o standard? Un confronto su costo totale, adattamento, tempi, integrazioni, proprietà e manutenzione, con una guida per scegliere.",
+      "section": "Software",
+      "minutes": 7,
+      "card": "Software su misura o standard? Confronto su costo totale, adattamento, tempi, integrazioni, proprietà e manutenzione."
+    },
+    "en": {
+      "slug": "custom-or-off-the-shelf-software",
+      "title": "Custom software or off-the-shelf software: which should you choose?",
+      "description": "Custom or off-the-shelf software? A comparison on total cost, fit, timing, integrations, ownership and maintenance, with a guide to choosing.",
+      "section": "Software",
+      "minutes": 7,
+      "card": "Custom or off-the-shelf software? A comparison on total cost, fit, timing, integrations, ownership and maintenance."
+    }
+  },
+  {
+    "day": 16,
+    "pub": "2026-12-08",
+    "slot": "B",
+    "it": {
+      "slug": "sito-web-non-riceve-visite",
+      "title": "Perché il tuo sito web non riceve visite? 8 errori da evitare",
+      "description": "Otto motivi per cui un sito non riceve visite: non indicizzato, parole chiave sbagliate, contenuti vuoti, lento, nessuna scheda Google e altri. Come verificarli.",
+      "section": "SEO",
+      "minutes": 7,
+      "card": "Otto motivi per cui un sito non riceve visite: non indicizzato, parole chiave sbagliate, contenuti vuoti, lento, nessuna scheda Google e altri."
+    },
+    "en": {
+      "slug": "website-not-getting-visits",
+      "title": "Why is your website getting no visits? 8 mistakes to avoid",
+      "description": "Eight reasons a website gets no visits: not indexed, wrong keywords, empty content, slow, no Google profile and more. How to check each one.",
+      "section": "SEO",
+      "minutes": 7,
+      "card": "Eight reasons a website gets no visits: not indexed, wrong keywords, empty content, slow, no Google profile and more."
+    }
+  },
+  {
+    "day": 30,
+    "pub": "2026-12-09",
+    "slot": "A",
+    "it": {
+      "slug": "sito-web-attivita-locale-novara",
+      "title": "Come creare un sito web per un'attività locale a Novara",
+      "description": "Cosa serve al sito di un'attività di Novara per farsi trovare: pagine, zone, scheda Google e recensioni. Una guida pratica, con un esempio reale del territorio.",
+      "section": "SEO locale",
+      "minutes": 7,
+      "card": "Cosa serve al sito di un'attività di Novara per farsi trovare: pagine, zone, scheda Google e recensioni, con un esempio reale."
+    },
+    "en": {
+      "slug": "website-local-business-novara",
+      "title": "How to build a website for a local business in Novara",
+      "description": "What a Novara business's website needs to be found: pages, areas, Google profile and reviews. A practical guide, with a real local example.",
+      "section": "Local SEO",
+      "minutes": 7,
+      "card": "What a Novara business's website needs to be found: pages, areas, Google profile and reviews, with a real local example."
+    }
+  },
+  {
+    "day": 17,
+    "pub": "2026-12-09",
+    "slot": "B",
+    "it": {
+      "slug": "quanto-tempo-per-posizionarsi-su-google",
+      "title": "Quanto tempo serve per posizionarsi su Google?",
+      "description": "Quanto tempo serve per comparire su Google? Dipende da concorrenza, età del sito e lavoro fatto. Cosa aspettarsi, segnali di progresso e perché nessuno può garantire.",
+      "section": "SEO",
+      "minutes": 6,
+      "card": "Quanto serve per comparire su Google? Dipende da concorrenza, età del sito e lavoro fatto: cosa aspettarsi e perché nessuno può garantire."
+    },
+    "en": {
+      "slug": "how-long-to-rank-on-google",
+      "title": "How long does it take to rank on Google?",
+      "description": "How long to appear on Google? It depends on competition, site age and work done. What to expect, signs of progress and why nobody can guarantee a time.",
+      "section": "SEO",
+      "minutes": 6,
+      "card": "How long to appear on Google? It depends on competition, site age and work done: what to expect and why nobody can guarantee."
+    }
+  },
+  {
+    "day": 31,
+    "pub": "2026-12-10",
+    "slot": "A",
+    "it": {
+      "slug": "come-scegliere-agenzia-seo",
+      "title": "Come scegliere un'agenzia SEO per la propria azienda",
+      "description": "Come scegliere un'agenzia SEO: metodo, report, accessi, contratto e segnali d'allarme. Le domande da fare prima di firmare e cosa non si può promettere.",
+      "section": "SEO",
+      "minutes": 7,
+      "card": "Metodo, report, accessi, contratto e segnali d'allarme: le domande da fare prima di scegliere un'agenzia SEO."
+    },
+    "en": {
+      "slug": "how-to-choose-seo-agency",
+      "title": "How to choose an SEO agency for your company",
+      "description": "How to choose an SEO agency: method, reports, access, contract and warning signs. The questions to ask before signing and what cannot be promised.",
+      "section": "SEO",
+      "minutes": 7,
+      "card": "Method, reports, access, contract and warning signs: the questions to ask before choosing an SEO agency."
+    }
+  },
+  {
+    "day": 4,
+    "pub": "2026-12-10",
+    "slot": "B",
+    "it": {
+      "slug": "sito-web-aziendale-prezzo-cosa-include",
+      "title": "Sito web aziendale: cosa include il prezzo e come leggere il preventivo",
+      "description": "Cosa include il prezzo di un sito web aziendale, cosa spesso è escluso e come leggere un preventivo voce per voce. Le domande da fare prima di firmare.",
+      "section": "Costi e preventivi",
+      "minutes": 7,
+      "card": "Cosa include il prezzo di un sito aziendale, cosa spesso è escluso e come leggere un preventivo voce per voce."
+    },
+    "en": {
+      "slug": "business-website-price-what-included",
+      "title": "Business website: what the price includes and how to read the quote",
+      "description": "What the price of a business website includes, what is often left out and how to read a quote line by line. The questions to ask before signing.",
+      "section": "Cost and quotes",
+      "minutes": 7,
+      "card": "What the price of a business website includes, what is often excluded and how to read a quote line by line."
+    }
+  },
+  {
+    "day": 11,
+    "pub": "2026-12-11",
+    "slot": "A",
+    "it": {
+      "slug": "intelligenza-artificiale-per-aziende",
+      "title": "Intelligenza artificiale per aziende: applicazioni pratiche",
+      "description": "Applicazioni pratiche dell'intelligenza artificiale in azienda: assistenza clienti, documenti, vendite, contenuti e dati. Limiti, privacy e come partire con un pilota.",
+      "section": "AI",
+      "minutes": 8,
+      "card": "Assistenza clienti, documenti, vendite, contenuti e dati: applicazioni pratiche dell'AI in azienda, con limiti, privacy e un pilota da cui partire."
+    },
+    "en": {
+      "slug": "artificial-intelligence-for-business",
+      "title": "Artificial intelligence for businesses: practical applications",
+      "description": "Practical applications of artificial intelligence in business: customer service, documents, sales, content and data. Limits, privacy and how to start with a pilot.",
+      "section": "AI",
+      "minutes": 8,
+      "card": "Customer service, documents, sales, content and data: practical applications of AI in business, with limits, privacy and a pilot to start."
+    }
+  },
+  {
+    "day": 2,
+    "pub": "2026-12-12",
+    "slot": "B",
+    "it": {
+      "slug": "come-scegliere-una-web-agency"
+    },
+    "en": {
+      "slug": "how-to-choose-a-web-agency",
+      "title": "How to choose a web agency: 7 things to check",
+      "description": "How to choose a web agency: 7 things to check before signing, from method to quote, from site ownership to support after launch.",
+      "section": "Choosing a supplier",
+      "minutes": 10,
+      "card": "Method, work shown, quote, site ownership, SEO and support: the seven things to check before signing, with the warning signs."
+    },
+    "en_only": true
   }
 ]

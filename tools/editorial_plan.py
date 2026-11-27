@@ -161,7 +161,7 @@ def main():
              '| Giorno | Pubblica | Stato | Titolo | Keyword principale (IT / EN) |', '|---|---|---|---|---|']
     for r in PLAN:
         lines.append('| %d (%s) | %s %s | %s | %s | %s / %s |' % (r[0], r[1][5:], r[3] or '-', r[4], r[2], r[5], r[6], r[9]))
-    lines += ['', '## Come funziona la pubblicazione', '',
+    lines += ['', '**Stato al 27 novembre 2026:** tutti gli articoli del calendario sono scritti (italiano e inglese) e programmati; oggi \u00e8 online il primo, gli altri escono ogni mattina fino al 12 dicembre. Il giorno 1 e il giorno 10 sono gi\u00e0 coperti da pagine esistenti.', '', '## Come funziona la pubblicazione', '',
               '- Gli articoli si scrivono in `tools/calendar_content.py` (italiano e inglese insieme) e si costruiscono con `python tools/build_calendar_articles.py`.',
               '- Restano in `_scheduled/` (mai pubblicata: `.vercelignore` salta le cartelle con underscore) con la data in `_scheduled/manifest.json`.',
               '- Ogni mattina una GitHub Action (`.github/workflows/publish-scheduled.yml`) esegue `tools/publish_scheduled.py`: sposta gli articoli scaduti in `blog/` ed `en/blog/`, li aggiunge agli indici del blog e alla sitemap, controlla il sito e fa push su `main`. Vercel pubblica.',

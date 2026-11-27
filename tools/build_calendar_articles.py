@@ -158,9 +158,9 @@ def build(a, lang, shell):
       </div>
     </section>
 
-    <section class="sect" id="related" aria-labelledby="related-title">
+    <section class="sect" id="%(rel_id)s" aria-labelledby="%(rel_id)s-title">
       <div class="sect__top">
-        <h2 class="m-text-4" id="related-title">%(more)s</h2>
+        <h2 class="m-text-4" id="%(rel_id)s-title">%(more)s</h2>
       </div>
       <div class="cards">
 %(cards)s
@@ -184,7 +184,7 @@ def build(a, lang, shell):
        'author': lb['author'], 'role': lb['role'] % d['minutes'], 'iso': a['pub'], 'updated': lb['updated'] % pretty_date(a['pub'], lang),
        'brief': lb['brief'], 'takeaways': takeaways, 'toc_label': lb['toc'], 'toc': toc, 'sections': sections, 'faq_title': lb['faq'], 'faq': faq,
        'more': lb['more'], 'cards': cards, 'cta_title': esc(d['cta_title']), 'cta_text': esc(d['cta_text']), 'write': lb['write'],
-       'work': lb['work'], 'work_label': lb['work_label']}
+       'work': lb['work'], 'work_label': lb['work_label'], 'rel_id': 'correlati' if a.get('en_only') else 'related'}
     return head + ld + header + main + shell['footer']
 
 
@@ -195,19 +195,26 @@ def write_all(articles):
     done = {m['day'] for m in manifest}
     for a in articles:
         P = paths(a)
-        for lang in ('it', 'en'):
+        for lang in (('en',) if a.get('en_only') else ('it', 'en')):
             out = os.path.join(SCHED, P[lang].strip('/'))
             os.makedirs(out, exist_ok=True)
             open(os.path.join(out, 'index.html'), 'w', encoding='utf-8', newline='\n').write(build(a, lang, shells[lang]))
             words = len(re.sub(r'<[^>]+>', ' ', open(os.path.join(out, 'index.html'), encoding='utf-8').read().split('<main')[1].split('</main>')[0]).split())
             print('%s  %s  %s  (%d words)' % (a['pub'], lang, P[lang], words))
+        keys = ('slug', 'title', 'description', 'section', 'minutes', 'card')
         entry = {'day': a['day'], 'pub': a['pub'], 'slot': a['slot'],
-                 **{lang: {k: a[lang][k] for k in ('slug', 'title', 'description', 'section', 'minutes', 'card')} for lang in ('it', 'en')}}
+                 'it': {'slug': a['it']['slug']} if a.get('en_only') else {k: a['it'][k] for k in keys},
+                 'en': {k: a['en'][k] for k in keys}}
+        if a.get('en_only'):
+            entry['en_only'] = True
         manifest = [m for m in manifest if m['day'] != a['day']] + [entry]
     manifest.sort(key=lambda m: (m['pub'], m['slot'], m['day']))
     open(manifest_path, 'w', encoding='utf-8', newline='\n').write(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n')
 
 
 if __name__ == '__main__':
-    import calendar_content
-    write_all(calendar_content.ARTICLES)
+    import calendar_content, calendar_content_b, calendar_content_c, calendar_content_d, calendar_content_e, calendar_content_f
+    allarticles = []
+    for mod in (calendar_content, calendar_content_b, calendar_content_c, calendar_content_d, calendar_content_e, calendar_content_f):
+        allarticles += mod.ARTICLES
+    write_all(allarticles)

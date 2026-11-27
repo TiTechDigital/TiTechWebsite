@@ -36,6 +36,8 @@ Stato: EN-MISSING 1, EXISTS 2, MISSING 23, PARTIAL 5
 | 30 (12-09) | 2026-12-09 A | PARTIAL | Come creare un sito web per un'attività locale a Novara | realizzazione siti web Novara / website design Novara |
 | 31 (12-10) | 2026-12-10 A | MISSING | Come scegliere un'agenzia SEO per la propria azienda | agenzia SEO / SEO agency |
 
+**Stato al 27 novembre 2026:** tutti gli articoli del calendario sono scritti (italiano e inglese) e programmati; oggi è online il primo, gli altri escono ogni mattina fino al 12 dicembre. Il giorno 1 e il giorno 10 sono già coperti da pagine esistenti.
+
 ## Come funziona la pubblicazione
 
 - Gli articoli si scrivono in `tools/calendar_content.py` (italiano e inglese insieme) e si costruiscono con `python tools/build_calendar_articles.py`.

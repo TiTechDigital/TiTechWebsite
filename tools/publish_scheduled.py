@@ -72,14 +72,37 @@ def register_index(lang, m):
     return True
 
 
+def link_existing_italian_page(m):
+    """An English twin of a page that already existed in Italian: the Italian page and its sitemap entry learn about it."""
+    it_path, en_path = urlpath('it', m['it']['slug']), urlpath('en', m['en']['slug'])
+    page = os.path.join(ROOT, it_path.strip('/'), 'index.html')
+    s = open(page, encoding='utf-8').read()
+    en_url = SITE + en_path
+    if 'hreflang="en" href="%s"' % en_url not in s:
+        s = s.replace('<link rel="alternate" hreflang="x-default"', '<link rel="alternate" hreflang="en" href="%s">\n<link rel="alternate" hreflang="x-default"' % en_url, 1)
+    s = re.sub(r'(<a class="(?:nav__lang|menu__lang)" href=")/en/blog/(" hreflang="en")', lambda x: x.group(1) + en_path + x.group(2), s)
+    open(page, 'w', encoding='utf-8', newline='\n').write(s)
+    f = os.path.join(ROOT, 'sitemap.xml')
+    t = open(f, encoding='utf-8').read()
+    it_loc = '<loc>%s</loc>' % (SITE + it_path)
+    i = t.index(it_loc)
+    j = t.index('</url>', i)
+    if 'hreflang="en"' not in t[i:j]:
+        t = t[:j] + '    <xhtml:link rel="alternate" hreflang="en" href="%s"/>\n  ' % en_url + t[j:]
+    open(f, 'w', encoding='utf-8', newline='\n').write(t)
+
+
 def register_sitemap(m):
     f = os.path.join(ROOT, 'sitemap.xml')
     s = open(f, encoding='utf-8').read()
     it, en = SITE + urlpath('it', m['it']['slug']), SITE + urlpath('en', m['en']['slug'])
-    if it in s:
+    if en in s:
         return
+    if m.get('en_only'):
+        link_existing_italian_page(m)
+        s = open(f, encoding='utf-8').read()
     rows = ''
-    for loc in (it, en):
+    for loc in ((en,) if m.get('en_only') else (it, en)):
         rows += ('  <url>\n    <loc>%s</loc>\n    <lastmod>%s</lastmod>\n'
                  '    <xhtml:link rel="alternate" hreflang="it-IT" href="%s"/>\n    <xhtml:link rel="alternate" hreflang="en" href="%s"/>\n'
                  '    <xhtml:link rel="alternate" hreflang="x-default" href="%s"/>\n  </url>\n' % (loc, m['pub'], it, en, it))
@@ -96,7 +119,7 @@ def publish(today):
     done = []
     for m in sorted(due, key=lambda x: (x['pub'], x['slot'], x['day'])):
         ok = True
-        for lang in ('it', 'en'):
+        for lang in (('en',) if m.get('en_only') else ('it', 'en')):
             rel = urlpath(lang, m[lang]['slug']).strip('/')
             src, dst = os.path.join(SCHED, rel), os.path.join(ROOT, rel)
             if os.path.exists(dst):
@@ -108,11 +131,12 @@ def publish(today):
                 continue
             shutil.move(src, dst)
         if ok:
-            register_index('it', m)
+            if not m.get('en_only'):
+                register_index('it', m)
             register_index('en', m)
             register_sitemap(m)
             done.append(m)
-            print('published day %d: %s | %s' % (m['day'], m['it']['title'], m['en']['title']))
+            print('published day %d: %s | %s' % (m['day'], m['it'].get('title', '(existing Italian page)'), m['en']['title']))
         else:
             left.append(m)
     open(MANIFEST, 'w', encoding='utf-8', newline='\n').write(json.dumps(sorted(left, key=lambda x: (x['pub'], x['slot'], x['day'])), ensure_ascii=False, indent=2) + '\n')
