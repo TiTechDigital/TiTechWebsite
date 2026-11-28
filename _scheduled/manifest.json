@@ -1,47 +1,5 @@
 [
   {
-    "day": 19,
-    "pub": "2026-11-28",
-    "slot": "A",
-    "it": {
-      "slug": "sito-web-per-professionisti",
-      "title": "Sito web per professionisti: cosa non dovrebbe mai mancare",
-      "description": "Profilo, aree di attività, primo contatto, privacy e scheda Google: la checklist per il sito di uno studio professionale, con i link alle guide per ogni professione.",
-      "section": "Settori",
-      "minutes": 7,
-      "card": "La checklist per il sito di uno studio professionale: profilo, aree di attività, primo contatto, privacy e scheda Google."
-    },
-    "en": {
-      "slug": "website-for-professionals",
-      "title": "Website for professionals: what should never be missing",
-      "description": "Profile, areas of practice, first contact, privacy and a Google profile: the checklist for a professional practice website, with guides for each profession.",
-      "section": "Industries",
-      "minutes": 7,
-      "card": "The checklist for a professional practice website: profile, areas of practice, first contact, privacy and Google profile."
-    }
-  },
-  {
-    "day": 3,
-    "pub": "2026-11-28",
-    "slot": "B",
-    "it": {
-      "slug": "sito-web-per-piccole-imprese",
-      "title": "Sito web per piccole imprese: perché è fondamentale nel 2026",
-      "description": "Chi ti cerca controlla online prima di chiamare. Cosa fa un sito per una piccola impresa, quali pagine servono davvero e da dove partire senza sprechi.",
-      "section": "Siti web",
-      "minutes": 7,
-      "card": "Chi ti cerca controlla online prima di chiamare: cosa fa un sito per una piccola impresa, quali pagine servono e da dove partire."
-    },
-    "en": {
-      "slug": "website-for-small-businesses",
-      "title": "Website for small businesses: why it matters in 2026",
-      "description": "People check you online before they call. What a website does for a small business, which pages are really needed and where to start without waste.",
-      "section": "Websites",
-      "minutes": 7,
-      "card": "People check you online before they call: what a website does for a small business, which pages you need and where to start."
-    }
-  },
-  {
     "day": 20,
     "pub": "2026-11-29",
     "slot": "A",
